@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+	<!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title> Anne-Marie ATIGNON </title>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" data-key="brand">A-Tech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero" data-key="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-key="about">About me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills" data-key="skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio" data-key="projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience" data-key="experiences">Experiences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-key="work">Let's work together</a></li>
+                </ul>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="fr">FR</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Hero -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="text-primary">
+                        <div class="typewriter-container">
+                            <span class="typewriter-text" data-key="greeting">Hello! I'm</span>
+                        </div>
+                    </h3>
+                    <h1 class="display-1 fw-bold mb-3">Anne-Marie</h1>
+                    <h2 class="display-6 mb-4" data-key="title">Financial Engineer & Graphic Designer</h2>
+                    <a href="#portfolio" class="btn btn-primary btn-lg px-4 py-3" data-key="projects-btn">My projects</a>
+                </div>
+                <div class="col-lg-6 text-center position-relative">
+                    <img src="assets\photo LinkedIN.jpg" 
+                         alt="Profil" class="round-avatar">
+                    <div class="availability-badge" data-bs-toggle="tooltip" 
+                         title="Currently available for projects"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title" data-key="about-title">About me</h2>
+                    <p class="lead" data-key="about-text">
+                        I combine two professional passions: 
+                        <strong>Financial Engineering</strong> with expertise in quantitative modeling, risk analysis and financial markets and 
+                        <strong>Graphic Design</strong> nurtured by a lifelong passion for visual creation and the arts. 
+                        These dual skills enable me to approach projects with both analytical rigor and creative sensitivity.
+                    </p>
+                    <div class="mt-4">
+                        <a href="assets/EN_Resume_AnneMarie_ATIGNON.pdf" 
+                        download="CV_AnneMarie_ATIGNON.pdf"
+                        class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-download me-2"></i> <span data-key="download-cv">Download CV</span>
+                        </a> 
+                        <a href="#contact" class="btn btn-primary btn-lg" data-key="work-btn">Let's work together</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-0 shadow h-100">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-award fa-3x text-primary mb-3"></i>
+                                    <h5>1+ </h5>
+                                    <p class="mb-0" data-key="exp-text"> years of experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-0 shadow h-100">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                                    <h5>6+</h5>
+                                    <p class="mb-0" data-key="projects-text">Projects</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-0 shadow h-100">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-project-diagram fa-3x text-primary mb-3"></i>
+                                    <h5>6+</h5>
+                                    <p class="mb-0" data-key="tech-text"> Technologies mastered</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-0 shadow h-100">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-trophy fa-3x text-primary mb-3"></i>
+                                    <h5>1+</h5>
+                                    <p class="mb-0" data-key="companies-text"> Companies worked with</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="section-title text-center mb-5" data-key="skills-title">Skills</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h5>Python</h5>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h5>Capcut</h5>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h5>Canva</h5>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h5>Figma</h5>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h5>French</h5>
+                            <span>100%</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h5>English</h5>
+                            <span>70%</span>
+                        </div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Portfolio -->
+    <section id="portfolio" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title text-center mb-5" data-key="projects-title">Projects</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-card shadow">
+                        <img src="assets\wiiru.png" class="card-img-top" alt="Projet 1">
+                        <div class="card-body">
+                            <h5 class="card-title" data-key="project1-title">Design d'application web</h5>
+                            <p class="card-text text-muted" data-key="project1-desc">UI/UX Design/ Logo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-card shadow">
+                        <img src="assets\nududu.png" class="card-img-top" alt="Projet 2" height="400px">
+                        <div class="card-body">
+                            <h5 class="card-title" data-key="project2-title">Site web/ Chatbot</h5>
+                            <p class="card-text text-muted" data-key="project2-desc"> Graphic design/ Logo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-card shadow">
+                        <img src="assets\ASE.svg" class="card-img-top" alt="Projet 3">
+                        <div class="card-body">
+                            <h5 class="card-title" data-key="project3-title">Visual design</h5>
+                            <p class="card-text text-muted" data-key="project3-desc">Graphic design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-card shadow">
+                        <img src="assets\tama.png" class="card-img-top" alt="Projet 4">
+                        <div class="card-body">
+                            <h5 class="card-title" data-key="project4-title">Application web</h5>
+                            <p class="card-text text-muted" data-key="project4-desc">UI Design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-card shadow">
+                        <img src="assets\fruitizz.png" class="card-img-top" alt="Projet 5" height="600px">
+                        <div class="card-body">
+                            <h5 class="card-title" data-key="project5-title">BD</h5>
+                            <p class="card-text text-muted" data-key="project5-desc">Illustration</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-card shadow">
+                        <img src="assets\aspace.png" class="card-img-top" alt="Projet 6">
+                        <div class="card-body">
+                            <h5 class="card-title" data-key="project6-title">Branding identity</h5>
+                            <p class="card-text text-muted" data-key="project6-desc">Branding</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expérience -->
+    <section id="experience" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="section-title text-center mb-5" data-key="experiences-title">Experiences</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="mb-4" data-key="education-title">Education</h3>
+                    <div class="timeline-item">
+                        <h5 data-key="education1">Laureat WHISPA</h5>
+                        <p class="text-primary fw-bold">Etrilabs - 2025</p>
+                        <p data-key="education1-desc">Specialization in UX/UX design & Graphic design.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h5 data-key="education2">Master's of science in Financial Engineering</h5>
+                        <p class="text-primary fw-bold">Worldquant University - 2024</p>
+                        <p data-key="education2-desc">Specialization in Quantitative Finance</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h5 data-key="education3">Master's in Business Administration</h5>
+                        <p class="text-primary fw-bold">African School of Economics - 2023</p>
+                        <p data-key="education3-desc">Specialization in Finance</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h5 data-key="education4">Bachelor's in Accounting, Finance & Auditing</h5>
+                        <p class="text-primary fw-bold">ISM Adonai - 2019</p>
+                        <p data-key="education4-desc">Specialization in Finance</p>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4" data-key="work-title">Work experience </h3>
+                    <div class="timeline-item">
+                        <h5 data-key="work1">Comms Assistant </h5>
+                        <p class="text-primary fw-bold">African School of Economics - 2024</p>
+                        <p data-key="work1-desc">Coordination of student communications, social medias and events.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 data-key="work2">Internship</h5>
+                        <p class="text-primary fw-bold">Audirex Benin - 2022</p>
+                        <p data-key="work2-desc">Bank reconciliation, audits, invoice and document processing.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 data-key="work3">Illustrator</h5>
+                        <p class="text-primary fw-bold">Fruitizz - 2020</p>
+                        <p data-key="work3-desc"> BD's illustration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title text-center mb-5" data-key="contact-title">Let's work together</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="contact-info">
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-envelope fa-1_5x text-primary me-4 mt-1"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>atignonanna@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-phone fa-1_5x text-primary me-4 mt-1"></i>
+                            <div>
+                                <h5>Phone</h5>
+                                <p>+229 01 40 54 69 73</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-map-marker-alt fa-1_5x text-primary me-4 mt-1"></i>
+                            <div>
+                                <h5>Address</h5>
+                                <p>Akassato, Abomey-Calavi, Benin</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100" data-key="send">Send message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <h3 class="mb-4" data-key="follow">Follow us !</h3>
+            <div class="social-links mb-4">
+                <a href="https://www.facebook.com/anna.atg.7" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                
+                <a href="https://x.com/luvmeduh" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                
+                <a href="https://www.instagram.com/eir_ama/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/anne-marie-atignon/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                
+                <a href="https://github.com/Annaatg" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <p class="mb-0" data-key="copyright">© 2025 A-Tech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Effet vague décoratif -->
+    <div class="wave"></div>
+    <div class="wave w2"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Objet contenant toutes les traductions
+        const translations = {
+            en: {
+                // Navigation
+                "brand": "A-Tech",
+                "home": "Home",
+                "about": "About me",
+                "skills": "Skills",
+                "projects": "Projects",
+                "experiences": "Experiences",
+                "work": "Let's work together",
+                
+                // Hero section
+                "greeting": "Hello! I'm",
+                "title": "Financial Engineer & Graphic Designer",
+                "projects-btn": "My projects",
+                
+                // About section
+                "about-title": "About me",
+                "about-text": "I combine two professional passions: <strong>Financial Engineering</strong> with expertise in quantitative modeling, risk analysis and financial markets and <strong>Graphic Design</strong> nurtured by a lifelong passion for visual creation and the arts. These dual skills enable me to approach projects with both analytical rigor and creative sensitivity.",
+                "download-cv": "Download CV",
+                "work-btn": "Let's work together",
+                "exp-text": " years of experience",
+                "projects-text": "Projects",
+                "tech-text": " Technologies mastered",
+                "companies-text": " Companies worked with",
+                
+                // Skills section
+                "skills-title": "Skills",
+                
+                // Projects section
+                "projects-title": "Projects",
+                "project1-title": "Web application design",
+                "project1-desc": "UI/UX Design/ Logo",
+                "project2-title": "Website/ Chatbot",
+                "project2-desc": "Graphic design/ Logo",
+                "project3-title": "Visual design",
+                "project3-desc": "Graphic design",
+                "project4-title": "Web application",
+                "project4-desc": "UI Design",
+                "project5-title": "Comic",
+                "project5-desc": "Illustration",
+                "project6-title": "Branding identity",
+                "project6-desc": "Branding",
+                
+                // Experience section
+                "experiences-title": "Experiences",
+                "education-title": "Education",
+                "education1": "Laureat WHISPA",
+                "education1-desc": "Specialization in UX/UX design & Graphic design.",
+                "education2": "Master's of science in Financial Engineering",
+                "education2-desc": "Specialization in Quantitative Finance",
+                "education3": "Master's in Business Administration",
+                "education3-desc": "Specialization in Finance",
+                "education4": "Bachelor's in Accounting, Finance & Auditing",
+                "education4-desc": "Specialization in Finance",
+                "work-title": "Work experience",
+                "work1": "Comms Assistant",
+                "work1-desc": "Coordination of student communications, social medias and events.",
+                "work2": "Internship",
+                "work2-desc": "Bank reconciliation, audits, invoice and document processing.",
+                "work3": "Illustrator",
+                "work3-desc": "Comic illustration",
+                
+                // Contact section
+                "contact-title": "Let's work together",
+                "send": "Send message",
+                
+                // Footer
+                "follow": "Follow us!",
+                "copyright": "© 2025 A-Tech. All rights reserved."
+            },
+            fr: {
+                // Navigation
+                "brand": "A-Tech",
+                "home": "Accueil",
+                "about": "À propos",
+                "skills": "Compétences",
+                "projects": "Projets",
+                "experiences": "Expériences",
+                "work": "Travaillons ensemble",
+                
+                // Hero section
+                "greeting": "Bonjour ! Je suis",
+                "title": "Ingénieure Financière & Designer Graphique",
+                "projects-btn": "Mes projets",
+                
+                // About section
+                "about-title": "À propos de moi",
+                "about-text": "Je combine deux passions professionnelles : l'<strong>Ingénierie Financière</strong> avec une expertise en modélisation quantitative, analyse de risques et marchés financiers, et le <strong>Design Graphique</strong> nourri par une passion de longue date pour la création visuelle et les arts. Ces doubles compétences me permettent d'aborder les projets avec à la fois une rigueur analytique et une sensibilité créative.",
+                "download-cv": "Télécharger CV",
+                "work-btn": "Travaillons ensemble",
+                "exp-text": " années d'expérience",
+                "projects-text": "Projets",
+                "tech-text": " Technologies maîtrisées",
+                "companies-text": " Entreprises collaborées",
+                
+                // Skills section
+                "skills-title": "Compétences",
+                
+                // Projects section
+                "projects-title": "Projets",
+                "project1-title": "Design d'application web",
+                "project1-desc": "UI/UX Design/ Logo",
+                "project2-title": "Site web/ Chatbot",
+                "project2-desc": "Design graphique/ Logo",
+                "project3-title": "Design visuel",
+                "project3-desc": "Design graphique",
+                "project4-title": "Application web",
+                "project4-desc": "UI Design",
+                "project5-title": "BD",
+                "project5-desc": "Illustration",
+                "project6-title": "Identité de marque",
+                "project6-desc": "Branding",
+                
+                // Experience section
+                "experiences-title": "Expériences",
+                "education-title": "Éducation",
+                "education1": "Lauréate WHISPA",
+                "education1-desc": "Spécialisation en UX/UX design & Design graphique.",
+                "education2": "Master en Ingénierie Financière",
+                "education2-desc": "Spécialisation en Finance Quantitative",
+                "education3": "Master en Administration des Affaires",
+                "education3-desc": "Spécialisation en Finance",
+                "education4": "Licence en Comptabilité, Finance & Audit",
+                "education4-desc": "Spécialisation en Finance",
+                "work-title": "Expérience professionnelle",
+                "work1": "Assistante Communication",
+                "work1-desc": "Coordination des communications étudiantes, réseaux sociaux et événements.",
+                "work2": "Stage",
+                "work2-desc": "Réconciliation bancaire, audits, traitement de factures et documents.",
+                "work3": "Illustratrice",
+                "work3-desc": "Illustration de BD",
+                
+                // Contact section
+                "contact-title": "Travaillons ensemble",
+                "send": "Envoyer le message",
+                
+                // Footer
+                "follow": "Suivez-nous !",
+                "copyright": "© 2025 A-Tech. Tous droits réservés."
+            }
+        };
+
+        // Fonction pour changer la langue
+        function changeLanguage(lang) {
+            // Mettre à jour tous les éléments avec l'attribut data-key
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+            
+            // Mettre à jour le sélecteur de langue
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Sauvegarder la préférence de langue
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Événements pour les boutons de langue
+        document.querySelectorAll('.lang-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const lang = button.getAttribute('data-lang');
+                changeLanguage(lang);
+            });
+        });
+
+        // Charger la langue préférée au démarrage
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+            changeLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
