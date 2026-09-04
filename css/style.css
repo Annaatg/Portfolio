@@ -289,24 +289,26 @@ h1, h2, h3, h4, h5 {
 
 .hero-section {
   padding: 190px 0 120px;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
   position: relative;
   overflow: hidden;
 }
 
 .hero-bg-art {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(1400px, 160vw);
-  max-width: none;
-  height: 720px;
+  inset: 0;
   background-image:
-    linear-gradient(180deg, rgba(6, 13, 26, 0.35) 0%, rgba(6, 13, 26, 0.55) 55%, var(--bg) 100%),
+    radial-gradient(ellipse 55% 55% at 50% 32%, rgba(6, 13, 26, 0.6), transparent 70%),
+    linear-gradient(180deg, rgba(6, 13, 26, 0.15) 0%, rgba(6, 13, 26, 0.35) 55%, var(--bg) 96%),
     url('../assets/hero-market.jpg');
-  background-size: cover;
-  background-position: center top;
-  opacity: 0.55;
+  background-size: cover, cover, cover;
+  background-position: center, center, center 30%;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  -webkit-mask-image: radial-gradient(ellipse 100% 90% at 50% 38%, black 45%, transparent 92%);
+  mask-image: radial-gradient(ellipse 100% 90% at 50% 38%, black 45%, transparent 92%);
   pointer-events: none;
   z-index: 0;
 }
@@ -393,7 +395,7 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 22px;
 }
 
-.hero-name .accent-text {
+.accent-text {
   color: var(--accent);
 }
 
@@ -404,22 +406,6 @@ h1, h2, h3, h4, h5 {
   font-weight: 400;
   max-width: 540px;
   margin: 0 auto 36px;
-}
-
-.hero-title em {
-  color: var(--text);
-  font-style: italic;
-  font-weight: 500;
-}
-
-.hero-location {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: var(--text-faint);
-  font-size: 0.88rem;
-  margin-top: 32px;
 }
 
 .hero-actions {
@@ -932,7 +918,6 @@ textarea.form-control {
   }
 
   .hero-bg-art {
-    height: 480px;
-    opacity: 0.4;
+    opacity: 0.55;
   }
 }
