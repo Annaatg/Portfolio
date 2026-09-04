@@ -15,9 +15,9 @@
   --text-faint: #8c8b80;
   --ink: #16160f;
   --ink-hover: #33332a;
-  --accent: #10a05f;
-  --accent-soft: rgba(16, 160, 95, 0.10);
-  --accent-strong: #0b7a48;
+  --accent: #1d3a6e;
+  --accent-soft: rgba(29, 58, 110, 0.10);
+  --accent-strong: #12233f;
   --success: #22c55e;
 
   --font-display: 'Space Grotesk', 'Inter', sans-serif;
@@ -172,16 +172,6 @@ h1, h2, h3, h4, h5 {
   box-shadow: 0 8px 20px rgba(22, 22, 15, 0.08);
 }
 
-/* ---------- Top ribbon (floating availability badge) ---------- */
-
-.top-ribbon {
-  position: fixed;
-  top: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 110;
-}
-
 /* ---------- Navbar ---------- */
 
 .navbar {
@@ -190,8 +180,7 @@ h1, h2, h3, h4, h5 {
   left: 0;
   right: 0;
   z-index: 100;
-  height: 100px;
-  padding-top: 26px;
+  height: 76px;
   background: rgba(242, 240, 236, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -314,7 +303,7 @@ h1, h2, h3, h4, h5 {
 /* ---------- Hero ---------- */
 
 .hero-section {
-  padding: 220px 0 120px;
+  padding: 180px 0 120px;
   position: relative;
 }
 
@@ -372,6 +361,7 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
   color: #fff;
   box-shadow: 0 10px 24px rgba(22, 22, 15, 0.2);
+  margin-bottom: 28px;
 }
 
 .badge-pill .pulse {
@@ -390,9 +380,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-name {
-  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  font-size: clamp(3.2rem, 7.5vw, 5.6rem);
   line-height: 1.05;
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
 
 .accent-text {
@@ -400,12 +390,13 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-title {
-  font-family: var(--font-body);
-  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  line-height: 1.3;
   color: var(--text-muted);
-  font-weight: 400;
-  max-width: 540px;
-  margin: 0 auto 36px;
+  font-weight: 500;
+  max-width: 640px;
+  margin: 0 auto 40px;
 }
 
 .hero-actions {
@@ -881,7 +872,7 @@ textarea.form-control {
   .nav-links {
     display: none;
     position: absolute;
-    top: 100px;
+    top: 76px;
     left: 0;
     right: 0;
     flex-direction: column;
@@ -946,7 +937,7 @@ textarea.form-control {
     padding: 26px;
   }
 
-  .top-ribbon .badge-pill span:last-child {
+  .badge-pill span:last-child {
     font-size: 0.76rem;
   }
 }
