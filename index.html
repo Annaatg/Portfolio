@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Anne-Marie Atignon — Financial Engineer &amp; Graphic Designer</title>
-	<meta name="description" content="Portfolio of Anne-Marie Atignon, Financial Engineer &amp; Graphic Designer based in Benin.">
+	<title>Anne-Marie Atignon — Aspiring Sales &amp; Trading Analyst</title>
+	<meta name="description" content="Portfolio of Anne-Marie Atignon, aspiring Sales &amp; Trading Analyst with a background in Financial Engineering and Graphic Design.">
 
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,6 +14,14 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+	<!-- Floating availability badge -->
+	<div class="top-ribbon">
+		<div class="badge-pill">
+			<span class="pulse"></span>
+			<span data-key="availability">Available for work</span>
+		</div>
+	</div>
 
 	<!-- Navbar -->
 	<nav class="navbar">
@@ -28,7 +36,7 @@
 				<li><a href="#skills" data-key="skills">Skills</a></li>
 				<li><a href="#portfolio" data-key="projects">Work</a></li>
 				<li><a href="#experience" data-key="experiences">Experience</a></li>
-				<li><a href="#contact" data-key="work">Contact</a></li>
+				<li class="nav-contact-mobile"><a href="#contact" data-key="work">Contact</a></li>
 			</ul>
 
 			<div class="nav-right">
@@ -36,6 +44,7 @@
 					<button class="lang-btn active" data-lang="en">EN</button>
 					<button class="lang-btn" data-lang="fr">FR</button>
 				</div>
+				<a href="#contact" class="nav-contact-btn" data-key="work">Contact</a>
 				<button class="nav-toggle" id="navToggle" aria-label="Menu">
 					<i class="fas fa-bars"></i>
 				</button>
@@ -45,14 +54,8 @@
 
 	<!-- Hero -->
 	<section id="hero" class="hero-section">
-		<div class="hero-bg-art" aria-hidden="true"></div>
 		<div class="container">
 			<div class="hero-center">
-				<div class="badge-pill">
-					<span class="pulse"></span>
-					<span data-key="availability">Available for new projects</span>
-				</div>
-
 				<div class="typewriter-container">
 					<span class="typewriter-text" data-key="greeting">Hello! I'm</span>
 				</div>
@@ -61,22 +64,17 @@
 					Anne-Marie <span class="accent-text" data-key="hero-title-accent">Atignon</span>
 				</h1>
 
-				<p class="hero-title" data-key="title">Financial Engineer &amp; Graphic Designer — I bring <em>analytical rigor</em> and <em>creative sensitivity</em> to every project.</p>
+				<p class="hero-title" data-key="title">Aspiring Sales &amp; Trading Analyst | <span class="accent-text">Financial Engineering</span></p>
 
 				<div class="hero-actions">
-					<a href="#portfolio" class="btn btn-accent" data-key="projects-btn">
-						<i class="fas fa-arrow-down"></i>
-						My work
-					</a>
-					<a href="assets/EN_Resume_AnneMarie_ATIGNON.pdf" download="CV_AnneMarie_ATIGNON.pdf" class="btn btn-ghost">
+					<a href="assets/EN_Resume_AnneMarie_ATIGNON.pdf" download="CV_AnneMarie_ATIGNON.pdf" class="btn btn-accent">
 						<i class="fas fa-download"></i>
-						<span data-key="download-cv">Download CV</span>
+						<span data-key="download-cv">Download my CV</span>
 					</a>
-				</div>
-
-				<div class="hero-location">
-					<i class="fas fa-location-dot"></i>
-					<span data-key="location">Akassato, Abomey-Calavi, Benin</span>
+					<a href="#portfolio" class="btn btn-ghost">
+						<i class="fas fa-arrow-down"></i>
+						<span data-key="projects-btn">See what I've built</span>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -91,13 +89,11 @@
 			</div>
 
 			<div class="bento-grid">
-				<div class="bento-card col-span-2 about-card reveal">
-					<p data-key="about-text">
-						I combine two professional passions: <strong>Financial Engineering</strong>, with expertise
-						in quantitative modeling, risk analysis and financial markets, and <strong>Graphic Design</strong>,
-						nurtured by a lifelong passion for visual creation and the arts. These dual skills let me
-						approach every project with both analytical rigor and creative sensitivity.
-					</p>
+				<div class="bento-card col-span-4 about-card reveal">
+					<p data-key="about-text-1">I'm a financial engineer in the making, currently completing my MSc in Financial Engineering at WorldQuant University, with an MBA in Finance from the African School of Economics. My work sits at the intersection of markets and code — I like turning a hunch about how prices behave into something testable, then finding out whether it actually holds up.</p>
+					<p data-key="about-text-2">That instinct is what led to my thesis: a systematic, market-neutral equity pairs trading strategy that uses machine learning for signal generation and risk management. It's the kind of project where the fun part isn't the idea — it's the part where you stress-test it and it either survives or it doesn't.</p>
+					<p data-key="about-text-3">I work primarily in Python and R, with a solid grounding in financial econometrics, stochastic modelling, and risk management. Outside of models and backtests, I care about markets in the way some people care about puzzles — I want to know why something moved, not just that it did.</p>
+					<p data-key="about-text-4">I'm currently looking for opportunities in Sales &amp; Trading, with a particular interest in derivatives and systematic strategies. This portfolio is where I share the projects that got me here.</p>
 					<a href="#contact" class="btn btn-accent" data-key="work-btn">Let's work together</a>
 				</div>
 
@@ -105,28 +101,32 @@
 					<img src="assets/profile.jpg" alt="Anne-Marie Atignon">
 				</div>
 
-				<div class="bento-card stat-card reveal">
-					<div class="stat-icon"><i class="fas fa-award"></i></div>
-					<div class="stat-value">1+</div>
-					<div class="stat-label" data-key="exp-text">Years of experience</div>
-				</div>
+				<div class="bento-card col-span-2 stats-strip reveal">
+					<div class="stats-mini-grid">
+						<div class="mini-stat">
+							<div class="stat-icon"><i class="fas fa-award"></i></div>
+							<div class="stat-value">1+</div>
+							<div class="stat-label" data-key="exp-text">Years of experience</div>
+						</div>
 
-				<div class="bento-card stat-card reveal">
-					<div class="stat-icon"><i class="fas fa-diagram-project"></i></div>
-					<div class="stat-value">6+</div>
-					<div class="stat-label" data-key="projects-text">Projects delivered</div>
-				</div>
+						<div class="mini-stat">
+							<div class="stat-icon"><i class="fas fa-diagram-project"></i></div>
+							<div class="stat-value">6+</div>
+							<div class="stat-label" data-key="projects-text">Projects delivered</div>
+						</div>
 
-				<div class="bento-card stat-card reveal">
-					<div class="stat-icon"><i class="fas fa-layer-group"></i></div>
-					<div class="stat-value">6+</div>
-					<div class="stat-label" data-key="tech-text">Tools mastered</div>
-				</div>
+						<div class="mini-stat">
+							<div class="stat-icon"><i class="fas fa-layer-group"></i></div>
+							<div class="stat-value">6+</div>
+							<div class="stat-label" data-key="tech-text">Tools mastered</div>
+						</div>
 
-				<div class="bento-card stat-card reveal">
-					<div class="stat-icon"><i class="fas fa-building"></i></div>
-					<div class="stat-value">1+</div>
-					<div class="stat-label" data-key="companies-text">Organizations worked with</div>
+						<div class="mini-stat">
+							<div class="stat-icon"><i class="fas fa-building"></i></div>
+							<div class="stat-value">1+</div>
+							<div class="stat-label" data-key="companies-text">Organizations worked with</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -428,17 +428,20 @@
 				"experiences": "Experience",
 				"work": "Contact",
 
-				"availability": "Available for new projects",
+				"availability": "Available for work",
 				"greeting": "Hello! I'm",
 				"hero-title-accent": "Atignon",
-				"title": "Financial Engineer &amp; Graphic Designer — I bring <em>analytical rigor</em> and <em>creative sensitivity</em> to every project.",
-				"projects-btn": "My work",
-				"download-cv": "Download CV",
+				"title": "Aspiring Sales &amp; Trading Analyst | <span class=\"accent-text\">Financial Engineering</span>",
+				"projects-btn": "See what I've built",
+				"download-cv": "Download my CV",
 				"location": "Akassato, Abomey-Calavi, Benin",
 
 				"about-eyebrow": "Who I am",
 				"about-title": "About me",
-				"about-text": "I combine two professional passions: <strong>Financial Engineering</strong>, with expertise in quantitative modeling, risk analysis and financial markets, and <strong>Graphic Design</strong>, nurtured by a lifelong passion for visual creation and the arts. These dual skills let me approach every project with both analytical rigor and creative sensitivity.",
+				"about-text-1": "I'm a financial engineer in the making, currently completing my MSc in Financial Engineering at WorldQuant University, with an MBA in Finance from the African School of Economics. My work sits at the intersection of markets and code — I like turning a hunch about how prices behave into something testable, then finding out whether it actually holds up.",
+				"about-text-2": "That instinct is what led to my thesis: a systematic, market-neutral equity pairs trading strategy that uses machine learning for signal generation and risk management. It's the kind of project where the fun part isn't the idea — it's the part where you stress-test it and it either survives or it doesn't.",
+				"about-text-3": "I work primarily in Python and R, with a solid grounding in financial econometrics, stochastic modelling, and risk management. Outside of models and backtests, I care about markets in the way some people care about puzzles — I want to know why something moved, not just that it did.",
+				"about-text-4": "I'm currently looking for opportunities in Sales &amp; Trading, with a particular interest in derivatives and systematic strategies. This portfolio is where I share the projects that got me here.",
 				"work-btn": "Let's work together",
 				"exp-text": "Years of experience",
 				"projects-text": "Projects delivered",
@@ -518,17 +521,20 @@
 				"experiences": "Expériences",
 				"work": "Contact",
 
-				"availability": "Disponible pour de nouveaux projets",
+				"availability": "Disponible pour travailler",
 				"greeting": "Bonjour ! Je suis",
 				"hero-title-accent": "Atignon",
-				"title": "Ingénieure Financière &amp; Designer Graphique — j'apporte <em>rigueur analytique</em> et <em>sensibilité créative</em> à chaque projet.",
-				"projects-btn": "Mes projets",
-				"download-cv": "Télécharger le CV",
+				"title": "Aspirante Analyste Sales &amp; Trading | <span class=\"accent-text\">Ingénierie Financière</span>",
+				"projects-btn": "Découvrez mes réalisations",
+				"download-cv": "Télécharger mon CV",
 				"location": "Akassato, Abomey-Calavi, Bénin",
 
 				"about-eyebrow": "Qui suis-je",
 				"about-title": "À propos de moi",
-				"about-text": "Je combine deux passions professionnelles : l'<strong>Ingénierie Financière</strong>, avec une expertise en modélisation quantitative, analyse de risques et marchés financiers, et le <strong>Design Graphique</strong>, nourri par une passion de longue date pour la création visuelle et les arts. Ces doubles compétences me permettent d'aborder chaque projet avec rigueur analytique et sensibilité créative.",
+				"about-text-1": "Je suis ingénieure financière en devenir, actuellement en train de terminer mon Master of Science en Ingénierie Financière à la WorldQuant University, avec un MBA en Finance de l'African School of Economics. Mon travail se situe à l'intersection des marchés et du code — j'aime transformer une intuition sur le comportement des prix en quelque chose de testable, puis découvrir si elle tient réellement la route.",
+				"about-text-2": "C'est cet instinct qui a mené à mon mémoire : une stratégie systématique et neutre au marché de pairs trading sur actions, utilisant le machine learning pour la génération de signaux et la gestion des risques. C'est le genre de projet où la partie amusante n'est pas l'idée — c'est le moment où on la met à l'épreuve, et où elle survit ou non.",
+				"about-text-3": "Je travaille principalement avec Python et R, avec une solide base en économétrie financière, en modélisation stochastique et en gestion des risques. En dehors des modèles et des backtests, je m'intéresse aux marchés comme d'autres s'intéressent aux énigmes — je veux savoir pourquoi quelque chose a bougé, pas seulement que ça a bougé.",
+				"about-text-4": "Je suis actuellement à la recherche d'opportunités en Sales &amp; Trading, avec un intérêt particulier pour les produits dérivés et les stratégies systématiques. Ce portfolio rassemble les projets qui m'ont menée jusqu'ici.",
 				"work-btn": "Travaillons ensemble",
 				"exp-text": "Années d'expérience",
 				"projects-text": "Projets réalisés",
