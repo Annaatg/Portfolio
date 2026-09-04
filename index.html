@@ -393,20 +393,20 @@
 			</div>
 
 			<div class="bento-grid">
-				<div class="bento-card col-span-2 reveal">
+				<div class="bento-card col-span-2 reveal contact-info-card">
 					<div class="contact-info-row">
 						<div class="icon-badge"><i class="fas fa-envelope"></i></div>
 						<div>
 							<div class="label" data-key="contact-email-label">Email</div>
 							<div class="value">atignonanna@gmail.com</div>
 						</div>
-						<button class="copy-btn" id="copyEmailBtn" data-key="copy-btn" data-copied="Copied!">Copy</button>
 					</div>
 					<div class="contact-info-row">
 						<div class="icon-badge"><i class="fas fa-phone"></i></div>
 						<div>
 							<div class="label" data-key="contact-phone-label">Phone</div>
 							<div class="value">+229 01 40 54 69 73</div>
+							<div class="value">+229 01 91 52 58 09</div>
 						</div>
 					</div>
 					<div class="contact-info-row">
@@ -415,24 +415,6 @@
 							<div class="label" data-key="contact-address-label">Address</div>
 							<div class="value" data-key="location">Akassato, Abomey-Calavi, Benin</div>
 						</div>
-					</div>
-
-					<div class="social-row">
-						<a href="https://www.facebook.com/anna.atg.7" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
-							<i class="fab fa-facebook-f"></i>
-						</a>
-						<a href="https://x.com/luvmeduh" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X">
-							<i class="fab fa-x-twitter"></i>
-						</a>
-						<a href="https://www.instagram.com/eir_ama/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
-							<i class="fab fa-instagram"></i>
-						</a>
-						<a href="https://www.linkedin.com/in/anne-marie-atignon/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-							<i class="fab fa-linkedin-in"></i>
-						</a>
-						<a href="https://github.com/Annaatg" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
-							<i class="fab fa-github"></i>
-						</a>
 					</div>
 				</div>
 
@@ -448,7 +430,7 @@
 							<input type="text" class="form-control" data-key-placeholder="form-subject" placeholder="Subject" required>
 						</div>
 						<div class="form-group">
-							<textarea class="form-control" rows="4" data-key-placeholder="form-message" placeholder="Your message" required></textarea>
+							<textarea class="form-control" rows="3" data-key-placeholder="form-message" placeholder="Your message" required></textarea>
 						</div>
 						<button type="submit" class="btn btn-accent" style="width:100%" data-key="send">Send message</button>
 					</form>
@@ -589,7 +571,6 @@
 				"contact-email-label": "Email",
 				"contact-phone-label": "Phone",
 				"contact-address-label": "Address",
-				"copy-btn": "Copy",
 				"form-name": "Your name",
 				"form-email": "Your email",
 				"form-subject": "Subject",
@@ -703,7 +684,6 @@
 				"contact-email-label": "Email",
 				"contact-phone-label": "Téléphone",
 				"contact-address-label": "Adresse",
-				"copy-btn": "Copier",
 				"form-name": "Votre nom",
 				"form-email": "Votre email",
 				"form-subject": "Sujet",
@@ -759,27 +739,6 @@
 			navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 				navLinks.classList.remove('is-open');
 			}));
-		}
-
-		// ---------- Copy email ----------
-		const copyBtn = document.getElementById('copyEmailBtn');
-		if (copyBtn) {
-			copyBtn.addEventListener('click', async () => {
-				const email = 'atignonanna@gmail.com';
-				try {
-					await navigator.clipboard.writeText(email);
-				} catch (e) {
-					const ta = document.createElement('textarea');
-					ta.value = email;
-					document.body.appendChild(ta);
-					ta.select();
-					document.execCommand('copy');
-					document.body.removeChild(ta);
-				}
-				const original = copyBtn.textContent;
-				copyBtn.textContent = copyBtn.getAttribute('data-copied') || 'Copied!';
-				setTimeout(() => { copyBtn.textContent = original; }, 1800);
-			});
 		}
 
 		// ---------- Contact form (static site — no backend) ----------

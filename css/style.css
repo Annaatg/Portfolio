@@ -785,21 +785,14 @@ h1, h2, h3, h4, h5 {
   font-size: 0.98rem;
 }
 
-.contact-info-row button.copy-btn {
-  margin-left: auto;
-  background: var(--bg);
-  border: 1px solid var(--border-strong);
-  color: var(--text-muted);
-  border-radius: 8px;
-  padding: 6px 12px;
-  font-size: 0.75rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
+.contact-info-row .value + .value {
+  margin-top: 2px;
 }
 
-.contact-info-row button.copy-btn:hover {
-  color: var(--text);
-  border-color: var(--accent);
+.contact-info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .social-row {
@@ -856,7 +849,7 @@ h1, h2, h3, h4, h5 {
 
 textarea.form-control {
   resize: vertical;
-  min-height: 130px;
+  min-height: 90px;
 }
 
 /* ---------- Footer ---------- */
