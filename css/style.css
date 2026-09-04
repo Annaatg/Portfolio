@@ -751,8 +751,8 @@ h1, h2, h3, h4, h5 {
 .contact-info-row {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 16px 0;
+  gap: 18px;
+  padding: 28px 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -792,7 +792,7 @@ h1, h2, h3, h4, h5 {
 .contact-info-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .social-row {
