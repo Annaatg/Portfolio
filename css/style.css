@@ -510,14 +510,13 @@ h1, h2, h3, h4, h5 {
 .mini-stat {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 10px;
 }
 
-.stat-card {
+.mini-stat-top {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
+  align-items: center;
+  gap: 14px;
 }
 
 .stat-icon {
@@ -529,7 +528,7 @@ h1, h2, h3, h4, h5 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  flex-shrink: 0;
   font-size: 1rem;
 }
 
