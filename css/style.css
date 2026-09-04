@@ -726,12 +726,19 @@ h1, h2, h3, h4, h5 {
 .tool-tile-label {
   font-family: var(--font-display);
   font-size: 0.78rem;
-  color: var(--text-muted);
+  font-weight: 600;
+  color: var(--accent);
   margin-bottom: 10px;
 }
 
 .tool-tile .service-tags {
   margin-top: 0;
+}
+
+.tool-tile .tag-chip {
+  background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+  border-color: transparent;
+  color: #fff;
 }
 
 .lang-grid {
