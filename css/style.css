@@ -592,56 +592,53 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 18px;
 }
 
-.tool-category {
-  margin-bottom: 20px;
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
 
-.tool-category:last-child {
-  margin-bottom: 0;
+.tool-tile {
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  background: var(--bg);
 }
 
-.tool-category-label {
+.tool-tile-label {
   font-family: var(--font-display);
   font-size: 0.78rem;
   color: var(--text-muted);
   margin-bottom: 10px;
 }
 
-.tool-category .service-tags {
+.tool-tile .service-tags {
   margin-top: 0;
 }
 
-.skill-row {
-  margin-bottom: 18px;
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
 
-.skill-row:last-child {
-  margin-bottom: 0;
+.lang-tile {
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  background: var(--bg);
 }
 
-.skill-row-head {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  font-size: 0.92rem;
+.lang-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 6px;
 }
 
-.skill-row-head .skill-level {
-  color: var(--text-faint);
+.lang-level {
   font-size: 0.8rem;
-}
-
-.skill-bar {
-  height: 6px;
-  border-radius: 100px;
-  background: var(--bg-elevated);
-  overflow: hidden;
-}
-
-.skill-bar-fill {
-  height: 100%;
-  border-radius: 100px;
-  background: linear-gradient(90deg, var(--accent-strong), var(--accent));
+  color: var(--text-faint);
 }
 
 /* ---------- Work / Projects ---------- */
@@ -958,5 +955,9 @@ textarea.form-control {
 
   .badge-pill span:last-child {
     font-size: 0.76rem;
+  }
+
+  .tool-grid, .lang-grid {
+    grid-template-columns: 1fr;
   }
 }
