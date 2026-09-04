@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5 {
   background: rgba(242, 240, 236, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 3px solid var(--accent);
 }
 
 .navbar .container {
@@ -687,9 +687,9 @@ h1, h2, h3, h4, h5 {
   font-size: 0.78rem;
   padding: 6px 12px;
   border-radius: 100px;
-  border: 1px solid var(--border-strong);
-  color: var(--text-muted);
-  background: var(--bg);
+  border-color: transparent;
+  color: #fff;
+  background: var(--accent);
 }
 
 /* ---------- Skills ---------- */
@@ -703,7 +703,7 @@ h1, h2, h3, h4, h5 {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--text-faint);
+  color: var(--text);
   margin-bottom: 18px;
 }
 
@@ -732,12 +732,6 @@ h1, h2, h3, h4, h5 {
 
 .tool-tile .service-tags {
   margin-top: 0;
-}
-
-.tool-tile .tag-chip {
-  background: linear-gradient(135deg, var(--accent), var(--accent-bright));
-  border-color: transparent;
-  color: #fff;
 }
 
 .lang-grid {
