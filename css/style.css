@@ -592,6 +592,25 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 18px;
 }
 
+.tool-category {
+  margin-bottom: 20px;
+}
+
+.tool-category:last-child {
+  margin-bottom: 0;
+}
+
+.tool-category-label {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.tool-category .service-tags {
+  margin-top: 0;
+}
+
 .skill-row {
   margin-bottom: 18px;
 }
