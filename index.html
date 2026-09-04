@@ -64,7 +64,7 @@
 				<p class="hero-title" data-key="title">Aspiring Sales &amp; Trading Analyst<br><span class="accent-text">Financial Engineering</span></p>
 
 				<div class="hero-actions">
-					<a href="assets/EN_Resume_AnneMarie_ATIGNON.pdf" download="CV_AnneMarie_ATIGNON.pdf" class="btn btn-accent">
+					<a href="assets/EN_Resume_AnneMarie_ATIGNON.pdf" download="CV_AnneMarie_ATIGNON.pdf" id="cvDownloadLink" class="btn btn-accent">
 						<i class="fas fa-download"></i>
 						<span data-key="download-cv">Download my CV</span>
 					</a>
@@ -298,51 +298,26 @@
 			</div>
 
 			<div class="bento-grid">
-				<div class="bento-card col-span-2 project-card reveal">
-					<div class="project-media"><img src="assets/wiiru.png" alt="Wiiru" loading="lazy"></div>
+				<div class="bento-card col-span-4 project-card reveal">
+					<div class="project-media project-media-icon"><i class="fas fa-chart-line"></i></div>
 					<div class="project-body">
-						<h3 data-key="project1-title">Wiiru — Web app design</h3>
-						<p data-key="project1-desc">UI/UX design &amp; logo</p>
-					</div>
-				</div>
-
-				<div class="bento-card col-span-2 project-card reveal">
-					<div class="project-media"><img src="assets/nududu.png" alt="Nududu" loading="lazy"></div>
-					<div class="project-body">
-						<h3 data-key="project2-title">Nududu — Website &amp; chatbot</h3>
-						<p data-key="project2-desc">Graphic design &amp; logo</p>
-					</div>
-				</div>
-
-				<div class="bento-card project-card reveal">
-					<div class="project-media"><img src="assets/ASE.svg" alt="African School of Economics" loading="lazy"></div>
-					<div class="project-body">
-						<h3 data-key="project3-title">ASE — Visual design</h3>
-						<p data-key="project3-desc">Graphic design</p>
-					</div>
-				</div>
-
-				<div class="bento-card project-card reveal">
-					<div class="project-media"><img src="assets/tama.png" alt="Tama" loading="lazy"></div>
-					<div class="project-body">
-						<h3 data-key="project4-title">Tama — Web application</h3>
-						<p data-key="project4-desc">UI design</p>
-					</div>
-				</div>
-
-				<div class="bento-card project-card reveal">
-					<div class="project-media"><img src="assets/fruitizz.png" alt="Fruitizz" loading="lazy"></div>
-					<div class="project-body">
-						<h3 data-key="project5-title">Fruitizz — Comic</h3>
-						<p data-key="project5-desc">Illustration</p>
-					</div>
-				</div>
-
-				<div class="bento-card project-card reveal">
-					<div class="project-media"><img src="assets/aspace.png" alt="Aspace" loading="lazy"></div>
-					<div class="project-body">
-						<h3 data-key="project6-title">Aspace — Branding identity</h3>
-						<p data-key="project6-desc">Branding</p>
+						<h3 data-key="project1-title">Yield Curve &amp; Market Risk Analysis</h3>
+						<p data-key="project1-desc">Modeling the U.S. Treasury yield curve and decomposing market risk through correlation analysis — from raw FRED data to a fitted Nelson-Siegel curve and PCA-driven factor decomposition.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">Nelson-Siegel Model</span>
+							<span class="tag-chip">PCA/SVD</span>
+						</div>
+						<ul class="project-detail-list">
+							<li data-key="project1-detail1">Yield curve modeling — pulled historical U.S. Treasury yield data via the FRED API and fitted a Nelson-Siegel curve to model the term structure at different points in time, comparing fitted curves against observed yields.</li>
+							<li data-key="project1-detail2">Correlation &amp; dimensionality reduction — used PCA and SVD to decompose the covariance structure of Treasury-linked ETF returns, isolating the dominant factors driving yield movements and demonstrating how a small number of components explain most of the variance in rate changes.</li>
+							<li data-key="project1-detail3">Empirical ETF analysis — applied the same PCA/SVD framework to a real estate sector ETF (XLRE) and its top 30 holdings, extracting principal components from daily return covariance to understand the sector's underlying risk factors.</li>
+						</ul>
+						<p class="project-note" data-key="project1-note">Group project completed as part of the WorldQuant University MScFE program — equal contribution across all three components.</p>
+						<a href="assets/WQU_GWP1_cleaned.ipynb" download="WQU_Yield_Curve_Market_Risk_Analysis.ipynb" class="btn btn-ghost project-download">
+							<i class="fas fa-download"></i>
+							<span data-key="project1-download">Download the notebook</span>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -562,18 +537,13 @@
 
 				"work-eyebrow": "Selected work",
 				"projects-title": "Projects",
-				"project1-title": "Wiiru — Web app design",
-				"project1-desc": "UI/UX design &amp; logo",
-				"project2-title": "Nududu — Website &amp; chatbot",
-				"project2-desc": "Graphic design &amp; logo",
-				"project3-title": "ASE — Visual design",
-				"project3-desc": "Graphic design",
-				"project4-title": "Tama — Web application",
-				"project4-desc": "UI design",
-				"project5-title": "Fruitizz — Comic",
-				"project5-desc": "Illustration",
-				"project6-title": "Aspace — Branding identity",
-				"project6-desc": "Branding",
+				"project1-title": "Yield Curve &amp; Market Risk Analysis",
+				"project1-desc": "Modeling the U.S. Treasury yield curve and decomposing market risk through correlation analysis — from raw FRED data to a fitted Nelson-Siegel curve and PCA-driven factor decomposition.",
+				"project1-detail1": "Yield curve modeling — pulled historical U.S. Treasury yield data via the FRED API and fitted a Nelson-Siegel curve to model the term structure at different points in time, comparing fitted curves against observed yields.",
+				"project1-detail2": "Correlation &amp; dimensionality reduction — used PCA and SVD to decompose the covariance structure of Treasury-linked ETF returns, isolating the dominant factors driving yield movements and demonstrating how a small number of components explain most of the variance in rate changes.",
+				"project1-detail3": "Empirical ETF analysis — applied the same PCA/SVD framework to a real estate sector ETF (XLRE) and its top 30 holdings, extracting principal components from daily return covariance to understand the sector's underlying risk factors.",
+				"project1-note": "Group project completed as part of the WorldQuant University MScFE program — equal contribution across all three components.",
+				"project1-download": "Download the notebook",
 
 				"experience-eyebrow": "Journey",
 				"experiences-title": "Experience",
@@ -675,18 +645,13 @@
 
 				"work-eyebrow": "Projets sélectionnés",
 				"projects-title": "Projets",
-				"project1-title": "Wiiru — Design d'application web",
-				"project1-desc": "UI/UX Design &amp; Logo",
-				"project2-title": "Nududu — Site web &amp; chatbot",
-				"project2-desc": "Design graphique &amp; Logo",
-				"project3-title": "ASE — Design visuel",
-				"project3-desc": "Design graphique",
-				"project4-title": "Tama — Application web",
-				"project4-desc": "UI Design",
-				"project5-title": "Fruitizz — BD",
-				"project5-desc": "Illustration",
-				"project6-title": "Aspace — Identité de marque",
-				"project6-desc": "Branding",
+				"project1-title": "Analyse de la courbe des taux et du risque de marché",
+				"project1-desc": "Modélisation de la courbe des taux du Trésor américain et décomposition du risque de marché par analyse de corrélation — des données brutes de la FRED à une courbe de Nelson-Siegel ajustée et une décomposition factorielle par ACP.",
+				"project1-detail1": "Modélisation de la courbe des taux — récupération des données historiques des taux du Trésor américain via l'API FRED et ajustement d'une courbe de Nelson-Siegel pour modéliser la structure par terme à différents moments, en comparant les courbes ajustées aux rendements observés.",
+				"project1-detail2": "Corrélation et réduction de dimensionnalité — utilisation de l'ACP (PCA) et de la SVD pour décomposer la structure de covariance des rendements d'ETF liés au Trésor, isolant les facteurs dominants des mouvements de taux et démontrant comment un petit nombre de composantes explique l'essentiel de la variance des variations de taux.",
+				"project1-detail3": "Analyse empirique d'ETF — application du même cadre ACP/SVD à un ETF du secteur immobilier (XLRE) et à ses 30 principales positions, extrayant les composantes principales de la covariance des rendements journaliers pour comprendre les facteurs de risque sous-jacents du secteur.",
+				"project1-note": "Projet de groupe réalisé dans le cadre du MScFE de WorldQuant University — contribution égale sur les trois volets.",
+				"project1-download": "Télécharger le notebook",
 
 				"experience-eyebrow": "Parcours",
 				"experiences-title": "Expériences",
@@ -748,6 +713,17 @@
 			document.querySelectorAll('.lang-btn').forEach(btn => {
 				btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
 			});
+
+			const cvLink = document.getElementById('cvDownloadLink');
+			if (cvLink) {
+				if (lang === 'fr') {
+					cvLink.setAttribute('href', 'assets/FR_Resume_AnneMarie_ATIGNON.pdf');
+					cvLink.setAttribute('download', 'CV_AnneMarie_ATIGNON.pdf');
+				} else {
+					cvLink.setAttribute('href', 'assets/EN_Resume_AnneMarie_ATIGNON.pdf');
+					cvLink.setAttribute('download', 'CV_AnneMarie_ATIGNON.pdf');
+				}
+			}
 
 			try { localStorage.setItem('preferredLanguage', lang); } catch (e) {}
 		}
