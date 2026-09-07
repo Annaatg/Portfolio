@@ -851,6 +851,13 @@ h1, h2, h3, h4, h5 {
   margin-top: 22px;
 }
 
+.project-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
 /* ---------- Experience / Timeline ---------- */
 
 .timeline-card h3 {
