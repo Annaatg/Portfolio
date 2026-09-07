@@ -506,6 +506,30 @@
 						</a>
 					</div>
 				</div>
+
+				<div class="bento-card col-span-4 project-card reveal">
+					<div class="project-media project-media-icon"><i class="fas fa-dice"></i></div>
+					<div class="project-body">
+						<h3 data-key="project9-title">Multi-Armed Bandits for Stock Selection: 2008 vs. 2020</h3>
+						<p data-key="project9-desc">Applying reinforcement learning (UCB and Epsilon-Greedy algorithms) to pick stocks during the 2008 financial crisis and the 2020 COVID crash — treating each stock as a bandit arm and letting the algorithm learn where to allocate.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">Reinforcement Learning</span>
+							<span class="tag-chip">Multi-Armed Bandits</span>
+						</div>
+						<ul class="project-detail-list">
+							<li data-key="project9-detail1">Data collection &amp; correlation structure — gathered daily returns for 30 stocks (14 financial, 15 non-financial) during the September-October 2008 crisis, and used hierarchical clustering on the correlation matrix to visualize how stocks grouped together under stress.</li>
+							<li data-key="project9-detail2">UCB (Upper Confidence Bound) algorithm — implemented UCB from scratch to sequentially select stocks, balancing exploitation of historically strong performers against exploration of under-tested ones, using each stock's daily return as its "reward."</li>
+							<li data-key="project9-detail3">Epsilon-Greedy algorithm — implemented a second bandit strategy for comparison, choosing the best-known stock most of the time while randomly exploring alternatives a fraction of the time.</li>
+							<li data-key="project9-detail4">Out-of-sample stress test — reran both algorithms on the same 30 stocks during the March-April 2020 COVID crash, comparing cumulative returns between UCB and Epsilon-Greedy to see which strategy adapted better to a completely different crisis.</li>
+						</ul>
+						<p class="project-note" data-key="project9-note">Group project completed as part of the WorldQuant University MScFE Stochastic Modeling module — equal contribution across all components.</p>
+						<a href="assets/WQU_SM_GWP3_Multiarmed_Bandits.ipynb" download="WQU_Multiarmed_Bandits_Stock_Selection.ipynb" class="btn btn-ghost project-download">
+							<i class="fas fa-download"></i>
+							<span data-key="project9-download">Download the notebook</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -786,6 +810,14 @@
 				"project8-detail4": "Regime-switching autoregression — extended the model to a Markov-switching AR(1) process on S&amp;P 500 returns, estimating smoothed regime probabilities over time to show how the probability of being in a high-volatility state evolves.",
 				"project8-note": "Group project completed as part of the WorldQuant University MScFE Stochastic Modeling module — equal contribution across all components.",
 				"project8-download": "Download the notebook",
+				"project9-title": "Multi-Armed Bandits for Stock Selection: 2008 vs. 2020",
+				"project9-desc": "Applying reinforcement learning (UCB and Epsilon-Greedy algorithms) to pick stocks during the 2008 financial crisis and the 2020 COVID crash — treating each stock as a bandit arm and letting the algorithm learn where to allocate.",
+				"project9-detail1": "Data collection &amp; correlation structure — gathered daily returns for 30 stocks (14 financial, 15 non-financial) during the September-October 2008 crisis, and used hierarchical clustering on the correlation matrix to visualize how stocks grouped together under stress.",
+				"project9-detail2": "UCB (Upper Confidence Bound) algorithm — implemented UCB from scratch to sequentially select stocks, balancing exploitation of historically strong performers against exploration of under-tested ones, using each stock's daily return as its \"reward.\"",
+				"project9-detail3": "Epsilon-Greedy algorithm — implemented a second bandit strategy for comparison, choosing the best-known stock most of the time while randomly exploring alternatives a fraction of the time.",
+				"project9-detail4": "Out-of-sample stress test — reran both algorithms on the same 30 stocks during the March-April 2020 COVID crash, comparing cumulative returns between UCB and Epsilon-Greedy to see which strategy adapted better to a completely different crisis.",
+				"project9-note": "Group project completed as part of the WorldQuant University MScFE Stochastic Modeling module — equal contribution across all components.",
+				"project9-download": "Download the notebook",
 
 				"experience-eyebrow": "Journey",
 				"experiences-title": "Experience",
@@ -950,6 +982,14 @@
 				"project8-detail4": "Autorégression à changement de régime — extension du modèle à un processus AR(1) à changement de régime markovien sur les rendements du S&amp;P 500, en estimant les probabilités de régime lissées dans le temps pour montrer l'évolution de la probabilité d'être dans un état de forte volatilité.",
 				"project8-note": "Projet de groupe réalisé dans le cadre du module Stochastic Modeling du MScFE de WorldQuant University — contribution égale sur l'ensemble des volets.",
 				"project8-download": "Télécharger le notebook",
+				"project9-title": "Bandits manchots pour la sélection d'actions : 2008 vs. 2020",
+				"project9-desc": "Application de l'apprentissage par renforcement (algorithmes UCB et Epsilon-Greedy) pour sélectionner des actions pendant la crise financière de 2008 et le crash du COVID en 2020 — en traitant chaque action comme un bras de bandit et en laissant l'algorithme apprendre où allouer.",
+				"project9-detail1": "Collecte de données et structure de corrélation — rassemblement des rendements journaliers de 30 actions (14 financières, 15 non financières) pendant la crise de septembre-octobre 2008, et utilisation d'un clustering hiérarchique sur la matrice de corrélation pour visualiser comment les actions se regroupaient sous la pression du marché.",
+				"project9-detail2": "Algorithme UCB (Upper Confidence Bound) — implémentation de l'UCB à partir de zéro pour sélectionner séquentiellement des actions, en équilibrant l'exploitation des valeurs historiquement performantes et l'exploration de celles moins testées, en utilisant le rendement journalier de chaque action comme sa « récompense ».",
+				"project9-detail3": "Algorithme Epsilon-Greedy — implémentation d'une seconde stratégie de bandit à des fins de comparaison, choisissant l'action la mieux connue la plupart du temps tout en explorant aléatoirement des alternatives une fraction du temps.",
+				"project9-detail4": "Test de robustesse hors échantillon — réexécution des deux algorithmes sur les mêmes 30 actions pendant le crash du COVID de mars-avril 2020, en comparant les rendements cumulés entre UCB et Epsilon-Greedy pour voir quelle stratégie s'est le mieux adaptée à une crise totalement différente.",
+				"project9-note": "Projet de groupe réalisé dans le cadre du module Stochastic Modeling du MScFE de WorldQuant University — contribution égale sur l'ensemble des volets.",
+				"project9-download": "Télécharger le notebook",
 
 				"experience-eyebrow": "Parcours",
 				"experiences-title": "Expériences",
