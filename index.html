@@ -426,6 +426,32 @@
 						</a>
 					</div>
 				</div>
+
+				<div class="bento-card col-span-4 project-card reveal">
+					<div class="project-media project-media-icon"><i class="fas fa-wave-square"></i></div>
+					<div class="project-body">
+						<h3 data-key="project6-title">Exotic Option Pricing: Stochastic Volatility &amp; Jump Diffusion</h3>
+						<p data-key="project6-desc">Pricing options under the Heston and Merton models via Monte Carlo simulation, extending to American early-exercise and barrier options — where theory meets the messiness of real option pricing.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">Monte Carlo</span>
+							<span class="tag-chip">Heston Model</span>
+							<span class="tag-chip">Options Pricing</span>
+						</div>
+						<ul class="project-detail-list">
+							<li data-key="project6-detail1">Heston model (stochastic volatility) — simulated correlated stock price and variance processes via Monte Carlo (10,000 paths) to price at-the-money European calls and puts, testing sensitivity to the correlation parameter ρ between asset returns and volatility.</li>
+							<li data-key="project6-detail2">Merton jump-diffusion model — modeled sudden price jumps (Poisson-distributed) layered on top of standard diffusion, pricing options under varying jump intensities and comparing the resulting price curves against the Heston model's smoother, volatility-driven behavior.</li>
+							<li data-key="project6-detail3">Greeks estimation — computed Delta and Gamma numerically under both models to quantify option price sensitivity to the underlying asset.</li>
+							<li data-key="project6-detail4">American options &amp; early exercise — priced an American call under the Heston model using Monte Carlo with Least Squares Regression (the Longstaff-Schwartz approach), confirming the early-exercise premium against the European price.</li>
+							<li data-key="project6-detail5">Barrier options — priced Up-and-In Call and Down-and-In Put exotic options under jump-diffusion, showing how barrier conditions can significantly discount an option relative to its vanilla European equivalent.</li>
+						</ul>
+						<p class="project-note" data-key="project6-note">Group project completed as part of the WorldQuant University MScFE Derivative Pricing module — equal contribution across all components.</p>
+						<a href="assets/WQU_GWP2_Exotic_Option_Pricing.ipynb" download="WQU_Exotic_Option_Pricing_Heston_Merton.ipynb" class="btn btn-ghost project-download">
+							<i class="fas fa-download"></i>
+							<span data-key="project6-download">Download the notebook</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -681,6 +707,15 @@
 				"project5-detail4": "Multi-step binomial trees — extended the model to a 3-step tree pricing a put option, tracing asset price evolution node by node and discounting expected payoffs back to present value.",
 				"project5-note": "Group project completed as part of the WorldQuant University MScFE Derivative Pricing module — equal contribution across all components.",
 				"project5-download": "Download the notebook",
+				"project6-title": "Exotic Option Pricing: Stochastic Volatility &amp; Jump Diffusion",
+				"project6-desc": "Pricing options under the Heston and Merton models via Monte Carlo simulation, extending to American early-exercise and barrier options — where theory meets the messiness of real option pricing.",
+				"project6-detail1": "Heston model (stochastic volatility) — simulated correlated stock price and variance processes via Monte Carlo (10,000 paths) to price at-the-money European calls and puts, testing sensitivity to the correlation parameter ρ between asset returns and volatility.",
+				"project6-detail2": "Merton jump-diffusion model — modeled sudden price jumps (Poisson-distributed) layered on top of standard diffusion, pricing options under varying jump intensities and comparing the resulting price curves against the Heston model's smoother, volatility-driven behavior.",
+				"project6-detail3": "Greeks estimation — computed Delta and Gamma numerically under both models to quantify option price sensitivity to the underlying asset.",
+				"project6-detail4": "American options &amp; early exercise — priced an American call under the Heston model using Monte Carlo with Least Squares Regression (the Longstaff-Schwartz approach), confirming the early-exercise premium against the European price.",
+				"project6-detail5": "Barrier options — priced Up-and-In Call and Down-and-In Put exotic options under jump-diffusion, showing how barrier conditions can significantly discount an option relative to its vanilla European equivalent.",
+				"project6-note": "Group project completed as part of the WorldQuant University MScFE Derivative Pricing module — equal contribution across all components.",
+				"project6-download": "Download the notebook",
 
 				"experience-eyebrow": "Journey",
 				"experiences-title": "Experience",
@@ -820,6 +855,15 @@
 				"project5-detail4": "Arbres binomiaux à plusieurs étapes — extension du modèle à un arbre à 3 étapes pour valoriser une option de vente, en retraçant l'évolution du prix de l'actif nœud par nœud et en actualisant les flux de paiement attendus à leur valeur présente.",
 				"project5-note": "Projet de groupe réalisé dans le cadre du module Derivative Pricing du MScFE de WorldQuant University — contribution égale sur l'ensemble des volets.",
 				"project5-download": "Télécharger le notebook",
+				"project6-title": "Valorisation d'options exotiques : volatilité stochastique et diffusion à sauts",
+				"project6-desc": "Valorisation d'options sous les modèles de Heston et de Merton par simulation Monte Carlo, avec extension aux options américaines à exercice anticipé et aux options à barrière — là où la théorie rencontre la complexité réelle de la valorisation d'options.",
+				"project6-detail1": "Modèle de Heston (volatilité stochastique) — simulation de processus corrélés de prix et de variance par Monte Carlo (10 000 trajectoires) pour valoriser des calls et puts européens à la monnaie, en testant la sensibilité au paramètre de corrélation ρ entre les rendements de l'actif et la volatilité.",
+				"project6-detail2": "Modèle de diffusion à sauts de Merton — modélisation de sauts de prix soudains (distribués selon Poisson) superposés à une diffusion standard, valorisation d'options sous différentes intensités de sauts et comparaison des courbes de prix obtenues avec le comportement plus lisse, piloté par la volatilité, du modèle de Heston.",
+				"project6-detail3": "Estimation des Greeks — calcul numérique du Delta et du Gamma sous les deux modèles pour quantifier la sensibilité du prix de l'option à l'actif sous-jacent.",
+				"project6-detail4": "Options américaines et exercice anticipé — valorisation d'un call américain sous le modèle de Heston par Monte Carlo avec régression par moindres carrés (approche de Longstaff-Schwartz), confirmant la prime d'exercice anticipé par rapport au prix européen.",
+				"project6-detail5": "Options à barrière — valorisation d'options exotiques Up-and-In Call et Down-and-In Put sous diffusion à sauts, montrant comment les conditions de barrière peuvent fortement décoter une option par rapport à son équivalent européen classique.",
+				"project6-note": "Projet de groupe réalisé dans le cadre du module Derivative Pricing du MScFE de WorldQuant University — contribution égale sur l'ensemble des volets.",
+				"project6-download": "Télécharger le notebook",
 
 				"experience-eyebrow": "Parcours",
 				"experiences-title": "Expériences",
