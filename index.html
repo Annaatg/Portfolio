@@ -602,6 +602,31 @@
 						</a>
 					</div>
 				</div>
+
+				<div class="bento-card col-span-4 project-card reveal">
+					<div class="project-media project-media-icon"><i class="fas fa-microchip"></i></div>
+					<div class="project-body">
+						<h3 data-key="project13-title">Deep Learning for Price Prediction: MLPs vs. GAF-CNNs</h3>
+						<p data-key="project13-desc">Comparing neural network architectures for S&amp;P 500 prediction across three data representations — testing whether converting price series into images (Gramian Angular Fields) for a CNN beats a standard neural network.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">Deep Learning</span>
+							<span class="tag-chip">CNN</span>
+							<span class="tag-chip">TensorFlow</span>
+						</div>
+						<ul class="project-detail-list">
+							<li data-key="project13-detail1">Stationarity analysis — tested S&amp;P 500 price levels for stationarity via the Augmented Dickey-Fuller test, then applied fractional differencing to find the optimal balance between removing trend and preserving memory in the series (unlike simple log returns, which achieve stationarity but discard more information).</li>
+							<li data-key="project13-detail2">MLP baseline models — trained feedforward neural networks on three representations of the same data — raw price levels, log returns, and fractionally differenced series — using lagged values as features, to test which representation is easiest for a neural network to learn from.</li>
+							<li data-key="project13-detail3">GAF-CNN models — converted each time series into Gramian Angular Field images and trained convolutional neural networks on the resulting "pictures" of price dynamics, an unconventional but increasingly popular technique for financial time series.</li>
+							<li data-key="project13-detail4">Comprehensive model comparison — benchmarked all six model/representation combinations by MSE and MAE, finding that a standard MLP trained on log returns outperformed every CNN variant, including the image-based ones — a useful reminder that architectural sophistication doesn't always beat simpler, well-chosen representations.</li>
+						</ul>
+						<p class="project-note" data-key="project13-note">Group project completed as part of the WorldQuant University MScFE Deep Learning for Finance module — equal contribution across all components.</p>
+						<a href="assets/WQU_DL_GWP1_MLP_vs_GAFCNN.ipynb" download="WQU_DL_MLP_vs_GAFCNN.ipynb" class="btn btn-ghost project-download">
+							<i class="fas fa-download"></i>
+							<span data-key="project13-download">Download the notebook</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -911,6 +936,14 @@
 				"project12-detail3": "Ensemble learning — implemented and compared three ensemble strategies (bagging, boosting, and stacking) on a classification task, evaluating each with cross-validation to see which combination method generalized best.",
 				"project12-note": "Group project completed as part of the WorldQuant University MScFE Machine Learning in Finance module — equal contribution across all components. The ensemble learning section requires an external dataset (breast_cancer_dataset.csv) not included with the notebook.",
 				"project12-download": "Download the notebook",
+				"project13-title": "Deep Learning for Price Prediction: MLPs vs. GAF-CNNs",
+				"project13-desc": "Comparing neural network architectures for S&amp;P 500 prediction across three data representations — testing whether converting price series into images (Gramian Angular Fields) for a CNN beats a standard neural network.",
+				"project13-detail1": "Stationarity analysis — tested S&amp;P 500 price levels for stationarity via the Augmented Dickey-Fuller test, then applied fractional differencing to find the optimal balance between removing trend and preserving memory in the series (unlike simple log returns, which achieve stationarity but discard more information).",
+				"project13-detail2": "MLP baseline models — trained feedforward neural networks on three representations of the same data — raw price levels, log returns, and fractionally differenced series — using lagged values as features, to test which representation is easiest for a neural network to learn from.",
+				"project13-detail3": "GAF-CNN models — converted each time series into Gramian Angular Field images and trained convolutional neural networks on the resulting \"pictures\" of price dynamics, an unconventional but increasingly popular technique for financial time series.",
+				"project13-detail4": "Comprehensive model comparison — benchmarked all six model/representation combinations by MSE and MAE, finding that a standard MLP trained on log returns outperformed every CNN variant, including the image-based ones — a useful reminder that architectural sophistication doesn't always beat simpler, well-chosen representations.",
+				"project13-note": "Group project completed as part of the WorldQuant University MScFE Deep Learning for Finance module — equal contribution across all components.",
+				"project13-download": "Download the notebook",
 
 				"experience-eyebrow": "Journey",
 				"experiences-title": "Experience",
@@ -1104,6 +1137,14 @@
 				"project12-detail3": "Méthodes d'ensemble — implémentation et comparaison de trois stratégies d'ensemble (bagging, boosting et stacking) sur une tâche de classification, en évaluant chacune par validation croisée pour voir quelle méthode de combinaison généralisait le mieux.",
 				"project12-note": "Projet de groupe réalisé dans le cadre du module Machine Learning in Finance du MScFE de WorldQuant University — contribution égale sur l'ensemble des volets. La partie méthodes d'ensemble nécessite un jeu de données externe (breast_cancer_dataset.csv) non fourni avec le notebook.",
 				"project12-download": "Télécharger le notebook",
+				"project13-title": "Deep learning pour la prédiction de prix : MLP vs. GAF-CNN",
+				"project13-desc": "Comparaison d'architectures de réseaux de neurones pour la prédiction du S&amp;P 500 selon trois représentations de données — en testant si convertir des séries de prix en images (champs angulaires de Gram) pour un CNN surpasse un réseau de neurones standard.",
+				"project13-detail1": "Analyse de stationnarité — test de la stationnarité des niveaux de prix du S&amp;P 500 via le test de Dickey-Fuller augmenté, puis application d'une différenciation fractionnaire pour trouver le meilleur équilibre entre suppression de la tendance et préservation de la mémoire de la série (contrairement aux simples rendements logarithmiques, qui atteignent la stationnarité mais perdent davantage d'information).",
+				"project13-detail2": "Modèles MLP de référence — entraînement de réseaux de neurones feedforward sur trois représentations des mêmes données — niveaux de prix bruts, rendements logarithmiques et série différenciée fractionnairement — en utilisant des valeurs retardées comme variables, pour tester quelle représentation est la plus facile à apprendre pour un réseau de neurones.",
+				"project13-detail3": "Modèles GAF-CNN — conversion de chaque série temporelle en images de champs angulaires de Gram et entraînement de réseaux de neurones convolutifs sur les « images » résultantes de la dynamique des prix, une technique peu conventionnelle mais de plus en plus populaire pour les séries temporelles financières.",
+				"project13-detail4": "Comparaison exhaustive des modèles — évaluation des six combinaisons modèle/représentation par MSE et MAE, montrant qu'un MLP standard entraîné sur les rendements logarithmiques surpassait toutes les variantes CNN, y compris celles basées sur des images — un rappel utile que la sophistication architecturale ne l'emporte pas toujours sur des représentations plus simples et bien choisies.",
+				"project13-note": "Projet de groupe réalisé dans le cadre du module Deep Learning for Finance du MScFE de WorldQuant University — contribution égale sur l'ensemble des volets.",
+				"project13-download": "Télécharger le notebook",
 
 				"experience-eyebrow": "Parcours",
 				"experiences-title": "Expériences",
