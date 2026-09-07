@@ -452,6 +452,36 @@
 						</a>
 					</div>
 				</div>
+
+				<div class="bento-card col-span-4 project-card reveal">
+					<div class="project-media project-media-icon"><i class="fas fa-sliders"></i></div>
+					<div class="project-body">
+						<h3 data-key="project7-title">Calibrating Stochastic Models to Real Market Data</h3>
+						<p data-key="project7-desc">Fitting the Heston, Bates, and CIR models to real option and interest-rate data — from stochastic volatility calibration via Fourier pricing to simulating a full year of interest-rate paths.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">Heston Model</span>
+							<span class="tag-chip">Monte Carlo</span>
+							<span class="tag-chip">Calibration</span>
+						</div>
+						<ul class="project-detail-list">
+							<li data-key="project7-detail1">Heston model calibration — calibrated the Heston stochastic volatility model to real 15-day equity option prices using Fourier-based pricing (the Lewis/Carr-Madan approach) and global optimization (differential evolution), converting puts to synthetic calls via put-call parity and verifying the Feller condition on the fitted parameters.</li>
+							<li data-key="project7-detail2">Bates model (Heston + jumps) — extended the calibration to 60-day options using the Bates model, which layers a jump-diffusion component on top of stochastic volatility, to test whether adding jumps improves the fit to market prices.</li>
+							<li data-key="project7-detail3">CIR interest rate model — calibrated the Cox-Ingersoll-Ross model to the Euribor term structure (7 to 360 days), then simulated 100,000 one-year interest rate paths to estimate the expected 12-month Euribor rate and its 5th-95th percentile confidence range.</li>
+						</ul>
+						<p class="project-note" data-key="project7-note">Group project completed as part of the WorldQuant University MScFE Stochastic Modeling module — equal contribution across all components.</p>
+						<div class="project-downloads">
+							<a href="assets/WQU_SM_GWP1_Calibration.ipynb" download="WQU_Calibrating_Stochastic_Models.ipynb" class="btn btn-ghost">
+								<i class="fas fa-download"></i>
+								<span data-key="project7-download">Download the notebook</span>
+							</a>
+							<a href="assets/MScFE622_Option_data.xlsx" download="MScFE_622_Stochastic_Modeling_GWP1_Option_data.xlsx" class="btn btn-ghost">
+								<i class="fas fa-download"></i>
+								<span data-key="project7-download-dataset">Download the dataset</span>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -716,6 +746,14 @@
 				"project6-detail5": "Barrier options — priced Up-and-In Call and Down-and-In Put exotic options under jump-diffusion, showing how barrier conditions can significantly discount an option relative to its vanilla European equivalent.",
 				"project6-note": "Group project completed as part of the WorldQuant University MScFE Derivative Pricing module — equal contribution across all components.",
 				"project6-download": "Download the notebook",
+				"project7-title": "Calibrating Stochastic Models to Real Market Data",
+				"project7-desc": "Fitting the Heston, Bates, and CIR models to real option and interest-rate data — from stochastic volatility calibration via Fourier pricing to simulating a full year of interest-rate paths.",
+				"project7-detail1": "Heston model calibration — calibrated the Heston stochastic volatility model to real 15-day equity option prices using Fourier-based pricing (the Lewis/Carr-Madan approach) and global optimization (differential evolution), converting puts to synthetic calls via put-call parity and verifying the Feller condition on the fitted parameters.",
+				"project7-detail2": "Bates model (Heston + jumps) — extended the calibration to 60-day options using the Bates model, which layers a jump-diffusion component on top of stochastic volatility, to test whether adding jumps improves the fit to market prices.",
+				"project7-detail3": "CIR interest rate model — calibrated the Cox-Ingersoll-Ross model to the Euribor term structure (7 to 360 days), then simulated 100,000 one-year interest rate paths to estimate the expected 12-month Euribor rate and its 5th-95th percentile confidence range.",
+				"project7-note": "Group project completed as part of the WorldQuant University MScFE Stochastic Modeling module — equal contribution across all components.",
+				"project7-download": "Download the notebook",
+				"project7-download-dataset": "Download the dataset",
 
 				"experience-eyebrow": "Journey",
 				"experiences-title": "Experience",
@@ -864,6 +902,14 @@
 				"project6-detail5": "Options à barrière — valorisation d'options exotiques Up-and-In Call et Down-and-In Put sous diffusion à sauts, montrant comment les conditions de barrière peuvent fortement décoter une option par rapport à son équivalent européen classique.",
 				"project6-note": "Projet de groupe réalisé dans le cadre du module Derivative Pricing du MScFE de WorldQuant University — contribution égale sur l'ensemble des volets.",
 				"project6-download": "Télécharger le notebook",
+				"project7-title": "Calibration de modèles stochastiques sur des données de marché réelles",
+				"project7-desc": "Ajustement des modèles de Heston, Bates et CIR sur des données réelles d'options et de taux d'intérêt — de la calibration de la volatilité stochastique par valorisation de Fourier à la simulation d'une année complète de trajectoires de taux d'intérêt.",
+				"project7-detail1": "Calibration du modèle de Heston — calibration du modèle de volatilité stochastique de Heston sur des prix réels d'options actions à 15 jours par valorisation basée sur Fourier (approche de Lewis/Carr-Madan) et optimisation globale (évolution différentielle), en convertissant les puts en calls synthétiques via la parité call-put et en vérifiant la condition de Feller sur les paramètres ajustés.",
+				"project7-detail2": "Modèle de Bates (Heston + sauts) — extension de la calibration à des options à 60 jours à l'aide du modèle de Bates, qui superpose une composante de diffusion à sauts à la volatilité stochastique, pour tester si l'ajout de sauts améliore l'ajustement aux prix de marché.",
+				"project7-detail3": "Modèle de taux d'intérêt CIR — calibration du modèle de Cox-Ingersoll-Ross sur la structure par terme de l'Euribor (7 à 360 jours), puis simulation de 100 000 trajectoires de taux d'intérêt sur un an pour estimer le taux Euribor à 12 mois attendu et son intervalle de confiance au 5e-95e centile.",
+				"project7-note": "Projet de groupe réalisé dans le cadre du module Stochastic Modeling du MScFE de WorldQuant University — contribution égale sur l'ensemble des volets.",
+				"project7-download": "Télécharger le notebook",
+				"project7-download-dataset": "Télécharger le jeu de données",
 
 				"experience-eyebrow": "Parcours",
 				"experiences-title": "Expériences",
