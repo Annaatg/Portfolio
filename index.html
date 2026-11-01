@@ -651,6 +651,33 @@
 						</a>
 					</div>
 				</div>
+
+				<div class="bento-card col-span-4 project-card reveal">
+					<div class="project-media project-media-icon"><i class="fas fa-triangle-exclamation"></i></div>
+					<div class="project-body">
+						<h3 data-key="project15-title">Data Leakage &amp; Walk-Forward Backtesting of Deep Learning Trading Models</h3>
+						<p data-key="project15-desc">Shows how data leakage inflates the apparent performance of MLP, LSTM and CNN-GAF models on SPY, then re-tests them with leak-free walk-forward backtesting.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">PyTorch</span>
+							<span class="tag-chip">NumPy</span>
+							<span class="tag-chip">Backtesting</span>
+						</div>
+						<ul class="project-detail-list">
+							<li data-key="project15-detail1">Built a 5-day-ahead direction classifier on 2,000 days of SPY returns (10 lagged returns as features, chronological 70/30 split).</li>
+							<li data-key="project15-detail2">Leakage demonstration: labels built from a global return quantile and features normalized on the full sample; coded a check counting training samples whose labels overlap the test period.</li>
+							<li data-key="project15-detail3">Implemented an MLP, an LSTM (NumPy, gates and BPTT) and a CNN on Gramian Angular Field images of return windows.</li>
+							<li data-key="project15-detail4">Strategy backtest with long/short signals, 5-day non-overlapping trades and 5 bps costs; metrics: total/annualized return, volatility, Sharpe, max drawdown, hit rate versus buy-and-hold. On the leaky setup the MLP and CNN lost money while buy-and-hold had a Sharpe of 1.31.</li>
+							<li data-key="project15-detail5">Walk-forward validation (500/500 and 500/100 windows) with scaling and labels computed inside each fold; retrained MLP and CNN-GAF in PyTorch per fold. Leak-free accuracy of about 59-60% mostly reflected majority-class prediction (class-1 recall of 1-3%).</li>
+							<li data-key="project15-detail6">Takeaway: headline accuracy hides weak predictive power; only leak-free walk-forward tests with trading metrics give an honest picture.</li>
+						</ul>
+						<p class="project-note" data-key="project15-note">Group project — equal contribution across all components. Requires an external dataset (SPY.csv) not included with the notebook.</p>
+						<a href="assets/WQU_DL_GWP3_Leakage_WalkForward.ipynb" download="WQU_DL_Leakage_WalkForward_Backtest.ipynb" class="btn btn-ghost project-download">
+							<i class="fas fa-download"></i>
+							<span data-key="project15-download">Download the notebook</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -975,6 +1002,16 @@
 				"project14-detail3": "Multi-output LSTM model — extended the approach to a single multi-output LSTM predicting all five ETFs jointly, testing whether modeling cross-asset relationships in one network improves on training independent models per asset.",
 				"project14-note": "Group project completed as part of the WorldQuant University MScFE Deep Learning for Finance module — equal contribution across all components.",
 				"project14-download": "Download the notebook",
+				"project15-title": "Data Leakage &amp; Walk-Forward Backtesting of Deep Learning Trading Models",
+				"project15-desc": "Shows how data leakage inflates the apparent performance of MLP, LSTM and CNN-GAF models on SPY, then re-tests them with leak-free walk-forward backtesting.",
+				"project15-detail1": "Built a 5-day-ahead direction classifier on 2,000 days of SPY returns (10 lagged returns as features, chronological 70/30 split).",
+				"project15-detail2": "Leakage demonstration: labels built from a global return quantile and features normalized on the full sample; coded a check counting training samples whose labels overlap the test period.",
+				"project15-detail3": "Implemented an MLP, an LSTM (NumPy, gates and BPTT) and a CNN on Gramian Angular Field images of return windows.",
+				"project15-detail4": "Strategy backtest with long/short signals, 5-day non-overlapping trades and 5 bps costs; metrics: total/annualized return, volatility, Sharpe, max drawdown, hit rate versus buy-and-hold. On the leaky setup the MLP and CNN lost money while buy-and-hold had a Sharpe of 1.31.",
+				"project15-detail5": "Walk-forward validation (500/500 and 500/100 windows) with scaling and labels computed inside each fold; retrained MLP and CNN-GAF in PyTorch per fold. Leak-free accuracy of about 59-60% mostly reflected majority-class prediction (class-1 recall of 1-3%).",
+				"project15-detail6": "Takeaway: headline accuracy hides weak predictive power; only leak-free walk-forward tests with trading metrics give an honest picture.",
+				"project15-note": "Group project — equal contribution across all components. Requires an external dataset (SPY.csv) not included with the notebook.",
+				"project15-download": "Download the notebook",
 
 				"experience-eyebrow": "Journey",
 				"experiences-title": "Experience",
@@ -1183,6 +1220,16 @@
 				"project14-detail3": "Modèle LSTM multi-sorties — extension de l'approche à un seul modèle LSTM multi-sorties prédisant conjointement les cinq ETF, pour tester si la modélisation des relations inter-actifs dans un seul réseau améliore les résultats par rapport à l'entraînement de modèles indépendants par actif.",
 				"project14-note": "Projet de groupe réalisé dans le cadre du module Deep Learning for Finance du MScFE de WorldQuant University — contribution égale sur l'ensemble des volets.",
 				"project14-download": "Télécharger le notebook",
+				"project15-title": "Fuite de données et backtest walk-forward de modèles de trading par deep learning",
+				"project15-desc": "Montre comment la fuite de données gonfle la performance apparente des modèles MLP, LSTM et CNN-GAF sur le SPY, puis les retteste avec un backtest walk-forward exempt de fuite.",
+				"project15-detail1": "Construction d'un classifieur de direction à 5 jours sur 2 000 jours de rendements du SPY (10 rendements retardés comme variables, découpage chronologique 70/30).",
+				"project15-detail2": "Démonstration de la fuite de données : labels construits à partir d'un quantile de rendement global et variables normalisées sur l'échantillon complet ; code d'une vérification comptant les échantillons d'entraînement dont les labels chevauchent la période de test.",
+				"project15-detail3": "Implémentation d'un MLP, d'un LSTM (NumPy, portes et BPTT) et d'un CNN sur des images de champs angulaires de Gram des fenêtres de rendement.",
+				"project15-detail4": "Backtest de la stratégie avec signaux long/short, trades non chevauchants sur 5 jours et coûts de 5 points de base ; métriques : rendement total/annualisé, volatilité, Sharpe, drawdown maximal, taux de réussite face à l'achat-conservation. Sur le dispositif avec fuite, le MLP et le CNN ont perdu de l'argent alors que l'achat-conservation affichait un Sharpe de 1,31.",
+				"project15-detail5": "Validation walk-forward (fenêtres 500/500 et 500/100) avec normalisation et labels calculés à l'intérieur de chaque pli ; MLP et CNN-GAF réentraînés en PyTorch à chaque pli. La précision exempte de fuite, d'environ 59-60 %, reflétait surtout la prédiction de la classe majoritaire (rappel de la classe 1 de 1-3 %).",
+				"project15-detail6": "Enseignement : la précision affichée masque une faible capacité prédictive ; seuls des tests walk-forward exempts de fuite, assortis de métriques de trading, donnent une image honnête.",
+				"project15-note": "Projet de groupe — contribution égale sur l'ensemble des volets. Nécessite un jeu de données externe (SPY.csv) non fourni avec le notebook.",
+				"project15-download": "Télécharger le notebook",
 
 				"experience-eyebrow": "Parcours",
 				"experiences-title": "Expériences",
