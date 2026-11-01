@@ -678,6 +678,33 @@
 						</a>
 					</div>
 				</div>
+
+				<div class="bento-card col-span-4 project-card reveal">
+					<div class="project-media project-media-icon"><i class="fas fa-scale-balanced"></i></div>
+					<div class="project-body">
+						<h3 data-key="project16-title">Mean-Variance Portfolio Optimization, Factor Analysis &amp; Monte Carlo</h3>
+						<p data-key="project16-desc">Builds and tests constrained mean-variance portfolios on 10 US equities, then runs a Fama-French 5-factor regression and checks the optimizer against Monte Carlo simulation.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">SciPy</span>
+							<span class="tag-chip">Statsmodels</span>
+							<span class="tag-chip">Fama-French</span>
+						</div>
+						<ul class="project-detail-list">
+							<li data-key="project16-detail1">Downloaded two years of weekly prices (July 2023 - June 2025) for 10 large-cap US stocks across tech, banks, pharma, energy and retail.</li>
+							<li data-key="project16-detail2">Solved the Global Minimum Variance and Maximum Sharpe portfolios with SciPy (SLSQP, no short-selling); the Max Sharpe portfolio reached about 41.7% annualized return at 19% volatility (in-sample Sharpe of about 2.04).</li>
+							<li data-key="project16-detail3">Added a 15% maximum weight per asset and plotted the efficient frontier with and without the cap.</li>
+							<li data-key="project16-detail4">Out-of-sample test (July-September 2025) against a benchmark, reporting total return, Sharpe, max drawdown and win rate. Both portfolios beat the benchmark (18.8% and 16.4% vs 12.6%); the constrained portfolio had the better Sharpe ratio (5.75 vs 5.61) with lower volatility.</li>
+							<li data-key="project16-detail5">Fama-French 5-factor regression (OLS and robust Huber) of the portfolio's excess returns: positive significant alpha, no significant factor exposure, low explanatory power (R² of about 0.09).</li>
+							<li data-key="project16-detail6">Monte Carlo validation: an optimizer class comparing SLSQP with 50,000 random-portfolio simulations, with and without a weight cap. Variance matched within 0.15%, converging to within 0.04% at 100,000 simulations.</li>
+						</ul>
+						<p class="project-note" data-key="project16-note">Group project — equal contribution across all components.</p>
+						<a href="assets/WQU_PM_GWP1_Portfolio_Optimization.ipynb" download="WQU_Mean_Variance_Portfolio_Optimization.ipynb" class="btn btn-ghost project-download">
+							<i class="fas fa-download"></i>
+							<span data-key="project16-download">Download the notebook</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -1012,6 +1039,16 @@
 				"project15-detail6": "Takeaway: headline accuracy hides weak predictive power; only leak-free walk-forward tests with trading metrics give an honest picture.",
 				"project15-note": "Group project — equal contribution across all components. Requires an external dataset (SPY.csv) not included with the notebook.",
 				"project15-download": "Download the notebook",
+				"project16-title": "Mean-Variance Portfolio Optimization, Factor Analysis &amp; Monte Carlo",
+				"project16-desc": "Builds and tests constrained mean-variance portfolios on 10 US equities, then runs a Fama-French 5-factor regression and checks the optimizer against Monte Carlo simulation.",
+				"project16-detail1": "Downloaded two years of weekly prices (July 2023 - June 2025) for 10 large-cap US stocks across tech, banks, pharma, energy and retail.",
+				"project16-detail2": "Solved the Global Minimum Variance and Maximum Sharpe portfolios with SciPy (SLSQP, no short-selling); the Max Sharpe portfolio reached about 41.7% annualized return at 19% volatility (in-sample Sharpe of about 2.04).",
+				"project16-detail3": "Added a 15% maximum weight per asset and plotted the efficient frontier with and without the cap.",
+				"project16-detail4": "Out-of-sample test (July-September 2025) against a benchmark, reporting total return, Sharpe, max drawdown and win rate. Both portfolios beat the benchmark (18.8% and 16.4% vs 12.6%); the constrained portfolio had the better Sharpe ratio (5.75 vs 5.61) with lower volatility.",
+				"project16-detail5": "Fama-French 5-factor regression (OLS and robust Huber) of the portfolio's excess returns: positive significant alpha, no significant factor exposure, low explanatory power (R² of about 0.09).",
+				"project16-detail6": "Monte Carlo validation: an optimizer class comparing SLSQP with 50,000 random-portfolio simulations, with and without a weight cap. Variance matched within 0.15%, converging to within 0.04% at 100,000 simulations.",
+				"project16-note": "Group project — equal contribution across all components.",
+				"project16-download": "Download the notebook",
 
 				"experience-eyebrow": "Journey",
 				"experiences-title": "Experience",
@@ -1230,6 +1267,16 @@
 				"project15-detail6": "Enseignement : la précision affichée masque une faible capacité prédictive ; seuls des tests walk-forward exempts de fuite, assortis de métriques de trading, donnent une image honnête.",
 				"project15-note": "Projet de groupe — contribution égale sur l'ensemble des volets. Nécessite un jeu de données externe (SPY.csv) non fourni avec le notebook.",
 				"project15-download": "Télécharger le notebook",
+				"project16-title": "Optimisation de portefeuille moyenne-variance, analyse factorielle et Monte Carlo",
+				"project16-desc": "Construit et teste des portefeuilles moyenne-variance contraints sur 10 actions américaines, puis effectue une régression à 5 facteurs de Fama-French et vérifie l'optimiseur par simulation Monte Carlo.",
+				"project16-detail1": "Téléchargement de deux années de prix hebdomadaires (juillet 2023 - juin 2025) pour 10 grandes capitalisations américaines réparties entre tech, banques, pharma, énergie et distribution.",
+				"project16-detail2": "Résolution des portefeuilles à variance minimale globale et à Sharpe maximal avec SciPy (SLSQP, sans vente à découvert) ; le portefeuille à Sharpe maximal a atteint environ 41,7 % de rendement annualisé pour 19 % de volatilité (Sharpe in-sample d'environ 2,04).",
+				"project16-detail3": "Ajout d'un poids maximal de 15 % par actif et tracé de la frontière efficiente avec et sans ce plafond.",
+				"project16-detail4": "Test hors échantillon (juillet-septembre 2025) contre un benchmark, avec rendement total, Sharpe, drawdown maximal et taux de réussite. Les deux portefeuilles ont battu le benchmark (18,8 % et 16,4 % contre 12,6 %) ; le portefeuille contraint affichait un meilleur ratio de Sharpe (5,75 contre 5,61) avec une volatilité plus faible.",
+				"project16-detail5": "Régression à 5 facteurs de Fama-French (MCO et Huber robuste) des rendements excédentaires du portefeuille : alpha positif significatif, aucune exposition factorielle significative, faible pouvoir explicatif (R² d'environ 0,09).",
+				"project16-detail6": "Validation Monte Carlo : une classe d'optimiseur comparant SLSQP à 50 000 simulations de portefeuilles aléatoires, avec et sans plafond de poids. La variance correspondait à 0,15 % près, convergeant à 0,04 % près avec 100 000 simulations.",
+				"project16-note": "Projet de groupe — contribution égale sur l'ensemble des volets.",
+				"project16-download": "Télécharger le notebook",
 
 				"experience-eyebrow": "Parcours",
 				"experiences-title": "Expériences",
