@@ -806,6 +806,32 @@
 						</a>
 					</div>
 				</div>
+
+				<div class="bento-card col-span-4 project-card reveal">
+					<div class="project-media project-media-icon"><i class="fas fa-circle-nodes"></i></div>
+					<div class="project-body">
+						<h3 data-key="project21-title">Forecasting Oil Price Regimes: HMM Discretization &amp; Bayesian Networks</h3>
+						<p data-key="project21-desc">Builds a leakage-aware pipeline to forecast next-month oil-price regimes, combining HMM state discretization of 13 market and macro variables with a Bayesian network learned by hill-climbing search.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">Bayesian Network</span>
+							<span class="tag-chip">HMM</span>
+							<span class="tag-chip">pgmpy</span>
+						</div>
+						<ul class="project-detail-list">
+							<li data-key="project21-detail1">Assembled monthly data from 2000 to 2026 on oil, equities, the USD, the VIX, energy ETFs and US macro series (Yahoo Finance, FRED), with a chronological 80/10/10 train/validation/test split.</li>
+							<li data-key="project21-detail2">Trained a 3-state Hidden Markov Model for each of the 13 variables to turn them into bear, stagnant and bull regimes, with the state labelling derived from the training set only.</li>
+							<li data-key="project21-detail3">Defined an expert-drafted causal graph and refined it with hill-climbing structure search (maximum 3 parents per node), comparing K2, BIC and BDeu scoring on a one-step-ahead forecast target.</li>
+							<li data-key="project21-detail4">Added a guardrail that flags implausibly good validation scores; the final near-perfect accuracy triggered it and is treated as a likely data-leakage artifact, not a real result. The trading simulation showed no gain over buy-and-hold, consistent with that reading.</li>
+							<li data-key="project21-detail5">Takeaway: a model that looks perfect usually has a leak, so the next step is to decode regimes causally and re-test.</li>
+						</ul>
+						<p class="project-note" data-key="project21-note">Group project — equal contribution across all components.</p>
+						<a href="assets/WQU_RM_GWP3_HMM_Bayesian_Regime_Forecast.ipynb" download="WQU_Forecasting_Oil_Regimes_HMM_Bayesian.ipynb" class="btn btn-ghost project-download">
+							<i class="fas fa-download"></i>
+							<span data-key="project21-download">Download the notebook</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -1183,6 +1209,15 @@
 				"project20-detail4": "Used hill-climbing structure learning (pgmpy) to learn dependencies between the regime and macro variables; this step uses simulated placeholder variables and demonstrates the method only, not an empirical finding.",
 				"project20-note": "Group project — equal contribution across all components.",
 				"project20-download": "Download the notebook",
+				"project21-title": "Forecasting Oil Price Regimes: HMM Discretization &amp; Bayesian Networks",
+				"project21-desc": "Builds a leakage-aware pipeline to forecast next-month oil-price regimes, combining HMM state discretization of 13 market and macro variables with a Bayesian network learned by hill-climbing search.",
+				"project21-detail1": "Assembled monthly data from 2000 to 2026 on oil, equities, the USD, the VIX, energy ETFs and US macro series (Yahoo Finance, FRED), with a chronological 80/10/10 train/validation/test split.",
+				"project21-detail2": "Trained a 3-state Hidden Markov Model for each of the 13 variables to turn them into bear, stagnant and bull regimes, with the state labelling derived from the training set only.",
+				"project21-detail3": "Defined an expert-drafted causal graph and refined it with hill-climbing structure search (maximum 3 parents per node), comparing K2, BIC and BDeu scoring on a one-step-ahead forecast target.",
+				"project21-detail4": "Added a guardrail that flags implausibly good validation scores; the final near-perfect accuracy triggered it and is treated as a likely data-leakage artifact, not a real result. The trading simulation showed no gain over buy-and-hold, consistent with that reading.",
+				"project21-detail5": "Takeaway: a model that looks perfect usually has a leak, so the next step is to decode regimes causally and re-test.",
+				"project21-note": "Group project — equal contribution across all components.",
+				"project21-download": "Download the notebook",
 
 				"experience-eyebrow": "Journey",
 				"experiences-title": "Experience",
@@ -1444,6 +1479,15 @@
 				"project20-detail4": "Utilisation de l'apprentissage de structure par montée de colline (pgmpy) pour apprendre les dépendances entre le régime et des variables macroéconomiques ; cette étape utilise des variables simulées et ne fait que démontrer la méthode, sans constituer un résultat empirique.",
 				"project20-note": "Projet de groupe — contribution égale sur l'ensemble des volets.",
 				"project20-download": "Télécharger le notebook",
+				"project21-title": "Prévision des régimes du prix du pétrole : discrétisation par HMM et réseaux bayésiens",
+				"project21-desc": "Construit un pipeline attentif aux fuites de données pour prévoir les régimes du prix du pétrole du mois suivant, combinant une discrétisation par états HMM de 13 variables de marché et macroéconomiques avec un réseau bayésien appris par recherche par montée de colline.",
+				"project21-detail1": "Assemblage de données mensuelles de 2000 à 2026 sur le pétrole, les actions, le dollar américain, le VIX, les ETF énergétiques et des séries macroéconomiques américaines (Yahoo Finance, FRED), avec un découpage chronologique 80/10/10 entraînement/validation/test.",
+				"project21-detail2": "Entraînement d'un modèle de Markov caché à 3 états pour chacune des 13 variables afin de les convertir en régimes baissier, stagnant et haussier, l'étiquetage des états étant dérivé uniquement de l'ensemble d'entraînement.",
+				"project21-detail3": "Définition d'un graphe causal élaboré par des experts, affiné par une recherche de structure par montée de colline (maximum 3 parents par nœud), en comparant les scores K2, BIC et BDeu sur un objectif de prévision à un pas.",
+				"project21-detail4": "Ajout d'un garde-fou signalant des scores de validation anormalement bons ; la précision quasi parfaite obtenue en finale a déclenché ce garde-fou et est considérée comme un probable artefact de fuite de données, et non un résultat réel. La simulation de trading n'a montré aucun gain par rapport à l'achat-conservation, ce qui conforte cette lecture.",
+				"project21-detail5": "Enseignement : un modèle qui semble parfait cache généralement une fuite, d'où la nécessité, à l'étape suivante, de décoder les régimes de façon causale et de retester.",
+				"project21-note": "Projet de groupe — contribution égale sur l'ensemble des volets.",
+				"project21-download": "Télécharger le notebook",
 
 				"experience-eyebrow": "Parcours",
 				"experiences-title": "Expériences",
