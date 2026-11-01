@@ -705,6 +705,31 @@
 						</a>
 					</div>
 				</div>
+
+				<div class="bento-card col-span-4 project-card reveal">
+					<div class="project-media project-media-icon"><i class="fas fa-chess"></i></div>
+					<div class="project-body">
+						<h3 data-key="project17-title">Portfolio Strategies: MVO vs 1/N, Black-Litterman &amp; Kelly Criterion</h3>
+						<p data-key="project17-desc">Compares portfolio construction methods on US equities: constrained mean-variance optimization, a 5,000-run simulation against equal weighting, Black-Litterman with investor views, and Kelly-criterion sizing.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">SciPy</span>
+							<span class="tag-chip">Black-Litterman</span>
+							<span class="tag-chip">Monte Carlo</span>
+						</div>
+						<ul class="project-detail-list">
+							<li data-key="project17-detail1">Optimized a 7-stock portfolio (AAPL, NVDA, TSLA, XOM, REGN, LLY, JPM) on weekly data for July 2023 - June 2025, comparing long-only, long-only with a 20% cap, and unconstrained short-selling; the 20% cap gave the best Sharpe ratio (0.131 weekly vs 0.099 and 0.098).</li>
+							<li data-key="project17-detail2">Simulated 5,000 random 5-stock portfolios from a 20-stock universe (2-year estimation, 1-year out-of-sample test). Equal weighting beat minimum-variance optimization on average (14.0% vs 11.6%, statistically significant by paired t-test); the optimized portfolio won in down markets (75% win rate) and lost in bull markets, behaving as a defensive strategy.</li>
+							<li data-key="project17-detail3">Black-Litterman: equilibrium returns from market-cap weights and a risk-aversion estimate, blended with 7 investor views (including relative views NVDA vs AAPL and REGN vs LLY) to get posterior returns and weights, compared with a market-weighted portfolio in and out of sample.</li>
+							<li data-key="project17-detail4">Kelly criterion: implemented full, half and double Kelly sizing, measuring Sharpe, volatility and drawdowns on train and test periods, and showing how leverage amplifies risk without improving the Sharpe ratio.</li>
+						</ul>
+						<p class="project-note" data-key="project17-note">Group project — equal contribution across all components.</p>
+						<a href="assets/WQU_PM_GWP2_MVO_BlackLitterman_Kelly.ipynb" download="WQU_Portfolio_Strategies_MVO_BlackLitterman_Kelly.ipynb" class="btn btn-ghost project-download">
+							<i class="fas fa-download"></i>
+							<span data-key="project17-download">Download the notebook</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -1049,6 +1074,14 @@
 				"project16-detail6": "Monte Carlo validation: an optimizer class comparing SLSQP with 50,000 random-portfolio simulations, with and without a weight cap. Variance matched within 0.15%, converging to within 0.04% at 100,000 simulations.",
 				"project16-note": "Group project — equal contribution across all components.",
 				"project16-download": "Download the notebook",
+				"project17-title": "Portfolio Strategies: MVO vs 1/N, Black-Litterman &amp; Kelly Criterion",
+				"project17-desc": "Compares portfolio construction methods on US equities: constrained mean-variance optimization, a 5,000-run simulation against equal weighting, Black-Litterman with investor views, and Kelly-criterion sizing.",
+				"project17-detail1": "Optimized a 7-stock portfolio (AAPL, NVDA, TSLA, XOM, REGN, LLY, JPM) on weekly data for July 2023 - June 2025, comparing long-only, long-only with a 20% cap, and unconstrained short-selling; the 20% cap gave the best Sharpe ratio (0.131 weekly vs 0.099 and 0.098).",
+				"project17-detail2": "Simulated 5,000 random 5-stock portfolios from a 20-stock universe (2-year estimation, 1-year out-of-sample test). Equal weighting beat minimum-variance optimization on average (14.0% vs 11.6%, statistically significant by paired t-test); the optimized portfolio won in down markets (75% win rate) and lost in bull markets, behaving as a defensive strategy.",
+				"project17-detail3": "Black-Litterman: equilibrium returns from market-cap weights and a risk-aversion estimate, blended with 7 investor views (including relative views NVDA vs AAPL and REGN vs LLY) to get posterior returns and weights, compared with a market-weighted portfolio in and out of sample.",
+				"project17-detail4": "Kelly criterion: implemented full, half and double Kelly sizing, measuring Sharpe, volatility and drawdowns on train and test periods, and showing how leverage amplifies risk without improving the Sharpe ratio.",
+				"project17-note": "Group project — equal contribution across all components.",
+				"project17-download": "Download the notebook",
 
 				"experience-eyebrow": "Journey",
 				"experiences-title": "Experience",
@@ -1277,6 +1310,14 @@
 				"project16-detail6": "Validation Monte Carlo : une classe d'optimiseur comparant SLSQP à 50 000 simulations de portefeuilles aléatoires, avec et sans plafond de poids. La variance correspondait à 0,15 % près, convergeant à 0,04 % près avec 100 000 simulations.",
 				"project16-note": "Projet de groupe — contribution égale sur l'ensemble des volets.",
 				"project16-download": "Télécharger le notebook",
+				"project17-title": "Stratégies de portefeuille : MVO vs 1/N, Black-Litterman et critère de Kelly",
+				"project17-desc": "Compare des méthodes de construction de portefeuille sur des actions américaines : optimisation moyenne-variance contrainte, simulation de 5 000 tirages contre une pondération égale, Black-Litterman avec des vues d'investisseur, et dimensionnement par critère de Kelly.",
+				"project17-detail1": "Optimisation d'un portefeuille de 7 actions (AAPL, NVDA, TSLA, XOM, REGN, LLY, JPM) sur données hebdomadaires de juillet 2023 à juin 2025, en comparant long seul, long seul avec un plafond de 20 %, et vente à découvert sans contrainte ; le plafond de 20 % a donné le meilleur ratio de Sharpe (0,131 hebdomadaire contre 0,099 et 0,098).",
+				"project17-detail2": "Simulation de 5 000 portefeuilles aléatoires de 5 actions tirés d'un univers de 20 actions (estimation sur 2 ans, test hors échantillon sur 1 an). La pondération égale a battu l'optimisation à variance minimale en moyenne (14,0 % contre 11,6 %, significatif selon un test t apparié) ; le portefeuille optimisé l'a emporté dans les marchés baissiers (taux de réussite de 75 %) et a perdu dans les marchés haussiers, se comportant comme une stratégie défensive.",
+				"project17-detail3": "Black-Litterman : rendements d'équilibre calculés à partir des pondérations de capitalisation boursière et d'une estimation de l'aversion au risque, combinés à 7 vues d'investisseur (dont des vues relatives NVDA vs AAPL et REGN vs LLY) pour obtenir des rendements et des pondérations a posteriori, comparés à un portefeuille pondéré par la capitalisation boursière, in et hors échantillon.",
+				"project17-detail4": "Critère de Kelly : implémentation du dimensionnement Kelly complet, demi et double, en mesurant le Sharpe, la volatilité et les drawdowns sur les périodes d'entraînement et de test, et montrant comment l'effet de levier amplifie le risque sans améliorer le ratio de Sharpe.",
+				"project17-note": "Projet de groupe — contribution égale sur l'ensemble des volets.",
+				"project17-download": "Télécharger le notebook",
 
 				"experience-eyebrow": "Parcours",
 				"experiences-title": "Expériences",
