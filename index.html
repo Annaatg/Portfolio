@@ -781,6 +781,31 @@
 						</a>
 					</div>
 				</div>
+
+				<div class="bento-card col-span-4 project-card reveal">
+					<div class="project-media project-media-icon"><i class="fas fa-oil-well"></i></div>
+					<div class="project-body">
+						<h3 data-key="project20-title">Oil Market Regimes: Hidden Markov Model on WTI Crude</h3>
+						<p data-key="project20-desc">Detects bull, bear and stagnant regimes in WTI crude oil returns with a 3-state Gaussian Hidden Markov Model, and explores Bayesian-network structure learning.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">Hidden Markov Model</span>
+							<span class="tag-chip">hmmlearn</span>
+							<span class="tag-chip">Bayesian Network</span>
+						</div>
+						<ul class="project-detail-list">
+							<li data-key="project20-detail1">Downloaded WTI crude futures history (from August 2000) with yfinance and computed daily log-returns.</li>
+							<li data-key="project20-detail2">Fitted a 3-state Gaussian Hidden Markov Model (full covariance) on the returns, ordering states by mean return to read them as bear, stagnant and bull regimes.</li>
+							<li data-key="project20-detail3">Overlaid the regimes on the price history, plotted each regime's return distribution and the transition matrix to show how persistent each regime is.</li>
+							<li data-key="project20-detail4">Used hill-climbing structure learning (pgmpy) to learn dependencies between the regime and macro variables; this step uses simulated placeholder variables and demonstrates the method only, not an empirical finding.</li>
+						</ul>
+						<p class="project-note" data-key="project20-note">Group project — equal contribution across all components.</p>
+						<a href="assets/WQU_RM_GWP2_HMM_Oil_Regimes.ipynb" download="WQU_Oil_Market_Regimes_HMM.ipynb" class="btn btn-ghost project-download">
+							<i class="fas fa-download"></i>
+							<span data-key="project20-download">Download the notebook</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -1150,6 +1175,14 @@
 				"project19-detail4": "Drew a Bayesian-network diagram of the main oil-price drivers (supply, USD, VIX) and their effect on energy equities (XLE, XOP, USO), as a base for later risk modelling.",
 				"project19-note": "Group project — equal contribution across all components.",
 				"project19-download": "Download the notebook",
+				"project20-title": "Oil Market Regimes: Hidden Markov Model on WTI Crude",
+				"project20-desc": "Detects bull, bear and stagnant regimes in WTI crude oil returns with a 3-state Gaussian Hidden Markov Model, and explores Bayesian-network structure learning.",
+				"project20-detail1": "Downloaded WTI crude futures history (from August 2000) with yfinance and computed daily log-returns.",
+				"project20-detail2": "Fitted a 3-state Gaussian Hidden Markov Model (full covariance) on the returns, ordering states by mean return to read them as bear, stagnant and bull regimes.",
+				"project20-detail3": "Overlaid the regimes on the price history, plotted each regime's return distribution and the transition matrix to show how persistent each regime is.",
+				"project20-detail4": "Used hill-climbing structure learning (pgmpy) to learn dependencies between the regime and macro variables; this step uses simulated placeholder variables and demonstrates the method only, not an empirical finding.",
+				"project20-note": "Group project — equal contribution across all components.",
+				"project20-download": "Download the notebook",
 
 				"experience-eyebrow": "Journey",
 				"experiences-title": "Experience",
@@ -1403,6 +1436,14 @@
 				"project19-detail4": "Réalisation d'un diagramme de réseau bayésien des principaux facteurs du prix du pétrole (offre, dollar, VIX) et de leur effet sur les actions du secteur énergétique (XLE, XOP, USO), comme base pour une modélisation du risque ultérieure.",
 				"project19-note": "Projet de groupe — contribution égale sur l'ensemble des volets.",
 				"project19-download": "Télécharger le notebook",
+				"project20-title": "Régimes du marché pétrolier : modèle de Markov caché sur le WTI",
+				"project20-desc": "Détecte les régimes haussier, baissier et stagnant des rendements du pétrole WTI avec un modèle de Markov caché gaussien à 3 états, et explore l'apprentissage de structure de réseau bayésien.",
+				"project20-detail1": "Téléchargement de l'historique des futures WTI (depuis août 2000) via yfinance et calcul des rendements logarithmiques journaliers.",
+				"project20-detail2": "Ajustement d'un modèle de Markov caché gaussien à 3 états (covariance complète) sur les rendements, les états étant ordonnés par rendement moyen pour les lire comme des régimes baissier, stagnant et haussier.",
+				"project20-detail3": "Superposition des régimes sur l'historique des prix, tracé de la distribution des rendements de chaque régime et de la matrice de transition pour montrer la persistance de chaque régime.",
+				"project20-detail4": "Utilisation de l'apprentissage de structure par montée de colline (pgmpy) pour apprendre les dépendances entre le régime et des variables macroéconomiques ; cette étape utilise des variables simulées et ne fait que démontrer la méthode, sans constituer un résultat empirique.",
+				"project20-note": "Projet de groupe — contribution égale sur l'ensemble des volets.",
+				"project20-download": "Télécharger le notebook",
 
 				"experience-eyebrow": "Parcours",
 				"experiences-title": "Expériences",
