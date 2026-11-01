@@ -627,6 +627,30 @@
 						</a>
 					</div>
 				</div>
+
+				<div class="bento-card col-span-4 project-card reveal">
+					<div class="project-media project-media-icon"><i class="fas fa-money-bill-trend-up"></i></div>
+					<div class="project-body">
+						<h3 data-key="project14-title">LSTM Trading Strategy Across Multi-Asset ETFs</h3>
+						<p data-key="project14-desc">Building LSTM neural networks to predict and trade a five-asset ETF universe (equities, bonds, gold, oil), then backtesting the resulting strategy against a simple equal-weight buy-and-hold benchmark.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">LSTM</span>
+							<span class="tag-chip">TensorFlow</span>
+							<span class="tag-chip">Backtesting</span>
+						</div>
+						<ul class="project-detail-list">
+							<li data-key="project14-detail1">Individual LSTM models — built and trained a separate LSTM model for each of five ETFs (SPY for equities, TLT and SHY for long- and short-duration bonds, GLD for gold, DBO for oil), predicting next-period returns from historical price sequences.</li>
+							<li data-key="project14-detail2">Strategy construction &amp; backtesting — converted model predictions into trading signals and backtested the resulting LSTM-based strategy against an equal-weight buy-and-hold benchmark, evaluating performance through cumulative returns, drawdowns, and return distributions.</li>
+							<li data-key="project14-detail3">Multi-output LSTM model — extended the approach to a single multi-output LSTM predicting all five ETFs jointly, testing whether modeling cross-asset relationships in one network improves on training independent models per asset.</li>
+						</ul>
+						<p class="project-note" data-key="project14-note">Group project completed as part of the WorldQuant University MScFE Deep Learning for Finance module — equal contribution across all components.</p>
+						<a href="assets/WQU_DL_GWP2_LSTM_ETF_Strategy.ipynb" download="WQU_DL_LSTM_ETF_Strategy.ipynb" class="btn btn-ghost project-download">
+							<i class="fas fa-download"></i>
+							<span data-key="project14-download">Download the notebook</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -944,6 +968,13 @@
 				"project13-detail4": "Comprehensive model comparison — benchmarked all six model/representation combinations by MSE and MAE, finding that a standard MLP trained on log returns outperformed every CNN variant, including the image-based ones — a useful reminder that architectural sophistication doesn't always beat simpler, well-chosen representations.",
 				"project13-note": "Group project completed as part of the WorldQuant University MScFE Deep Learning for Finance module — equal contribution across all components.",
 				"project13-download": "Download the notebook",
+				"project14-title": "LSTM Trading Strategy Across Multi-Asset ETFs",
+				"project14-desc": "Building LSTM neural networks to predict and trade a five-asset ETF universe (equities, bonds, gold, oil), then backtesting the resulting strategy against a simple equal-weight buy-and-hold benchmark.",
+				"project14-detail1": "Individual LSTM models — built and trained a separate LSTM model for each of five ETFs (SPY for equities, TLT and SHY for long- and short-duration bonds, GLD for gold, DBO for oil), predicting next-period returns from historical price sequences.",
+				"project14-detail2": "Strategy construction &amp; backtesting — converted model predictions into trading signals and backtested the resulting LSTM-based strategy against an equal-weight buy-and-hold benchmark, evaluating performance through cumulative returns, drawdowns, and return distributions.",
+				"project14-detail3": "Multi-output LSTM model — extended the approach to a single multi-output LSTM predicting all five ETFs jointly, testing whether modeling cross-asset relationships in one network improves on training independent models per asset.",
+				"project14-note": "Group project completed as part of the WorldQuant University MScFE Deep Learning for Finance module — equal contribution across all components.",
+				"project14-download": "Download the notebook",
 
 				"experience-eyebrow": "Journey",
 				"experiences-title": "Experience",
@@ -1145,6 +1176,13 @@
 				"project13-detail4": "Comparaison exhaustive des modèles — évaluation des six combinaisons modèle/représentation par MSE et MAE, montrant qu'un MLP standard entraîné sur les rendements logarithmiques surpassait toutes les variantes CNN, y compris celles basées sur des images — un rappel utile que la sophistication architecturale ne l'emporte pas toujours sur des représentations plus simples et bien choisies.",
 				"project13-note": "Projet de groupe réalisé dans le cadre du module Deep Learning for Finance du MScFE de WorldQuant University — contribution égale sur l'ensemble des volets.",
 				"project13-download": "Télécharger le notebook",
+				"project14-title": "Stratégie de trading LSTM sur des ETF multi-actifs",
+				"project14-desc": "Construction de réseaux de neurones LSTM pour prédire et trader un univers de cinq ETF (actions, obligations, or, pétrole), puis backtest de la stratégie résultante contre un simple benchmark d'achat-conservation à poids égal.",
+				"project14-detail1": "Modèles LSTM individuels — construction et entraînement d'un modèle LSTM distinct pour chacun des cinq ETF (SPY pour les actions, TLT et SHY pour les obligations longue et courte duration, GLD pour l'or, DBO pour le pétrole), prédisant les rendements de la période suivante à partir des séquences de prix historiques.",
+				"project14-detail2": "Construction de la stratégie et backtest — conversion des prédictions du modèle en signaux de trading et backtest de la stratégie LSTM résultante contre un benchmark d'achat-conservation à poids égal, en évaluant la performance via les rendements cumulés, les drawdowns et les distributions de rendement.",
+				"project14-detail3": "Modèle LSTM multi-sorties — extension de l'approche à un seul modèle LSTM multi-sorties prédisant conjointement les cinq ETF, pour tester si la modélisation des relations inter-actifs dans un seul réseau améliore les résultats par rapport à l'entraînement de modèles indépendants par actif.",
+				"project14-note": "Projet de groupe réalisé dans le cadre du module Deep Learning for Finance du MScFE de WorldQuant University — contribution égale sur l'ensemble des volets.",
+				"project14-download": "Télécharger le notebook",
 
 				"experience-eyebrow": "Parcours",
 				"experiences-title": "Expériences",
