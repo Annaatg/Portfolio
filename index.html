@@ -730,6 +730,32 @@
 						</a>
 					</div>
 				</div>
+
+				<div class="bento-card col-span-4 project-card reveal">
+					<div class="project-media project-media-icon"><i class="fas fa-filter"></i></div>
+					<div class="project-body">
+						<h3 data-key="project18-title">Robust Portfolio Construction: Denoising, HRP &amp; Purged Cross-Validation</h3>
+						<p data-key="project18-desc">Tests 8 portfolio-construction strategies on 10 US equities, combining covariance denoising, Hierarchical Risk Parity and Combinatorial Purged Cross-Validation (CPCV) to reduce overfitting.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">Hierarchical Risk Parity</span>
+							<span class="tag-chip">CPCV</span>
+							<span class="tag-chip">Risk Management</span>
+						</div>
+						<ul class="project-detail-list">
+							<li data-key="project18-detail1">Implemented from scratch covariance denoising, Hierarchical Risk Parity (hierarchical clustering of assets) and Combinatorial Purged Cross-Validation (many train/test combinations with purging and embargo to prevent leakage), on 10 US equities (Jan 2024 - Jun 2025).</li>
+							<li data-key="project18-detail2">Built 8 strategies combining these methods, with a 15%-capped Maximum Sharpe portfolio as baseline, and compared annual return, volatility, Sharpe, max drawdown, CVaR and weight stability.</li>
+							<li data-key="project18-detail3">Key findings: MSRP with CPCV ranked first (Sharpe 0.61 vs 0.25 for the baseline); HRP alone had the lowest drawdown (-14% vs -22%); denoising added little on its own; combining all three methods did not help.</li>
+							<li data-key="project18-detail4">Out-of-sample check on July 2025, a month not used to build either portfolio: the baseline did slightly better (Sharpe 8.1 vs 7.0), reported as it came out.</li>
+							<li data-key="project18-detail5">Discussed the prediction vs. interpretation trade-off between simple explainable portfolios and more complex, better-validated ones.</li>
+						</ul>
+						<p class="project-note" data-key="project18-note">Group project — equal contribution across all components.</p>
+						<a href="assets/WQU_PM_GWP3_Denoising_HRP_CPCV.ipynb" download="WQU_Robust_Portfolio_Denoising_HRP_CPCV.ipynb" class="btn btn-ghost project-download">
+							<i class="fas fa-download"></i>
+							<span data-key="project18-download">Download the notebook</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -1082,6 +1108,15 @@
 				"project17-detail4": "Kelly criterion: implemented full, half and double Kelly sizing, measuring Sharpe, volatility and drawdowns on train and test periods, and showing how leverage amplifies risk without improving the Sharpe ratio.",
 				"project17-note": "Group project — equal contribution across all components.",
 				"project17-download": "Download the notebook",
+				"project18-title": "Robust Portfolio Construction: Denoising, HRP &amp; Purged Cross-Validation",
+				"project18-desc": "Tests 8 portfolio-construction strategies on 10 US equities, combining covariance denoising, Hierarchical Risk Parity and Combinatorial Purged Cross-Validation (CPCV) to reduce overfitting.",
+				"project18-detail1": "Implemented from scratch covariance denoising, Hierarchical Risk Parity (hierarchical clustering of assets) and Combinatorial Purged Cross-Validation (many train/test combinations with purging and embargo to prevent leakage), on 10 US equities (Jan 2024 - Jun 2025).",
+				"project18-detail2": "Built 8 strategies combining these methods, with a 15%-capped Maximum Sharpe portfolio as baseline, and compared annual return, volatility, Sharpe, max drawdown, CVaR and weight stability.",
+				"project18-detail3": "Key findings: MSRP with CPCV ranked first (Sharpe 0.61 vs 0.25 for the baseline); HRP alone had the lowest drawdown (-14% vs -22%); denoising added little on its own; combining all three methods did not help.",
+				"project18-detail4": "Out-of-sample check on July 2025, a month not used to build either portfolio: the baseline did slightly better (Sharpe 8.1 vs 7.0), reported as it came out.",
+				"project18-detail5": "Discussed the prediction vs. interpretation trade-off between simple explainable portfolios and more complex, better-validated ones.",
+				"project18-note": "Group project — equal contribution across all components.",
+				"project18-download": "Download the notebook",
 
 				"experience-eyebrow": "Journey",
 				"experiences-title": "Experience",
@@ -1318,6 +1353,15 @@
 				"project17-detail4": "Critère de Kelly : implémentation du dimensionnement Kelly complet, demi et double, en mesurant le Sharpe, la volatilité et les drawdowns sur les périodes d'entraînement et de test, et montrant comment l'effet de levier amplifie le risque sans améliorer le ratio de Sharpe.",
 				"project17-note": "Projet de groupe — contribution égale sur l'ensemble des volets.",
 				"project17-download": "Télécharger le notebook",
+				"project18-title": "Construction robuste de portefeuille : débruitage, HRP et validation croisée purgée",
+				"project18-desc": "Teste 8 stratégies de construction de portefeuille sur 10 actions américaines, combinant débruitage de la covariance, parité de risque hiérarchique (HRP) et validation croisée purgée combinatoire (CPCV) pour réduire le surapprentissage.",
+				"project18-detail1": "Implémentation à partir de zéro du débruitage de la covariance, de la parité de risque hiérarchique (clustering hiérarchique des actifs) et de la validation croisée purgée combinatoire (de nombreuses combinaisons entraînement/test avec purge et embargo pour éviter les fuites), sur 10 actions américaines (janvier 2024 - juin 2025).",
+				"project18-detail2": "Construction de 8 stratégies combinant ces méthodes, avec un portefeuille à Sharpe maximal plafonné à 15 % comme référence, et comparaison du rendement annuel, de la volatilité, du Sharpe, du drawdown maximal, de la CVaR et de la stabilité des pondérations.",
+				"project18-detail3": "Principaux résultats : le MSRP avec CPCV s'est classé premier (Sharpe de 0,61 contre 0,25 pour la référence) ; le HRP seul avait le drawdown le plus faible (-14 % contre -22 %) ; le débruitage seul apportait peu ; combiner les trois méthodes n'a pas aidé.",
+				"project18-detail4": "Vérification hors échantillon sur juillet 2025, un mois non utilisé pour construire les portefeuilles : la référence a légèrement mieux performé (Sharpe de 8,1 contre 7,0), rapporté tel quel.",
+				"project18-detail5": "Discussion de l'arbitrage entre prédiction et interprétation, entre des portefeuilles simples et explicables et des portefeuilles plus complexes et mieux validés.",
+				"project18-note": "Projet de groupe — contribution égale sur l'ensemble des volets.",
+				"project18-download": "Télécharger le notebook",
 
 				"experience-eyebrow": "Parcours",
 				"experiences-title": "Expériences",
