@@ -769,6 +769,10 @@ h1, h2, h3, h4, h5 {
   flex-direction: column;
 }
 
+.project-card.featured {
+  border-color: var(--accent-soft);
+}
+
 .project-media {
   aspect-ratio: 4 / 3;
   overflow: hidden;

@@ -298,6 +298,35 @@
 			</div>
 
 			<div class="bento-grid">
+				<div class="bento-card col-span-4 project-card featured reveal">
+					<div class="project-media project-media-icon"><i class="fas fa-graduation-cap"></i></div>
+					<div class="project-body">
+						<div class="eyebrow" data-key="capstone-eyebrow">Featured &middot; Capstone Thesis</div>
+						<h3 data-key="capstone-title">Market-Neutral Pairs Trading with Machine Learning (Capstone Thesis)</h3>
+						<p data-key="capstone-desc">Tests whether XGBoost, LightGBM and LSTM signals can beat a classic cointegration pairs-trading strategy, on 105 US large caps over 2010-2025.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">XGBoost</span>
+							<span class="tag-chip">LightGBM</span>
+							<span class="tag-chip">LSTM</span>
+							<span class="tag-chip">Statistical Arbitrage</span>
+						</div>
+						<ul class="project-detail-list">
+							<li data-key="capstone-detail1">Capstone thesis for the MSc in Financial Engineering at WorldQuant University (supervised by Saad Zaman): can regime-aware machine learning improve a market-neutral pairs-trading strategy?</li>
+							<li data-key="capstone-detail2">Built a clean daily-price dataset for 105 US large caps across 12 sectors (2010-2025) with a 95% coverage filter; ran Engle-Granger and Johansen cointegration tests on rolling windows and shortlisted 4 pairs (MA-V, ICE-V, JNJ-LLY, AXP-ICE).</li>
+							<li data-key="capstone-detail3">Built daily features using same-day information only (with a variance-inflation check) and trained XGBoost, LightGBM and LSTM signal models, benchmarked against a static z-score cointegration rule.</li>
+							<li data-key="capstone-detail4">Walk-forward out-of-sample backtest with transaction costs and a one-day execution delay, plus sensitivity analysis on costs (including 5 bps) and benchmark thresholds.</li>
+							<li data-key="capstone-detail5">Findings: tree models classify well (macro-F1 0.76 and 0.75 vs 0.32 for the LSTM) but lose money when traded; mean out-of-sample Sharpe was -0.02 (benchmark), -0.31 (XGBoost), -0.38 (LightGBM), -0.41 (LSTM). High recall with low precision means over-trading, and costs erase the edge. Hypothesis rejected for this universe.</li>
+							<li data-key="capstone-detail6">Takeaway: classification accuracy does not translate into trading profit. Limits are stated openly: only 4 pairs, a single validation split, current index constituents only.</li>
+						</ul>
+						<p class="project-note" data-key="capstone-note">Group project (3 authors).</p>
+						<a href="assets/WQU_Capstone_Pairs_Trading_ML.ipynb" download="WQU_Capstone_Pairs_Trading_ML.ipynb" class="btn btn-ghost project-download">
+							<i class="fas fa-download"></i>
+							<span data-key="capstone-download">Download the notebook</span>
+						</a>
+					</div>
+				</div>
+
 				<div class="bento-card col-span-4 project-card reveal">
 					<div class="project-media project-media-icon"><i class="fas fa-chart-line"></i></div>
 					<div class="project-body">
@@ -1048,6 +1077,17 @@
 				"level-beginner": "Beginner",
 
 				"work-eyebrow": "Selected work",
+				"capstone-eyebrow": "Featured &middot; Capstone Thesis",
+				"capstone-title": "Market-Neutral Pairs Trading with Machine Learning (Capstone Thesis)",
+				"capstone-desc": "Tests whether XGBoost, LightGBM and LSTM signals can beat a classic cointegration pairs-trading strategy, on 105 US large caps over 2010-2025.",
+				"capstone-detail1": "Capstone thesis for the MSc in Financial Engineering at WorldQuant University (supervised by Saad Zaman): can regime-aware machine learning improve a market-neutral pairs-trading strategy?",
+				"capstone-detail2": "Built a clean daily-price dataset for 105 US large caps across 12 sectors (2010-2025) with a 95% coverage filter; ran Engle-Granger and Johansen cointegration tests on rolling windows and shortlisted 4 pairs (MA-V, ICE-V, JNJ-LLY, AXP-ICE).",
+				"capstone-detail3": "Built daily features using same-day information only (with a variance-inflation check) and trained XGBoost, LightGBM and LSTM signal models, benchmarked against a static z-score cointegration rule.",
+				"capstone-detail4": "Walk-forward out-of-sample backtest with transaction costs and a one-day execution delay, plus sensitivity analysis on costs (including 5 bps) and benchmark thresholds.",
+				"capstone-detail5": "Findings: tree models classify well (macro-F1 0.76 and 0.75 vs 0.32 for the LSTM) but lose money when traded; mean out-of-sample Sharpe was -0.02 (benchmark), -0.31 (XGBoost), -0.38 (LightGBM), -0.41 (LSTM). High recall with low precision means over-trading, and costs erase the edge. Hypothesis rejected for this universe.",
+				"capstone-detail6": "Takeaway: classification accuracy does not translate into trading profit. Limits are stated openly: only 4 pairs, a single validation split, current index constituents only.",
+				"capstone-note": "Group project (3 authors).",
+				"capstone-download": "Download the notebook",
 				"projects-title": "Projects",
 				"project1-title": "Yield Curve &amp; Market Risk Analysis",
 				"project1-desc": "Modeling the U.S. Treasury yield curve and decomposing market risk through correlation analysis — from raw FRED data to a fitted Nelson-Siegel curve and PCA-driven factor decomposition.",
@@ -1318,6 +1358,17 @@
 				"level-beginner": "Débutant",
 
 				"work-eyebrow": "Projets sélectionnés",
+				"capstone-eyebrow": "À la une &middot; Thèse de fin d'études",
+				"capstone-title": "Pairs trading market-neutral avec machine learning (thèse de fin d'études)",
+				"capstone-desc": "Teste si des signaux XGBoost, LightGBM et LSTM peuvent battre une stratégie classique de pairs trading par cointégration, sur 105 grandes capitalisations américaines entre 2010 et 2025.",
+				"capstone-detail1": "Thèse de fin d'études pour le MSc en Ingénierie Financière de WorldQuant University (encadrée par Saad Zaman) : le machine learning sensible aux régimes peut-il améliorer une stratégie de pairs trading market-neutral ?",
+				"capstone-detail2": "Construction d'un jeu de données propre de prix journaliers pour 105 grandes capitalisations américaines réparties sur 12 secteurs (2010-2025) avec un filtre de couverture de 95 % ; tests de cointégration d'Engle-Granger et de Johansen sur fenêtres glissantes, avec sélection de 4 paires (MA-V, ICE-V, JNJ-LLY, AXP-ICE).",
+				"capstone-detail3": "Construction de variables journalières utilisant uniquement l'information du jour même (avec un contrôle du facteur d'inflation de la variance) et entraînement de modèles de signal XGBoost, LightGBM et LSTM, comparés à une règle statique de cointégration par z-score.",
+				"capstone-detail4": "Backtest walk-forward hors échantillon avec coûts de transaction et un délai d'exécution d'un jour, ainsi qu'une analyse de sensibilité aux coûts (y compris 5 points de base) et aux seuils de référence.",
+				"capstone-detail5": "Résultats : les modèles d'arbres classifient bien (F1 macro de 0,76 et 0,75 contre 0,32 pour le LSTM) mais perdent de l'argent une fois tradés ; le Sharpe moyen hors échantillon était de -0,02 (référence), -0,31 (XGBoost), -0,38 (LightGBM), -0,41 (LSTM). Un rappel élevé avec une faible précision signifie un sur-trading, et les coûts effacent l'avantage. Hypothèse rejetée pour cet univers.",
+				"capstone-detail6": "Enseignement : la précision de classification ne se traduit pas en profit de trading. Les limites sont assumées ouvertement : seulement 4 paires, une seule séparation de validation, uniquement les composants actuels de l'indice.",
+				"capstone-note": "Projet de groupe (3 auteurs).",
+				"capstone-download": "Télécharger le notebook",
 				"projects-title": "Projets",
 				"project1-title": "Analyse de la courbe des taux et du risque de marché",
 				"project1-desc": "Modélisation de la courbe des taux du Trésor américain et décomposition du risque de marché par analyse de corrélation — des données brutes de la FRED à une courbe de Nelson-Siegel ajustée et une décomposition factorielle par ACP.",
