@@ -26,26 +26,39 @@
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+	<a class="skip-link" href="#main-content" data-key="skip-link">Skip to main content</a>
+
+	<!-- Top band -->
+	<section class="top-band" aria-label="Keyword ticker" aria-hidden="true">
+		<div class="top-band-viewport" tabindex="0">
+			<div class="top-band-track" id="topBandTrack">
+				<div class="top-band-set" id="topBandSet1"></div>
+				<div class="top-band-set top-band-set-duplicate" id="topBandSet2" aria-hidden="true"></div>
+			</div>
+		</div>
+	</section>
 
 	<!-- Navbar -->
 	<nav class="navbar">
 		<div class="container">
 			<a class="navbar-brand" href="#hero">
-				<span class="dot"></span>
+				<span class="mono">AA</span>
 				Anne-Marie<span style="color:var(--text-faint)">.</span>
 			</a>
 
 			<ul class="nav-links" id="navLinks">
+				<li><a href="#hero" data-key="nav-home">Home</a></li>
 				<li><a href="#about" data-key="about">About</a></li>
 				<li><a href="#skills" data-key="skills">Skills</a></li>
-				<li><a href="#portfolio" data-key="projects">Work</a></li>
+				<li><a href="#portfolio" data-key="projects">Projects</a></li>
 				<li><a href="#experience" data-key="experiences">Experience</a></li>
 				<li><a href="#certifications" data-key="certifications-nav">Certifications</a></li>
-				<li class="nav-contact-mobile"><a href="#contact" data-key="work">Contact</a></li>
+				<li><a href="#contact" data-key="work">Contact</a></li>
 				<li class="nav-contact-mobile"><a href="https://www.linkedin.com/in/anne-marie-atignon/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
 			</ul>
 
@@ -57,7 +70,10 @@
 					<button class="lang-btn active" data-lang="en">EN</button>
 					<button class="lang-btn" data-lang="fr">FR</button>
 				</div>
-				<a href="#contact" class="nav-contact-btn" data-key="work">Contact</a>
+				<a href="assets/EN_Resume_AnneMarie_ATIGNON.pdf" download="CV_AnneMarie_ATIGNON.pdf" id="navCvDownloadLink" class="btn nav-contact-btn">
+					<i class="fas fa-download"></i>
+					<span data-key="download-cv">Download my CV</span>
+				</a>
 				<button class="nav-toggle" id="navToggle" aria-label="Menu">
 					<i class="fas fa-bars"></i>
 				</button>
@@ -65,36 +81,142 @@
 		</div>
 	</nav>
 
+	<main id="main-content">
+
 	<!-- Hero -->
 	<section id="hero" class="hero-section">
+		<div class="hero-graphic" aria-hidden="true">
+			<svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+				<defs>
+					<linearGradient id="hgAreaFill" x1="0" y1="0" x2="0" y2="1">
+						<stop offset="0%" stop-color="#C9A24D" stop-opacity="0.35"/>
+						<stop offset="100%" stop-color="#C9A24D" stop-opacity="0"/>
+					</linearGradient>
+				</defs>
+
+				<g stroke="rgba(255,255,255,0.07)" stroke-width="1">
+					<line x1="0" y1="60" x2="600" y2="60"/>
+					<line x1="0" y1="140" x2="600" y2="140"/>
+					<line x1="0" y1="220" x2="600" y2="220"/>
+					<line x1="0" y1="300" x2="600" y2="300"/>
+					<line x1="0" y1="380" x2="600" y2="380"/>
+				</g>
+
+				<g>
+					<line class="hg-candle" x1="30" y1="150" x2="30" y2="260" stroke="#2C4062" stroke-width="2" style="animation-delay:0.1s"/>
+					<rect class="hg-candle" x="22" y="180" width="16" height="50" fill="#1C3356" style="animation-delay:0.1s"/>
+
+					<line class="hg-candle" x1="80" y1="170" x2="80" y2="290" stroke="#2C4062" stroke-width="2" style="animation-delay:0.18s"/>
+					<rect class="hg-candle" x="72" y="195" width="16" height="60" fill="#2A4A74" style="animation-delay:0.18s"/>
+
+					<line class="hg-candle" x1="130" y1="120" x2="130" y2="230" stroke="#2C4062" stroke-width="2" style="animation-delay:0.26s"/>
+					<rect class="hg-candle" x="122" y="150" width="16" height="45" fill="#1C3356" style="animation-delay:0.26s"/>
+
+					<line class="hg-candle" x1="180" y1="140" x2="180" y2="250" stroke="#2C4062" stroke-width="2" style="animation-delay:0.34s"/>
+					<rect class="hg-candle" x="172" y="165" width="16" height="55" fill="#2A4A74" style="animation-delay:0.34s"/>
+
+					<line class="hg-candle" x1="230" y1="90" x2="230" y2="200" stroke="#2C4062" stroke-width="2" style="animation-delay:0.42s"/>
+					<rect class="hg-candle" x="222" y="110" width="16" height="48" fill="#1C3356" style="animation-delay:0.42s"/>
+
+					<line class="hg-candle" x1="280" y1="80" x2="280" y2="190" stroke="#2C4062" stroke-width="2" style="animation-delay:0.5s"/>
+					<rect class="hg-candle" x="272" y="100" width="16" height="50" fill="#2A4A74" style="animation-delay:0.5s"/>
+
+					<line class="hg-candle" x1="330" y1="60" x2="330" y2="165" stroke="#2C4062" stroke-width="2" style="animation-delay:0.58s"/>
+					<rect class="hg-candle" x="322" y="80" width="16" height="45" fill="#1C3356" style="animation-delay:0.58s"/>
+
+					<line class="hg-candle" x1="380" y1="40" x2="380" y2="145" stroke="#2C4062" stroke-width="2" style="animation-delay:0.66s"/>
+					<rect class="hg-candle" x="372" y="58" width="16" height="48" fill="#2A4A74" style="animation-delay:0.66s"/>
+
+					<line class="hg-candle" x1="430" y1="30" x2="430" y2="130" stroke="#2C4062" stroke-width="2" style="animation-delay:0.74s"/>
+					<rect class="hg-candle" x="422" y="48" width="16" height="42" fill="#1C3356" style="animation-delay:0.74s"/>
+
+					<line class="hg-candle" x1="480" y1="10" x2="480" y2="110" stroke="#2C4062" stroke-width="2" style="animation-delay:0.82s"/>
+					<rect class="hg-candle" x="472" y="28" width="16" height="44" fill="#2A4A74" style="animation-delay:0.82s"/>
+				</g>
+
+				<g class="hg-candle" fill="rgba(176,141,60,0.28)" style="animation-delay:0.9s">
+					<rect x="22" y="440" width="16" height="30"/>
+					<rect x="72" y="420" width="16" height="50"/>
+					<rect x="122" y="450" width="16" height="20"/>
+					<rect x="172" y="410" width="16" height="60"/>
+					<rect x="222" y="430" width="16" height="40"/>
+					<rect x="272" y="400" width="16" height="70"/>
+					<rect x="322" y="445" width="16" height="25"/>
+					<rect x="372" y="415" width="16" height="55"/>
+					<rect x="422" y="425" width="16" height="45"/>
+					<rect x="472" y="395" width="16" height="75"/>
+				</g>
+
+				<path d="M20,300 C120,280 160,200 260,190 S380,120 460,90 L460,500 L20,500 Z" fill="url(#hgAreaFill)" stroke="none"/>
+				<path class="hg-line" d="M20,300 C120,280 160,200 260,190 S380,120 460,90" fill="none" stroke="#C9A24D" stroke-width="3" stroke-linecap="round"/>
+			</svg>
+		</div>
+
 		<div class="container">
-			<div class="hero-center">
-				<div class="badge-pill">
-					<span class="pulse"></span>
-					<span data-key="availability">Open to Sales &amp; Trading graduate roles, 2026-27 &middot; Open to relocation</span>
+			<div class="hero-grid">
+				<div class="hero-left">
+					<div class="badge-pill">
+						<span class="pulse"></span>
+						<span data-key="availability">Open to Sales &amp; Trading graduate roles, 2026-27 &middot; Open to relocation</span>
+					</div>
+
+					<div class="hero-eyebrow" data-key="greeting">Hello! I'm</div>
+
+					<h1 class="hero-name">
+						Anne-Marie <span class="accent-text" data-key="hero-title-accent">Atignon</span>
+					</h1>
+
+					<p class="hero-title" data-key="title">Aspiring Sales &amp; Trading Analyst<br><span class="accent-text">Financial Engineering</span></p>
+
+					<p class="hero-value-prop" data-key="hero-value-prop">MSc Financial Engineering (90%). I test trading ideas with data and report what the numbers actually show.</p>
+
+					<div class="hero-actions">
+						<a href="assets/EN_Resume_AnneMarie_ATIGNON.pdf" download="CV_AnneMarie_ATIGNON.pdf" id="cvDownloadLink" class="btn btn-accent">
+							<i class="fas fa-download"></i>
+							<span data-key="download-cv">Download my CV</span>
+						</a>
+						<a href="#portfolio" class="btn btn-ghost">
+							<i class="fas fa-arrow-down"></i>
+							<span data-key="projects-btn">See what I've built</span>
+						</a>
+						<a href="#contact" class="btn btn-tertiary">
+							<span data-key="get-in-touch">Get in touch</span>
+						</a>
+					</div>
+
+					<div class="hero-stats-row">
+						<div class="hero-stat">
+							<div class="hero-stat-value" data-count-to="90" data-suffix="%">0%</div>
+							<div class="hero-stat-label" data-key="exp-text">MSc Financial Engineering</div>
+						</div>
+						<div class="hero-stat">
+							<div class="hero-stat-value" data-count-to="3.83" data-decimals="2">0.00</div>
+							<div class="hero-stat-label" data-key="companies-text">MBA GPA</div>
+						</div>
+						<div class="hero-stat">
+							<div class="hero-stat-value" data-count-to="22">0</div>
+							<div class="hero-stat-label" data-key="projects-text">Projects</div>
+						</div>
+						<div class="hero-tool-badge">Python &amp; R</div>
+					</div>
 				</div>
 
-				<div class="typewriter-container">
-					<span class="typewriter-text" data-key="greeting">Hello! I'm</span>
-				</div>
-
-				<h1 class="hero-name">
-					Anne-Marie <span class="accent-text" data-key="hero-title-accent">Atignon</span>
-				</h1>
-
-				<p class="hero-title" data-key="title">Aspiring Sales &amp; Trading Analyst<br><span class="accent-text">Financial Engineering</span></p>
-
-				<p class="hero-value-prop" data-key="hero-value-prop">MSc Financial Engineering (90%). I test trading ideas with data and report what the numbers actually show.</p>
-
-				<div class="hero-actions">
-					<a href="assets/EN_Resume_AnneMarie_ATIGNON.pdf" download="CV_AnneMarie_ATIGNON.pdf" id="cvDownloadLink" class="btn btn-accent">
-						<i class="fas fa-download"></i>
-						<span data-key="download-cv">Download my CV</span>
-					</a>
-					<a href="#portfolio" class="btn btn-ghost">
-						<i class="fas fa-arrow-down"></i>
-						<span data-key="projects-btn">See what I've built</span>
-					</a>
+				<div class="hero-right">
+					<div class="hero-featured-card">
+						<div class="eyebrow" data-key="capstone-eyebrow">Featured &middot; Capstone Thesis</div>
+						<h3 data-key="capstone-title">Market-Neutral Pairs Trading with Machine Learning (Capstone Thesis)</h3>
+						<p data-key="capstone-desc">Tests whether XGBoost, LightGBM and LSTM signals can beat a classic cointegration pairs-trading strategy, on 105 US large caps over 2010-2025.</p>
+						<div class="service-tags">
+							<span class="tag-chip">Python</span>
+							<span class="tag-chip">XGBoost</span>
+							<span class="tag-chip">LightGBM</span>
+							<span class="tag-chip">LSTM</span>
+							<span class="tag-chip">Statistical Arbitrage</span>
+						</div>
+						<a href="#capstone-project" class="btn btn-ghost" style="width:100%">
+							<span data-key="read-capstone">Read the capstone</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -115,36 +237,6 @@
 			<span data-key="markets-disclosure">Delayed data, for information only</span>
 			<span id="marketTickerAsOf"></span>
 		</p>
-	</section>
-
-	<!-- Keyword marquee -->
-	<section class="keyword-marquee" aria-hidden="true">
-		<div class="marquee-row marquee-row-1">
-			<div class="marquee-band marquee-blue">
-				<div class="marquee-track">
-					<span class="marquee-item">Financial Engineering</span><span class="marquee-sep">✱</span>
-					<span class="marquee-item">Data &amp; Machine Learning</span><span class="marquee-sep">✱</span>
-					<span class="marquee-item">Markets &amp; Trading</span><span class="marquee-sep">✱</span>
-					<span class="marquee-item">Financial Engineering</span><span class="marquee-sep">✱</span>
-					<span class="marquee-item">Data &amp; Machine Learning</span><span class="marquee-sep">✱</span>
-					<span class="marquee-item">Markets &amp; Trading</span><span class="marquee-sep">✱</span>
-				</div>
-			</div>
-		</div>
-		<div class="marquee-row marquee-row-2">
-			<div class="marquee-band marquee-dark">
-				<div class="marquee-track marquee-track-reverse">
-					<span class="marquee-item">Quantitative Finance</span><span class="marquee-sep">✱</span>
-					<span class="marquee-item">Risk Management</span><span class="marquee-sep">✱</span>
-					<span class="marquee-item">Python &amp; R</span><span class="marquee-sep">✱</span>
-					<span class="marquee-item">Sales &amp; Trading</span><span class="marquee-sep">✱</span>
-					<span class="marquee-item">Quantitative Finance</span><span class="marquee-sep">✱</span>
-					<span class="marquee-item">Risk Management</span><span class="marquee-sep">✱</span>
-					<span class="marquee-item">Python &amp; R</span><span class="marquee-sep">✱</span>
-					<span class="marquee-item">Sales &amp; Trading</span><span class="marquee-sep">✱</span>
-				</div>
-			</div>
-		</div>
 	</section>
 
 	<!-- About -->
@@ -220,7 +312,6 @@
 
 			<div class="bento-grid">
 				<div class="bento-card col-span-2 service-card reveal">
-					<div class="service-icon"><i class="fas fa-chart-pie"></i></div>
 					<h3 data-key="service1-title">Financial Engineering</h3>
 					<p data-key="service1-desc">Quantitative modeling, risk analysis and financial markets — building the analytical backbone behind sound decisions.</p>
 					<div class="service-tags">
@@ -231,7 +322,6 @@
 				</div>
 
 				<div class="bento-card col-span-2 service-card reveal">
-					<div class="service-icon"><i class="fas fa-brain"></i></div>
 					<h3 data-key="service3-title">Data &amp; Machine Learning</h3>
 					<p data-key="service3-desc">Time series modeling and predictive analytics — applying machine learning where markets meet data.</p>
 					<div class="service-tags">
@@ -242,7 +332,6 @@
 				</div>
 
 				<div class="bento-card col-span-2 service-card reveal">
-					<div class="service-icon"><i class="fas fa-arrow-trend-up"></i></div>
 					<h3 data-key="service4-title">Markets &amp; Trading</h3>
 					<p data-key="service4-desc">Systematic strategies across equities and FX — testing ideas until they hold up under real conditions.</p>
 					<div class="service-tags">
@@ -253,7 +342,6 @@
 				</div>
 
 				<div class="bento-card col-span-2 service-card reveal">
-					<div class="service-icon"><i class="fas fa-palette"></i></div>
 					<h3 data-key="service2-title">Graphic Design</h3>
 					<p data-key="service2-desc">Branding, social media posts — turning ideas into visuals that feel intentional and alive.</p>
 					<div class="service-tags">
@@ -342,7 +430,7 @@
 			<div class="eyebrow section-subhead" data-key="featured-eyebrow">Featured</div>
 
 			<div class="bento-grid">
-				<div class="bento-card col-span-4 project-card featured reveal">
+				<div class="bento-card col-span-4 project-card featured reveal" id="capstone-project">
 					<div class="project-media project-media-icon"><i class="fas fa-graduation-cap"></i></div>
 					<div class="project-body">
 						<div class="eyebrow" data-key="capstone-eyebrow">Featured &middot; Capstone Thesis</div>
@@ -1083,6 +1171,14 @@
 							<div class="value" data-key="location">Cotonou, Benin &middot; Open to relocation</div>
 						</div>
 					</div>
+					<div class="social-row">
+						<a href="https://www.linkedin.com/in/anne-marie-atignon/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+							<i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+						</a>
+						<a href="https://github.com/Annaatg" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+							<i class="fab fa-github"></i><span>GitHub</span>
+						</a>
+					</div>
 				</div>
 
 				<div class="bento-card col-span-2 reveal contact-cta-card">
@@ -1096,19 +1192,52 @@
 		</div>
 	</section>
 
+	</main>
+
 	<!-- Footer -->
 	<footer class="site-footer">
 		<div class="container">
-			<h3 data-key="follow">Follow along</h3>
-			<div class="social-row" style="justify-content:center">
-				<a href="https://www.linkedin.com/in/anne-marie-atignon/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-					<i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
-				</a>
-				<a href="https://github.com/Annaatg" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-					<i class="fab fa-github"></i><span>GitHub</span>
-				</a>
+			<div class="footer-grid">
+				<div class="footer-col footer-brand-col">
+					<div class="footer-brand">
+						<span class="mono">AA</span>
+						Anne-Marie Atignon
+					</div>
+					<p class="footer-tagline" data-key="footer-tagline">Aspiring Sales &amp; Trading Analyst &mdash; MSc Financial Engineering.</p>
+					<div class="footer-social-row">
+						<a href="https://www.linkedin.com/in/anne-marie-atignon/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+						<a href="https://github.com/Annaatg" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub">
+							<i class="fab fa-github"></i>
+						</a>
+					</div>
+				</div>
+
+				<div class="footer-col">
+					<h4 data-key="footer-quick-links">Quick links</h4>
+					<div class="footer-links">
+						<a href="#about" data-key="about">About</a>
+						<a href="#skills" data-key="skills">Skills</a>
+						<a href="#portfolio" data-key="projects">Projects</a>
+						<a href="#experience" data-key="experiences">Experience</a>
+						<a href="#certifications" data-key="certifications-nav">Certifications</a>
+						<a href="#contact" data-key="work">Contact</a>
+					</div>
+				</div>
+
+				<div class="footer-col">
+					<h4 data-key="footer-contact">Contact</h4>
+					<div class="footer-links">
+						<a href="mailto:atignonanna@gmail.com">atignonanna@gmail.com</a>
+						<span data-key="location">Cotonou, Benin &middot; Open to relocation</span>
+					</div>
+				</div>
 			</div>
-			<p class="footer-copy" data-key="copyright">© 2026 Anne-Marie Atignon. All rights reserved.</p>
+
+			<div class="footer-bottom">
+				<p class="footer-copy" data-key="copyright">© 2026 Anne-Marie Atignon. All rights reserved.</p>
+			</div>
 		</div>
 	</footer>
 
@@ -1116,9 +1245,11 @@
 		// ---------- Translations ----------
 		const translations = {
 			en: {
+				"skip-link": "Skip to main content",
+				"nav-home": "Home",
 				"about": "About",
 				"skills": "Skills",
-				"projects": "Work",
+				"projects": "Projects",
 				"experiences": "Experience",
 				"work": "Contact",
 
@@ -1128,6 +1259,8 @@
 				"title": "Aspiring Sales &amp; Trading Analyst<br><span class=\"accent-text\">Financial Engineering</span>",
 				"hero-value-prop": "MSc Financial Engineering (90%). I test trading ideas with data and report what the numbers actually show.",
 				"projects-btn": "See what I've built",
+				"get-in-touch": "Get in touch",
+				"read-capstone": "Read the capstone",
 				"download-cv": "Download my CV",
 				"location": "Cotonou, Benin &middot; Open to relocation",
 
@@ -1395,16 +1528,21 @@
 				"work5-desc": "Managed multiple concurrent client briefs, translating requirements into precise, brand-aligned deliverables.",
 
 				"contact-eyebrow": "Get in touch",
-				"contact-title": "Let's work together",
+				"contact-title": "Connect with me",
 				"contact-email-label": "Email",
 				"contact-address-label": "Address",
 				"contact-cta-text": "The fastest way to reach me is by email — I read and reply to every message.",
 				"email-me": "Email me",
 
 				"follow": "Follow along",
+				"footer-tagline": "Aspiring Sales &amp; Trading Analyst &mdash; MSc Financial Engineering.",
+				"footer-quick-links": "Quick links",
+				"footer-contact": "Contact",
 				"copyright": "© 2026 Anne-Marie Atignon. All rights reserved."
 			},
 			fr: {
+				"skip-link": "Aller au contenu principal",
+				"nav-home": "Accueil",
 				"about": "À propos",
 				"skills": "Compétences",
 				"projects": "Projets",
@@ -1417,6 +1555,8 @@
 				"title": "Aspirante Analyste Sales &amp; Trading<br><span class=\"accent-text\">Ingénierie Financière</span>",
 				"hero-value-prop": "Master en Ingénierie Financière (90 %). Je teste des idées de trading avec des données et je rapporte ce que les chiffres montrent réellement.",
 				"projects-btn": "Découvrez mes réalisations",
+				"get-in-touch": "Me contacter",
+				"read-capstone": "Lire le mémoire",
 				"download-cv": "Télécharger mon CV",
 				"location": "Cotonou, Bénin &middot; Ouverte à la mobilité géographique",
 
@@ -1684,13 +1824,16 @@
 				"work5-desc": "Gestion de plusieurs briefs clients simultanés, traduisant les besoins en livrables précis et alignés sur la marque.",
 
 				"contact-eyebrow": "Contact",
-				"contact-title": "Travaillons ensemble",
+				"contact-title": "Me contacter",
 				"contact-email-label": "Email",
 				"contact-address-label": "Adresse",
 				"contact-cta-text": "Le plus rapide pour me joindre est l'email — je lis et réponds à chaque message.",
 				"email-me": "M'écrire",
 
 				"follow": "Suivez-moi",
+				"footer-tagline": "Aspirante Analyste Sales &amp; Trading &mdash; Master en Ingénierie Financière.",
+				"footer-quick-links": "Liens rapides",
+				"footer-contact": "Contact",
 				"copyright": "© 2026 Anne-Marie Atignon. Tous droits réservés."
 			}
 		};
@@ -1751,6 +1894,93 @@
 				navLinks.classList.remove('is-open');
 			}));
 		}
+
+		// ---------- Nav "Download my CV" link: mirrors #cvDownloadLink's
+		// language-aware href without touching changeLanguage() itself ----------
+		(function initNavCvLink() {
+			const navCvLink = document.getElementById('navCvDownloadLink');
+			if (!navCvLink) return;
+
+			function syncNavCvLink() {
+				const lang = document.documentElement.getAttribute('lang') || 'en';
+				if (lang === 'fr') {
+					navCvLink.setAttribute('href', 'assets/FR_Resume_AnneMarie_ATIGNON.pdf');
+				} else {
+					navCvLink.setAttribute('href', 'assets/EN_Resume_AnneMarie_ATIGNON.pdf');
+				}
+				navCvLink.setAttribute('download', 'CV_AnneMarie_ATIGNON.pdf');
+			}
+
+			document.querySelectorAll('.lang-btn').forEach((btn) => {
+				btn.addEventListener('click', syncNavCvLink);
+			});
+			syncNavCvLink();
+		})();
+
+		// ---------- Top band: single straight scrolling keyword band ----------
+		(function initTopBand() {
+			const set1 = document.getElementById('topBandSet1');
+			const set2 = document.getElementById('topBandSet2');
+			if (!set1 || !set2) return;
+
+			// Exactly the keywords the two former diagonal marquee bars
+			// contained, merged into one list, nothing added or removed.
+			const KEYWORDS = [
+				'Financial Engineering',
+				'Data &amp; Machine Learning',
+				'Markets &amp; Trading',
+				'Quantitative Finance',
+				'Risk Management',
+				'Python &amp; R',
+				'Sales &amp; Trading',
+			];
+
+			const html = KEYWORDS.map((k) => (
+				'<span class="top-band-item">' + k + '</span><span class="top-band-sep" aria-hidden="true">&diams;</span>'
+			)).join('');
+
+			set1.innerHTML = html;
+			set2.innerHTML = html;
+		})();
+
+		// ---------- Hero stat counters (count-up, exact final values) ----------
+		(function initHeroCountUp() {
+			const els = document.querySelectorAll('.hero-stat-value[data-count-to]');
+			if (els.length === 0) return;
+			const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+			els.forEach((el) => {
+				const target = parseFloat(el.getAttribute('data-count-to'));
+				const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+				const suffix = el.getAttribute('data-suffix') || '';
+
+				function render(value) {
+					el.textContent = value.toFixed(decimals) + suffix;
+				}
+
+				if (prefersReducedMotion || !('requestAnimationFrame' in window)) {
+					render(target);
+					return;
+				}
+
+				const duration = 1400;
+				let startTime = null;
+
+				function step(ts) {
+					if (startTime === null) startTime = ts;
+					const progress = Math.min((ts - startTime) / duration, 1);
+					const eased = 1 - Math.pow(1 - progress, 3);
+					if (progress < 1) {
+						render(target * eased);
+						requestAnimationFrame(step);
+					} else {
+						render(target);
+					}
+				}
+
+				requestAnimationFrame(step);
+			});
+		})();
 
 		// ---------- Project filters ----------
 		const filterBtns = Array.from(document.querySelectorAll('.filter-btn'));
