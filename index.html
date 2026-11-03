@@ -112,7 +112,7 @@
 			</div>
 		</div>
 		<p class="market-ticker-disclosure">
-			<span data-key="markets-disclosure-live">Delayed data, for information only</span>
+			<span data-key="markets-disclosure">Delayed data, for information only</span>
 			<span id="marketTickerAsOf"></span>
 		</p>
 	</section>
@@ -1132,9 +1132,9 @@
 				"location": "Cotonou, Benin &middot; Open to relocation",
 
 				"markets-label": "Markets",
-				"markets-disclosure-live": "Delayed data, for information only",
-				"markets-disclosure-fallback": "Static fallback data (not live), for information only",
+				"markets-disclosure": "Delayed data, for information only",
 				"markets-asof-prefix": "As of",
+				"markets-last-update-prefix": "Last update:",
 
 				"certifications-nav": "Certifications",
 				"certifications-eyebrow": "Credentials",
@@ -1421,9 +1421,9 @@
 				"location": "Cotonou, Bénin &middot; Ouverte à la mobilité géographique",
 
 				"markets-label": "Marchés",
-				"markets-disclosure-live": "Données différées, à titre informatif",
-				"markets-disclosure-fallback": "Données de secours statiques (non en direct), à titre informatif",
+				"markets-disclosure": "Données différées, à titre informatif",
 				"markets-asof-prefix": "À la date du",
+				"markets-last-update-prefix": "Dernière mise à jour :",
 
 				"certifications-nav": "Certifications",
 				"certifications-eyebrow": "Qualifications",
@@ -1854,6 +1854,7 @@
 			if (!section || !set1 || !set2 || !asOfEl) return;
 
 			const REFRESH_MS = 5 * 60 * 1000;
+			const MAX_CACHE_AGE_MS = 24 * 60 * 60 * 1000;
 			const CACHE_KEY = 'marketTickerCache';
 			let lastPayload = null;
 			let lastFetchAt = 0;
@@ -1892,7 +1893,6 @@
 			function renderAsOf() {
 				if (!lastPayload) return;
 				const lang = document.documentElement.getAttribute('lang') || 'en';
-				const prefix = (translations[lang] && translations[lang]['markets-asof-prefix']) || 'As of';
 				const d = new Date(lastPayload.asOf);
 				let formatted;
 				try {
@@ -1902,21 +1902,23 @@
 				} catch (e) {
 					formatted = lastPayload.asOf;
 				}
+				const prefixKey = lastPayload.isCached ? 'markets-last-update-prefix' : 'markets-asof-prefix';
+				const fallbackPrefix = lastPayload.isCached ? 'Last update:' : 'As of';
+				const prefix = (translations[lang] && translations[lang][prefixKey]) || fallbackPrefix;
 				asOfEl.textContent = ' — ' + prefix + ' ' + formatted;
 
-				const disclosureEl = section.querySelector('.market-ticker-disclosure span[data-key^="markets-disclosure"]');
-				if (disclosureEl) {
-					const key = lastPayload.isFallback ? 'markets-disclosure-fallback' : 'markets-disclosure-live';
-					disclosureEl.setAttribute('data-key', key);
-					if (translations[lang] && translations[lang][key] !== undefined) {
-						disclosureEl.textContent = translations[lang][key];
-					}
+				const disclosureEl = section.querySelector('.market-ticker-disclosure span[data-key="markets-disclosure"]');
+				if (disclosureEl && translations[lang] && translations[lang]['markets-disclosure'] !== undefined) {
+					disclosureEl.textContent = translations[lang]['markets-disclosure'];
 				}
 			}
 
-			function render(payload, isFallback) {
+			// payload is only ever real data: a live /api/quotes response, or a
+			// previously successful one read back from localStorage (isCached
+			// true), never an invented/static value.
+			function render(payload, isCached) {
 				if (!payload || !Array.isArray(payload.items) || payload.items.length === 0) return;
-				lastPayload = Object.assign({}, payload, { isFallback: !!isFallback });
+				lastPayload = Object.assign({}, payload, { isCached: !!isCached });
 				const html = payload.items.map(buildItemHTML).join('');
 				set1.innerHTML = html;
 				set2.innerHTML = html;
@@ -1924,11 +1926,19 @@
 				section.hidden = false;
 			}
 
-			function loadFallback() {
-				fetch('assets/market-fallback.json')
-					.then((r) => { if (!r.ok) throw new Error('fallback http ' + r.status); return r.json(); })
-					.then((data) => render(data, true))
-					.catch(() => { /* nothing left to show; the strip stays hidden */ });
+			// Live data failed or was empty: fall back to the last successful
+			// response cached in localStorage, but only if it is less than 24h
+			// old. Otherwise hide the whole strip gracefully — no empty box,
+			// no console error, no invented numbers.
+			function tryCacheOrHide() {
+				try {
+					const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
+					if (cached && cached.payload && Date.now() - cached.fetchedAt < MAX_CACHE_AGE_MS) {
+						render(cached.payload, true);
+						return;
+					}
+				} catch (e) {}
+				section.hidden = true;
 			}
 
 			function loadLive() {
@@ -1942,25 +1952,13 @@
 								localStorage.setItem(CACHE_KEY, JSON.stringify({ fetchedAt: Date.now(), payload: data }));
 							} catch (e) {}
 						} else {
-							loadFallback();
+							tryCacheOrHide();
 						}
 					})
-					.catch(() => { loadFallback(); });
+					.catch(() => { tryCacheOrHide(); });
 			}
 
-			let usedCache = false;
-			try {
-				const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
-				if (cached && cached.payload && Date.now() - cached.fetchedAt < REFRESH_MS) {
-					render(cached.payload, false);
-					lastFetchAt = cached.fetchedAt;
-					usedCache = true;
-				}
-			} catch (e) {}
-
-			if (!usedCache) {
-				loadLive();
-			}
+			loadLive();
 
 			setInterval(() => {
 				if (document.visibilityState !== 'visible') return;
