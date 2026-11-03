@@ -1,0 +1,22 @@
+{
+	"note": "Static fallback only, used when the live /api/quotes call fails or is incomplete. These values are illustrative order-of-magnitude figures from general knowledge, not a verified live pull — replace with real last-known quotes before relying on this file in production. Daily change is intentionally shown as flat (0.00%) since no real change figure is available for a static file.",
+	"asOf": "2025-06-02T00:00:00.000Z",
+	"items": [
+		{ "id": "sp500", "label": "S&P 500", "value": "5,900.00", "unit": "", "changePct": 0 },
+		{ "id": "nasdaq100", "label": "Nasdaq 100", "value": "20,500.00", "unit": "", "changePct": 0 },
+		{ "id": "dowjones", "label": "Dow Jones", "value": "43,000.00", "unit": "", "changePct": 0 },
+		{ "id": "eurostoxx50", "label": "Euro Stoxx 50", "value": "4,950.00", "unit": "", "changePct": 0 },
+		{ "id": "ftse100", "label": "FTSE 100", "value": "8,200.00", "unit": "", "changePct": 0 },
+		{ "id": "cac40", "label": "CAC 40", "value": "7,500.00", "unit": "", "changePct": 0 },
+		{ "id": "dax", "label": "DAX", "value": "19,000.00", "unit": "", "changePct": 0 },
+		{ "id": "nikkei225", "label": "Nikkei 225", "value": "38,500.00", "unit": "", "changePct": 0 },
+		{ "id": "hangseng", "label": "Hang Seng", "value": "18,000.00", "unit": "", "changePct": 0 },
+		{ "id": "vix", "label": "VIX", "value": "15.00", "unit": "", "changePct": 0 },
+		{ "id": "us10y", "label": "US 10Y", "value": "4.25", "unit": "%", "changePct": 0 },
+		{ "id": "eurusd", "label": "EUR/USD", "value": "1.08", "unit": "", "changePct": 0 },
+		{ "id": "gbpusd", "label": "GBP/USD", "value": "1.27", "unit": "", "changePct": 0 },
+		{ "id": "usdjpy", "label": "USD/JPY", "value": "150.00", "unit": "", "changePct": 0 },
+		{ "id": "wti", "label": "WTI Crude", "value": "70.00", "unit": "", "changePct": 0 },
+		{ "id": "gold", "label": "Gold", "value": "2,650.00", "unit": "", "changePct": 0 }
+	]
+}

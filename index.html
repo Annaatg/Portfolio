@@ -44,6 +44,7 @@
 				<li><a href="#skills" data-key="skills">Skills</a></li>
 				<li><a href="#portfolio" data-key="projects">Work</a></li>
 				<li><a href="#experience" data-key="experiences">Experience</a></li>
+				<li><a href="#certifications" data-key="certifications-nav">Certifications</a></li>
 				<li class="nav-contact-mobile"><a href="#contact" data-key="work">Contact</a></li>
 				<li class="nav-contact-mobile"><a href="https://www.linkedin.com/in/anne-marie-atignon/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
 			</ul>
@@ -97,6 +98,23 @@
 				</div>
 			</div>
 		</div>
+	</section>
+
+	<!-- Market ticker -->
+	<section class="market-ticker" role="region" aria-label="Market snapshot" id="marketTicker" hidden>
+		<div class="market-ticker-row">
+			<div class="market-ticker-label" data-key="markets-label">Markets</div>
+			<div class="market-ticker-viewport" tabindex="0">
+				<div class="market-ticker-track" id="marketTickerTrack">
+					<div class="market-ticker-set" id="marketTickerSet1"></div>
+					<div class="market-ticker-set market-ticker-set-duplicate" id="marketTickerSet2" aria-hidden="true"></div>
+				</div>
+			</div>
+		</div>
+		<p class="market-ticker-disclosure">
+			<span data-key="markets-disclosure-live">Delayed data, for information only</span>
+			<span id="marketTickerAsOf"></span>
+		</p>
 	</section>
 
 	<!-- Keyword marquee -->
@@ -1024,6 +1042,23 @@
 		</div>
 	</section>
 
+	<!-- Certifications -->
+	<section id="certifications" class="section" style="background:var(--bg-elevated);">
+		<div class="container">
+			<div class="section-head reveal">
+				<div class="eyebrow" data-key="certifications-eyebrow">Credentials</div>
+				<h2 class="section-heading" data-key="certifications-title">Certifications</h2>
+				<p class="section-note" id="certsCounter"></p>
+			</div>
+
+			<div id="certsContainer"></div>
+
+			<div class="more-projects-row">
+				<button type="button" class="project-detail-toggle" id="certsToggleBtn" aria-expanded="false" aria-controls="certsContainer" data-key="certs-show-all">Show all certifications</button>
+			</div>
+		</div>
+	</section>
+
 	<!-- Contact -->
 	<section id="contact" class="section">
 		<div class="container">
@@ -1095,6 +1130,25 @@
 				"projects-btn": "See what I've built",
 				"download-cv": "Download my CV",
 				"location": "Cotonou, Benin &middot; Open to relocation",
+
+				"markets-label": "Markets",
+				"markets-disclosure-live": "Delayed data, for information only",
+				"markets-disclosure-fallback": "Static fallback data (not live), for information only",
+				"markets-asof-prefix": "As of",
+
+				"certifications-nav": "Certifications",
+				"certifications-eyebrow": "Credentials",
+				"certifications-title": "Certifications",
+				"certs-show-all": "Show all certifications",
+				"certs-hide": "Hide",
+				"certs-showing-count": "Showing {shown} of {total}",
+				"certs-view-credential": "View credential",
+				"cat-quant-finance": "Quantitative Finance",
+				"cat-data-science-ml": "Data Science &amp; Machine Learning",
+				"cat-ai-data-eng": "AI &amp; Data Engineering",
+				"cat-programming-software": "Programming &amp; Software",
+				"cat-professional-skills": "Professional Skills &amp; Ethics",
+				"cat-competitions": "Competitions",
 
 				"about-eyebrow": "Who I am",
 				"about-title": "About me",
@@ -1365,6 +1419,25 @@
 				"projects-btn": "Découvrez mes réalisations",
 				"download-cv": "Télécharger mon CV",
 				"location": "Cotonou, Bénin &middot; Ouverte à la mobilité géographique",
+
+				"markets-label": "Marchés",
+				"markets-disclosure-live": "Données différées, à titre informatif",
+				"markets-disclosure-fallback": "Données de secours statiques (non en direct), à titre informatif",
+				"markets-asof-prefix": "À la date du",
+
+				"certifications-nav": "Certifications",
+				"certifications-eyebrow": "Qualifications",
+				"certifications-title": "Certifications",
+				"certs-show-all": "Voir toutes les certifications",
+				"certs-hide": "Masquer",
+				"certs-showing-count": "Affichage de {shown} sur {total}",
+				"certs-view-credential": "Voir le justificatif",
+				"cat-quant-finance": "Finance Quantitative",
+				"cat-data-science-ml": "Science des données &amp; Machine Learning",
+				"cat-ai-data-eng": "IA &amp; Ingénierie des données",
+				"cat-programming-software": "Programmation &amp; Logiciels",
+				"cat-professional-skills": "Compétences professionnelles &amp; Éthique",
+				"cat-competitions": "Compétitions",
 
 				"about-eyebrow": "Qui suis-je",
 				"about-title": "À propos de moi",
@@ -1771,6 +1844,240 @@
 				}
 			});
 		});
+
+		// ---------- Market ticker ----------
+		(function initMarketTicker() {
+			const section = document.getElementById('marketTicker');
+			const set1 = document.getElementById('marketTickerSet1');
+			const set2 = document.getElementById('marketTickerSet2');
+			const asOfEl = document.getElementById('marketTickerAsOf');
+			if (!section || !set1 || !set2 || !asOfEl) return;
+
+			const REFRESH_MS = 5 * 60 * 1000;
+			const CACHE_KEY = 'marketTickerCache';
+			let lastPayload = null;
+			let lastFetchAt = 0;
+
+			function escapeHtml(str) {
+				return String(str).replace(/[&<>"']/g, (c) => ({
+					'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+				}[c]));
+			}
+
+			function buildChangeHTML(changePct) {
+				const rounded = Math.round(changePct * 100) / 100;
+				let cls = 'is-flat';
+				let glyph = '–';
+				let signedPct = '0.00';
+				if (rounded > 0) {
+					cls = 'is-up';
+					glyph = '▲';
+					signedPct = '+' + rounded.toFixed(2);
+				} else if (rounded < 0) {
+					cls = 'is-down';
+					glyph = '▼';
+					signedPct = rounded.toFixed(2);
+				}
+				return '<span class="ticker-item-change ' + cls + '">' + glyph + ' ' + signedPct + '%</span>';
+			}
+
+			function buildItemHTML(item) {
+				return '<span class="ticker-item">' +
+					'<span class="ticker-item-label">' + escapeHtml(item.label) + '</span>' +
+					'<span class="ticker-item-value">' + escapeHtml(item.value) + escapeHtml(item.unit || '') + '</span>' +
+					buildChangeHTML(item.changePct) +
+					'</span><span class="ticker-divider" aria-hidden="true">&mdash;</span>';
+			}
+
+			function renderAsOf() {
+				if (!lastPayload) return;
+				const lang = document.documentElement.getAttribute('lang') || 'en';
+				const prefix = (translations[lang] && translations[lang]['markets-asof-prefix']) || 'As of';
+				const d = new Date(lastPayload.asOf);
+				let formatted;
+				try {
+					formatted = new Intl.DateTimeFormat(lang === 'fr' ? 'fr-FR' : 'en-US', {
+						dateStyle: 'medium', timeStyle: 'short',
+					}).format(d);
+				} catch (e) {
+					formatted = lastPayload.asOf;
+				}
+				asOfEl.textContent = ' — ' + prefix + ' ' + formatted;
+
+				const disclosureEl = section.querySelector('.market-ticker-disclosure span[data-key^="markets-disclosure"]');
+				if (disclosureEl) {
+					const key = lastPayload.isFallback ? 'markets-disclosure-fallback' : 'markets-disclosure-live';
+					disclosureEl.setAttribute('data-key', key);
+					if (translations[lang] && translations[lang][key] !== undefined) {
+						disclosureEl.textContent = translations[lang][key];
+					}
+				}
+			}
+
+			function render(payload, isFallback) {
+				if (!payload || !Array.isArray(payload.items) || payload.items.length === 0) return;
+				lastPayload = Object.assign({}, payload, { isFallback: !!isFallback });
+				const html = payload.items.map(buildItemHTML).join('');
+				set1.innerHTML = html;
+				set2.innerHTML = html;
+				renderAsOf();
+				section.hidden = false;
+			}
+
+			function loadFallback() {
+				fetch('assets/market-fallback.json')
+					.then((r) => { if (!r.ok) throw new Error('fallback http ' + r.status); return r.json(); })
+					.then((data) => render(data, true))
+					.catch(() => { /* nothing left to show; the strip stays hidden */ });
+			}
+
+			function loadLive() {
+				lastFetchAt = Date.now();
+				fetch('api/quotes')
+					.then((r) => { if (!r.ok) throw new Error('quotes http ' + r.status); return r.json(); })
+					.then((data) => {
+						if (data && Array.isArray(data.items) && data.items.length > 0) {
+							render(data, false);
+							try {
+								localStorage.setItem(CACHE_KEY, JSON.stringify({ fetchedAt: Date.now(), payload: data }));
+							} catch (e) {}
+						} else {
+							loadFallback();
+						}
+					})
+					.catch(() => { loadFallback(); });
+			}
+
+			let usedCache = false;
+			try {
+				const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
+				if (cached && cached.payload && Date.now() - cached.fetchedAt < REFRESH_MS) {
+					render(cached.payload, false);
+					lastFetchAt = cached.fetchedAt;
+					usedCache = true;
+				}
+			} catch (e) {}
+
+			if (!usedCache) {
+				loadLive();
+			}
+
+			setInterval(() => {
+				if (document.visibilityState !== 'visible') return;
+				if (Date.now() - lastFetchAt < REFRESH_MS) return;
+				loadLive();
+			}, REFRESH_MS);
+
+			document.addEventListener('visibilitychange', () => {
+				if (document.visibilityState === 'visible' && Date.now() - lastFetchAt >= REFRESH_MS) {
+					loadLive();
+				}
+			});
+
+			document.querySelectorAll('.lang-btn').forEach((btn) => {
+				btn.addEventListener('click', renderAsOf);
+			});
+		})();
+
+		// ---------- Certifications ----------
+		(function initCertifications() {
+			const container = document.getElementById('certsContainer');
+			const counterEl = document.getElementById('certsCounter');
+			const toggleBtn = document.getElementById('certsToggleBtn');
+			if (!container || !counterEl || !toggleBtn) return;
+
+			const CATEGORY_ORDER = [
+				'quant-finance', 'data-science-ml', 'ai-data-eng',
+				'programming-software', 'professional-skills', 'competitions',
+			];
+			let certs = [];
+			let expanded = false;
+
+			function escapeHtml(str) {
+				return String(str).replace(/[&<>"']/g, (c) => ({
+					'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+				}[c]));
+			}
+
+			function shortIssuer(issuer) {
+				return issuer.split(' · ')[0].split(' (')[0];
+			}
+
+			function formatTemplate(str, vars) {
+				return str.replace(/\{(\w+)\}/g, (_, k) => (vars[k] !== undefined ? vars[k] : ''));
+			}
+
+			function buildCardHTML(cert) {
+				const linkHtml = cert.url
+					? '<a class="cert-link" href="' + escapeHtml(cert.url) + '" target="_blank" rel="noopener noreferrer" data-key="certs-view-credential">View credential</a>'
+					: '';
+				const dateHtml = '<span class="cert-date">' + (cert.date ? escapeHtml(cert.date) : '') + '</span>';
+				return '<div class="cert-card' + (cert.featured ? '' : ' certs-hidden') + '">' +
+					'<h3 class="cert-title">' + escapeHtml(cert.title) + '</h3>' +
+					'<p class="cert-issuer">' + escapeHtml(cert.issuer) + '</p>' +
+					'<div class="cert-meta-row">' + dateHtml +
+					'<span class="tag-chip cert-tag">' + escapeHtml(shortIssuer(cert.issuer)) + '</span></div>' +
+					linkHtml +
+					'</div>';
+			}
+
+			function render() {
+				const lang = document.documentElement.getAttribute('lang') || 'en';
+				const byCategory = new Map();
+				certs.forEach((c) => {
+					if (!byCategory.has(c.category)) byCategory.set(c.category, []);
+					byCategory.get(c.category).push(c);
+				});
+
+				let html = '';
+				CATEGORY_ORDER.forEach((slug) => {
+					const list = byCategory.get(slug);
+					if (!list || list.length === 0) return;
+					const hasFeatured = list.some((c) => c.featured);
+					const categoryHidden = !expanded && !hasFeatured;
+					const catKey = 'cat-' + slug;
+					const catLabel = (translations[lang] && translations[lang][catKey]) || slug;
+					html += '<div class="certs-category' + (categoryHidden ? ' certs-hidden' : '') + '">' +
+						'<div class="eyebrow section-subhead" data-key="' + catKey + '">' + catLabel + '</div>' +
+						'<div class="certs-grid">' + list.map(buildCardHTML).join('') + '</div></div>';
+				});
+				container.innerHTML = html;
+
+				if (expanded) {
+					container.querySelectorAll('.certs-hidden').forEach((el) => el.classList.remove('certs-hidden'));
+				}
+
+				const shown = expanded ? certs.length : certs.filter((c) => c.featured).length;
+				const counterTpl = (translations[lang] && translations[lang]['certs-showing-count']) || 'Showing {shown} of {total}';
+				counterEl.textContent = formatTemplate(counterTpl, { shown, total: certs.length });
+
+				const toggleKey = expanded ? 'certs-hide' : 'certs-show-all';
+				toggleBtn.setAttribute('data-key', toggleKey);
+				toggleBtn.setAttribute('aria-expanded', String(expanded));
+				if (translations[lang] && translations[lang][toggleKey] !== undefined) {
+					toggleBtn.innerHTML = translations[lang][toggleKey];
+				}
+			}
+
+			toggleBtn.addEventListener('click', () => {
+				expanded = !expanded;
+				render();
+			});
+
+			document.querySelectorAll('.lang-btn').forEach((btn) => {
+				btn.addEventListener('click', () => render());
+			});
+
+			fetch('assets/certifications.json')
+				.then((r) => { if (!r.ok) throw new Error('certs http ' + r.status); return r.json(); })
+				.then((data) => {
+					if (Array.isArray(data)) {
+						certs = data;
+						render();
+					}
+				})
+				.catch(() => { /* section header stays visible; body just stays empty */ });
+		})();
 
 		// ---------- Scroll reveal (progressive enhancement) ----------
 		// .reveal elements are visible by default in CSS. Here we opt them
