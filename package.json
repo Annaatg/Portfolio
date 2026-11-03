@@ -1,0 +1,9 @@
+{
+	"name": "anne-marie-atignon-portfolio",
+	"private": true,
+	"version": "1.0.0",
+	"description": "Static multi-page build for Anne-Marie Atignon's portfolio.",
+	"scripts": {
+		"build": "node build.mjs"
+	}
+}
