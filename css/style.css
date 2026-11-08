@@ -1,15 +1,16 @@
 /* =========================================================
    Anne-Marie Atignon — Portfolio
-   Flat, institutional finance system. No gradients, no card
-   shadows beyond a 1px border, no decorative icons.
+   Flat system built on three brand colors: Sapphire Blue and
+   Ocean Blue as the quiet base tones, Neon Jade as the one loud
+   accent (hero CTA, top band, small highlights only).
    ========================================================= */
 
 :root {
-  --ink: #0B1F3A;
-  --card-navy: #14284B;
-  --brass: #B08D3C;
-  --brass-text: #82682c;   /* brass darkened for 4.5:1 text on light surfaces, incl. bg-alt */
-  --brass-bright: #C9A24D; /* brass lightened for text on navy surfaces */
+  --ink: #0042AC;          /* Sapphire Blue: dark surfaces + link/accent text on light bg */
+  --card-navy: #003587;    /* darker sapphire shade, for depth where needed */
+  --brass: #83FD80;        /* Neon Jade: the one loud accent, used sparingly */
+  --brass-text: #0042AC;   /* Sapphire Blue: link/accent text on light surfaces (8.2:1+) */
+  --brass-bright: #00D3FB; /* Ocean Blue: accent text/labels on sapphire surfaces */
 
   --bg: #F6F7F9;
   --bg-alt: #EDEFF3;
@@ -23,13 +24,13 @@
 
   --on-dark-text: #FFFFFF;
   --on-dark-muted: #B9C0CB;
-  --on-dark-border: #28395A;
+  --on-dark-border: #1F56B8;
 
   --ticker-up: #166534;
   --ticker-down: #B91C1C;
 
-  --font-display: 'Source Serif 4', Georgia, serif;
-  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Ubuntu', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Times New Roman', Times, 'Liberation Serif', Georgia, serif;
   --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
 
   --space-1: 4px;
@@ -230,15 +231,15 @@ p {
   color: #fff;
 }
 
-.btn-primary:hover { background: #122a4d; }
-.btn-primary:active { background: #081527; }
+.btn-primary:hover { background: #003892; }
+.btn-primary:active { background: #002e78; }
 
 .on-dark .btn-primary {
-  background: var(--brass-bright);
+  background: var(--brass);
   color: var(--ink);
 }
 
-.on-dark .btn-primary:hover { background: #d4af5e; }
+.on-dark .btn-primary:hover { background: #75e373; }
 
 .btn-outline {
   background: transparent;
@@ -444,7 +445,7 @@ p {
   font-weight: 500;
 }
 
-.nav-cv-btn:hover { background: #122a4d; }
+.nav-cv-btn:hover { background: #003892; }
 
 .nav-toggle {
   display: none;
@@ -1201,11 +1202,11 @@ p {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  color: var(--brass-text);
+  color: var(--on-dark-muted);
   font-weight: 500;
 }
 
-.social-link:hover { color: var(--ink); }
+.social-link:hover { color: var(--brass-bright); }
 
 .social-row {
   display: flex;

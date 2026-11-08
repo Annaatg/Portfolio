@@ -44,11 +44,11 @@
 					<span class="tag-chip">Backtesting</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project14-detail1">Individual LSTM models — built and trained a separate LSTM model for each of five ETFs (SPY for equities, TLT and SHY for long- and short-duration bonds, GLD for gold, DBO for oil), predicting next-period returns from historical price sequences.</li>
-					<li data-key="project14-detail2">Strategy construction &amp; backtesting — converted model predictions into trading signals and backtested the resulting LSTM-based strategy against an equal-weight buy-and-hold benchmark, evaluating performance through cumulative returns, drawdowns, and return distributions.</li>
+					<li data-key="project14-detail1">Individual LSTM models; built and trained a separate LSTM model for each of five ETFs (SPY for equities, TLT and SHY for long- and short-duration bonds, GLD for gold, DBO for oil), predicting next-period returns from historical price sequences.</li>
+					<li data-key="project14-detail2">Strategy construction &amp; backtesting; converted model predictions into trading signals and backtested the resulting LSTM-based strategy against an equal-weight buy-and-hold benchmark, evaluating performance through cumulative returns, drawdowns, and return distributions.</li>
 				</ul>
 				<ul class="project-detail-list project-detail-extra" id="project14-extra">
-					<li data-key="project14-detail3">Multi-output LSTM model — extended the approach to a single multi-output LSTM predicting all five ETFs jointly, testing whether modeling cross-asset relationships in one network improves on training independent models per asset.</li>
+					<li data-key="project14-detail3">Multi-output LSTM model; extended the approach to a single multi-output LSTM predicting all five ETFs jointly, testing whether modeling cross-asset relationships in one network improves on training independent models per asset.</li>
 				</ul>
 				<button type="button" class="detail-toggle" aria-expanded="false" aria-controls="project14-extra" data-key="show-details">Show details</button>
 				<a href="/assets/WQU_DL_GWP2_LSTM_ETF_Strategy.ipynb" download="WQU_DL_LSTM_ETF_Strategy.ipynb" class="dl-link">
@@ -85,7 +85,7 @@
 
 			<article class="card project-card c-6">
 				<h3 data-key="project6-title">Exotic Option Pricing: Stochastic Volatility &amp; Jump Diffusion</h3>
-				<p class="desc" data-key="project6-desc">Pricing options under the Heston and Merton models via Monte Carlo simulation, extending to American early-exercise and barrier options — where theory meets the messiness of real option pricing.</p>
+				<p class="desc" data-key="project6-desc">Pricing options under the Heston and Merton models via Monte Carlo simulation, extending to American early-exercise and barrier options; where theory meets the messiness of real option pricing.</p>
 				<div class="tags-row">
 					<span class="tag-chip">Python</span>
 					<span class="tag-chip">Monte Carlo</span>
@@ -93,13 +93,13 @@
 					<span class="tag-chip">Options Pricing</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project6-detail1">Heston model (stochastic volatility) — simulated correlated stock price and variance processes via Monte Carlo (10,000 paths) to price at-the-money European calls and puts, testing sensitivity to the correlation parameter ρ between asset returns and volatility.</li>
-					<li data-key="project6-detail2">Merton jump-diffusion model — modeled sudden price jumps (Poisson-distributed) layered on top of standard diffusion, pricing options under varying jump intensities and comparing the resulting price curves against the Heston model's smoother, volatility-driven behavior.</li>
+					<li data-key="project6-detail1">Heston model (stochastic volatility); simulated correlated stock price and variance processes via Monte Carlo (10,000 paths) to price at-the-money European calls and puts, testing sensitivity to the correlation parameter ρ between asset returns and volatility.</li>
+					<li data-key="project6-detail2">Merton jump-diffusion model; modeled sudden price jumps (Poisson-distributed) layered on top of standard diffusion, pricing options under varying jump intensities and comparing the resulting price curves against the Heston model's smoother, volatility-driven behavior.</li>
 				</ul>
 				<ul class="project-detail-list project-detail-extra" id="project6-extra">
-					<li data-key="project6-detail3">Greeks estimation — computed Delta and Gamma numerically under both models to quantify option price sensitivity to the underlying asset.</li>
-					<li data-key="project6-detail4">American options &amp; early exercise — priced an American call under the Heston model using Monte Carlo with Least Squares Regression (the Longstaff-Schwartz approach), confirming the early-exercise premium against the European price.</li>
-					<li data-key="project6-detail5">Barrier options — priced Up-and-In Call and Down-and-In Put exotic options under jump-diffusion, showing how barrier conditions can significantly discount an option relative to its vanilla European equivalent.</li>
+					<li data-key="project6-detail3">Greeks estimation; computed Delta and Gamma numerically under both models to quantify option price sensitivity to the underlying asset.</li>
+					<li data-key="project6-detail4">American options &amp; early exercise; priced an American call under the Heston model using Monte Carlo with Least Squares Regression (the Longstaff-Schwartz approach), confirming the early-exercise premium against the European price.</li>
+					<li data-key="project6-detail5">Barrier options; priced Up-and-In Call and Down-and-In Put exotic options under jump-diffusion, showing how barrier conditions can significantly discount an option relative to its vanilla European equivalent.</li>
 				</ul>
 				<button type="button" class="detail-toggle" aria-expanded="false" aria-controls="project6-extra" data-key="show-details">Show details</button>
 				<a href="/assets/WQU_GWP2_Exotic_Option_Pricing.ipynb" download="WQU_Exotic_Option_Pricing_Heston_Merton.ipynb" class="dl-link">
@@ -146,18 +146,18 @@
 		<div class="projects-grid" id="projectGrid" role="tabpanel" aria-labelledby="filter-tab-all">
 			<article class="card project-card c-6" data-category="timeseries">
 				<h3 data-key="project1-title">Yield Curve &amp; Market Risk Analysis</h3>
-				<p class="desc" data-key="project1-desc">Modeling the U.S. Treasury yield curve and decomposing market risk through correlation analysis — from raw FRED data to a fitted Nelson-Siegel curve and PCA-driven factor decomposition.</p>
+				<p class="desc" data-key="project1-desc">Modeling the U.S. Treasury yield curve and decomposing market risk through correlation analysis; from raw FRED data to a fitted Nelson-Siegel curve and PCA-driven factor decomposition.</p>
 				<div class="tags-row">
 					<span class="tag-chip">Python</span>
 					<span class="tag-chip">Nelson-Siegel Model</span>
 					<span class="tag-chip">PCA/SVD</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project1-detail1">Yield curve modeling — pulled historical U.S. Treasury yield data via the FRED API and fitted a Nelson-Siegel curve to model the term structure at different points in time, comparing fitted curves against observed yields.</li>
-					<li data-key="project1-detail2">Correlation &amp; dimensionality reduction — used PCA and SVD to decompose the covariance structure of Treasury-linked ETF returns, isolating the dominant factors driving yield movements and demonstrating how a small number of components explain most of the variance in rate changes.</li>
+					<li data-key="project1-detail1">Yield curve modeling; pulled historical U.S. Treasury yield data via the FRED API and fitted a Nelson-Siegel curve to model the term structure at different points in time, comparing fitted curves against observed yields.</li>
+					<li data-key="project1-detail2">Correlation &amp; dimensionality reduction; used PCA and SVD to decompose the covariance structure of Treasury-linked ETF returns, isolating the dominant factors driving yield movements and demonstrating how a small number of components explain most of the variance in rate changes.</li>
 				</ul>
 				<ul class="project-detail-list project-detail-extra" id="project1-extra">
-					<li data-key="project1-detail3">Empirical ETF analysis — applied the same PCA/SVD framework to a real estate sector ETF (XLRE) and its top 30 holdings, extracting principal components from daily return covariance to understand the sector's underlying risk factors.</li>
+					<li data-key="project1-detail3">Empirical ETF analysis; applied the same PCA/SVD framework to a real estate sector ETF (XLRE) and its top 30 holdings, extracting principal components from daily return covariance to understand the sector's underlying risk factors.</li>
 				</ul>
 				<button type="button" class="detail-toggle" aria-expanded="false" aria-controls="project1-extra" data-key="show-details">Show details</button>
 				<a href="/assets/WQU_GWP1_cleaned.ipynb" download="WQU_Yield_Curve_Market_Risk_Analysis.ipynb" class="dl-link">
@@ -168,15 +168,15 @@
 
 			<article class="card project-card c-6" data-category="ml">
 				<h3 data-key="project2-title">Market Prediction &amp; Credit Risk Analysis</h3>
-				<p class="desc" data-key="project2-desc">Testing whether short-term technical signals predict emerging-market ETF returns, then shifting to credit risk — structuring and exploring a loan default dataset to surface the drivers of default.</p>
+				<p class="desc" data-key="project2-desc">Testing whether short-term technical signals predict emerging-market ETF returns, then shifting to credit risk; structuring and exploring a loan default dataset to surface the drivers of default.</p>
 				<div class="tags-row">
 					<span class="tag-chip">Python</span>
 					<span class="tag-chip">scikit-learn</span>
 					<span class="tag-chip">Credit Risk</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project2-detail1">ETF return prediction — built a linear regression model using a 10-day simple moving average to predict next-day returns on the Chile country ETF (ECH), validated across 5-fold cross-validation. Results showed weak but consistent positive correlation between predicted and actual returns, illustrating how difficult short-horizon return prediction is even with a clean, simple setup.</li>
-					<li data-key="project2-detail2">Credit risk data analysis — cleaned and structured a consumer credit dataset (loan amount, interest rate, borrower income, employment length, credit history length, loan status), handling missing values and categorical encoding, then explored the distributions driving default risk as groundwork for credit risk modeling.</li>
+					<li data-key="project2-detail1">ETF return prediction; built a linear regression model using a 10-day simple moving average to predict next-day returns on the Chile country ETF (ECH), validated across 5-fold cross-validation. Results showed weak but consistent positive correlation between predicted and actual returns, illustrating how difficult short-horizon return prediction is even with a clean, simple setup.</li>
+					<li data-key="project2-detail2">Credit risk data analysis; cleaned and structured a consumer credit dataset (loan amount, interest rate, borrower income, employment length, credit history length, loan status), handling missing values and categorical encoding, then explored the distributions driving default risk as groundwork for credit risk modeling.</li>
 				</ul>
 				<div class="project-downloads">
 					<a href="/assets/WQU_GWP2_Market_Prediction_Credit_Risk.ipynb" download="WQU_Market_Prediction_Credit_Risk_Analysis.ipynb" class="dl-link">
@@ -192,19 +192,19 @@
 
 			<article class="card project-card c-6" data-category="timeseries">
 				<h3 data-key="project3-title">Financial Econometrics: Diagnosing Data Pathologies</h3>
-				<p class="desc" data-key="project3-desc">A practical framework for spotting and fixing the four statistical issues that quietly break financial models — skewness, fat tails, outlier sensitivity, and non-stationarity — with diagnosis and remedies for each.</p>
+				<p class="desc" data-key="project3-desc">A practical framework for spotting and fixing the four statistical issues that quietly break financial models; skewness, fat tails, outlier sensitivity, and non-stationarity; with diagnosis and remedies for each.</p>
 				<div class="tags-row">
 					<span class="tag-chip">Python</span>
 					<span class="tag-chip">Statsmodels</span>
 					<span class="tag-chip">Time Series</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project3-detail1">Skewness — simulated and measured distributional asymmetry, and discussed its impact on risk models that assume normality.</li>
-					<li data-key="project3-detail2">Kurtosis &amp; heteroscedasticity — examined fat-tailed distributions and time-varying volatility, both common in financial returns and both dangerous when ignored in options pricing and risk management.</li>
+					<li data-key="project3-detail1">Skewness; simulated and measured distributional asymmetry, and discussed its impact on risk models that assume normality.</li>
+					<li data-key="project3-detail2">Kurtosis &amp; heteroscedasticity; examined fat-tailed distributions and time-varying volatility, both common in financial returns and both dangerous when ignored in options pricing and risk management.</li>
 				</ul>
 				<ul class="project-detail-list project-detail-extra" id="project3-extra">
-					<li data-key="project3-detail3">Outlier sensitivity — used the modified Z-score (median absolute deviation) to detect and quantify the distortion outliers introduce into means, variances, and regression coefficients.</li>
-					<li data-key="project3-detail4">Non-stationarity &amp; unit root testing — applied the Augmented Dickey-Fuller test to detect random-walk behavior in time series, and discussed why modeling non-stationary data without differencing produces spurious, unreliable results.</li>
+					<li data-key="project3-detail3">Outlier sensitivity; used the modified Z-score (median absolute deviation) to detect and quantify the distortion outliers introduce into means, variances, and regression coefficients.</li>
+					<li data-key="project3-detail4">Non-stationarity &amp; unit root testing; applied the Augmented Dickey-Fuller test to detect random-walk behavior in time series, and discussed why modeling non-stationary data without differencing produces spurious, unreliable results.</li>
 				</ul>
 				<button type="button" class="detail-toggle" aria-expanded="false" aria-controls="project3-extra" data-key="show-details">Show details</button>
 				<a href="/assets/WQU_Fin_Econom_GWP1_Data_Pathologies.ipynb" download="WQU_Financial_Econometrics_Data_Pathologies.ipynb" class="dl-link">
@@ -215,7 +215,7 @@
 
 			<article class="card project-card c-6" data-category="timeseries">
 				<h3 data-key="project4-title">Cointegration, Non-Stationarity &amp; Multicollinearity in Financial Time Series</h3>
-				<p class="desc" data-key="project4-desc">From feature engineering on time series to a full Johansen cointegration study of gold, silver, and platinum — building a VECM model and diagnosing multicollinearity across major tech stocks along the way.</p>
+				<p class="desc" data-key="project4-desc">From feature engineering on time series to a full Johansen cointegration study of gold, silver, and platinum; building a VECM model and diagnosing multicollinearity across major tech stocks along the way.</p>
 				<div class="tags-row">
 					<span class="tag-chip">Python</span>
 					<span class="tag-chip">VECM</span>
@@ -223,11 +223,11 @@
 					<span class="tag-chip">Time Series</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project4-detail1">Feature extraction — engineered lag features, rolling statistics, and differencing on time series data to prepare it for modeling, and assessed which transformations actually preserve useful signal.</li>
-					<li data-key="project4-detail2">Non-stationarity &amp; long-run equilibrium — tested gold, silver, and platinum prices (1985–2024) for unit roots using ADF and KPSS tests, confirmed a cointegrating relationship via the Johansen test, and built a Vector Error Correction Model (VECM) capturing the long-run equilibrium between the three metals — the same statistical foundation used in pairs trading, where cointegrated assets are traded against each other on the assumption their prices revert to equilibrium.</li>
+					<li data-key="project4-detail1">Feature extraction; engineered lag features, rolling statistics, and differencing on time series data to prepare it for modeling, and assessed which transformations actually preserve useful signal.</li>
+					<li data-key="project4-detail2">Non-stationarity &amp; long-run equilibrium; tested gold, silver, and platinum prices (1985–2024) for unit roots using ADF and KPSS tests, confirmed a cointegrating relationship via the Johansen test, and built a Vector Error Correction Model (VECM) capturing the long-run equilibrium between the three metals; the same statistical foundation used in pairs trading, where cointegrated assets are traded against each other on the assumption their prices revert to equilibrium.</li>
 				</ul>
 				<ul class="project-detail-list project-detail-extra" id="project4-extra">
-					<li data-key="project4-detail3">Multicollinearity — analyzed daily returns of AAPL, MSFT, GOOGL, and AMZN, using correlation matrices and Variance Inflation Factor (VIF) to detect and quantify redundancy between highly correlated tech stocks, identifying which pairs would destabilize a regression model.</li>
+					<li data-key="project4-detail3">Multicollinearity; analyzed daily returns of AAPL, MSFT, GOOGL, and AMZN, using correlation matrices and Variance Inflation Factor (VIF) to detect and quantify redundancy between highly correlated tech stocks, identifying which pairs would destabilize a regression model.</li>
 				</ul>
 				<button type="button" class="detail-toggle" aria-expanded="false" aria-controls="project4-extra" data-key="show-details">Show details</button>
 				<div class="project-downloads">
@@ -251,12 +251,12 @@
 					<span class="tag-chip">Options Pricing</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project5-detail1">Binomial tree pricing — implemented the Cox-Ross-Rubinstein (CRR) model with 100 time steps to price at-the-money European calls and puts, computing up/down factors and risk-neutral probabilities from volatility and the risk-free rate.</li>
-					<li data-key="project5-detail2">Moneyness sensitivity — priced calls and puts across a range of strikes (deep ITM to deep OTM) to confirm option values move as theory predicts: call prices fall as strikes rise, put prices rise as strikes rise.</li>
+					<li data-key="project5-detail1">Binomial tree pricing; implemented the Cox-Ross-Rubinstein (CRR) model with 100 time steps to price at-the-money European calls and puts, computing up/down factors and risk-neutral probabilities from volatility and the risk-free rate.</li>
+					<li data-key="project5-detail2">Moneyness sensitivity; priced calls and puts across a range of strikes (deep ITM to deep OTM) to confirm option values move as theory predicts: call prices fall as strikes rise, put prices rise as strikes rise.</li>
 				</ul>
 				<ul class="project-detail-list project-detail-extra" id="project5-extra">
-					<li data-key="project5-detail3">Put-call parity testing — checked the parity relationship (C − P = S − PV(K)) across strikes for both European and American options, finding it held only at-the-money for European options and broke down elsewhere — and testing why American options systematically violate it due to early-exercise rights.</li>
-					<li data-key="project5-detail4">Multi-step binomial trees — extended the model to a 3-step tree pricing a put option, tracing asset price evolution node by node and discounting expected payoffs back to present value.</li>
+					<li data-key="project5-detail3">Put-call parity testing; checked the parity relationship (C − P = S − PV(K)) across strikes for both European and American options, finding it held only at-the-money for European options and broke down elsewhere; and testing why American options systematically violate it due to early-exercise rights.</li>
+					<li data-key="project5-detail4">Multi-step binomial trees; extended the model to a 3-step tree pricing a put option, tracing asset price evolution node by node and discounting expected payoffs back to present value.</li>
 				</ul>
 				<button type="button" class="detail-toggle" aria-expanded="false" aria-controls="project5-extra" data-key="show-details">Show details</button>
 				<a href="/assets/WQU_GWP1_Option_Pricing_Binomial_Trees.ipynb" download="WQU_Option_Pricing_Binomial_Trees.ipynb" class="dl-link">
@@ -267,7 +267,7 @@
 
 			<article class="card project-card c-6" data-category="derivatives">
 				<h3 data-key="project7-title">Calibrating Stochastic Models to Real Market Data</h3>
-				<p class="desc" data-key="project7-desc">Fitting the Heston, Bates, and CIR models to real option and interest-rate data — from stochastic volatility calibration via Fourier pricing to simulating a full year of interest-rate paths.</p>
+				<p class="desc" data-key="project7-desc">Fitting the Heston, Bates, and CIR models to real option and interest-rate data; from stochastic volatility calibration via Fourier pricing to simulating a full year of interest-rate paths.</p>
 				<div class="tags-row">
 					<span class="tag-chip">Python</span>
 					<span class="tag-chip">Heston Model</span>
@@ -275,11 +275,11 @@
 					<span class="tag-chip">Calibration</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project7-detail1">Heston model calibration — calibrated the Heston stochastic volatility model to real 15-day equity option prices using Fourier-based pricing (the Lewis/Carr-Madan approach) and global optimization (differential evolution), converting puts to synthetic calls via put-call parity and verifying the Feller condition on the fitted parameters.</li>
-					<li data-key="project7-detail2">Bates model (Heston + jumps) — extended the calibration to 60-day options using the Bates model, which layers a jump-diffusion component on top of stochastic volatility, to test whether adding jumps improves the fit to market prices.</li>
+					<li data-key="project7-detail1">Heston model calibration; calibrated the Heston stochastic volatility model to real 15-day equity option prices using Fourier-based pricing (the Lewis/Carr-Madan approach) and global optimization (differential evolution), converting puts to synthetic calls via put-call parity and verifying the Feller condition on the fitted parameters.</li>
+					<li data-key="project7-detail2">Bates model (Heston + jumps); extended the calibration to 60-day options using the Bates model, which layers a jump-diffusion component on top of stochastic volatility, to test whether adding jumps improves the fit to market prices.</li>
 				</ul>
 				<ul class="project-detail-list project-detail-extra" id="project7-extra">
-					<li data-key="project7-detail3">CIR interest rate model — calibrated the Cox-Ingersoll-Ross model to the Euribor term structure (7 to 360 days), then simulated 100,000 one-year interest rate paths to estimate the expected 12-month Euribor rate and its 5th-95th percentile confidence range.</li>
+					<li data-key="project7-detail3">CIR interest rate model; calibrated the Cox-Ingersoll-Ross model to the Euribor term structure (7 to 360 days), then simulated 100,000 one-year interest rate paths to estimate the expected 12-month Euribor rate and its 5th-95th percentile confidence range.</li>
 				</ul>
 				<button type="button" class="detail-toggle" aria-expanded="false" aria-controls="project7-extra" data-key="show-details">Show details</button>
 				<div class="project-downloads">
@@ -296,19 +296,19 @@
 
 			<article class="card project-card c-6" data-category="timeseries">
 				<h3 data-key="project8-title">Regime-Switching Volatility: S&amp;P 500 vs. Bitcoin</h3>
-				<p class="desc" data-key="project8-desc">Detecting bull/bear volatility regimes in equities and crypto with Markov-switching models — comparing how a traditional index and a highly volatile digital asset behave across calm and turbulent periods.</p>
+				<p class="desc" data-key="project8-desc">Detecting bull/bear volatility regimes in equities and crypto with Markov-switching models; comparing how a traditional index and a highly volatile digital asset behave across calm and turbulent periods.</p>
 				<div class="tags-row">
 					<span class="tag-chip">Python</span>
 					<span class="tag-chip">Markov-Switching Models</span>
 					<span class="tag-chip">Time Series</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project8-detail1">Time series diagnostics — analyzed S&amp;P 500 and Bitcoin daily returns (2019-2022) with rolling volatility, ACF/PACF plots, and Ljung-Box tests to characterize each series' autocorrelation structure before modeling.</li>
-					<li data-key="project8-detail2">Markov regime-switching models — fitted two-regime Markov-switching models to both assets to identify distinct low- and high-volatility states, visualizing regime shifts against real market events (the COVID crash and subsequent bull run, the 2022 bear market).</li>
+					<li data-key="project8-detail1">Time series diagnostics; analyzed S&amp;P 500 and Bitcoin daily returns (2019-2022) with rolling volatility, ACF/PACF plots, and Ljung-Box tests to characterize each series' autocorrelation structure before modeling.</li>
+					<li data-key="project8-detail2">Markov regime-switching models; fitted two-regime Markov-switching models to both assets to identify distinct low- and high-volatility states, visualizing regime shifts against real market events (the COVID crash and subsequent bull run, the 2022 bear market).</li>
 				</ul>
 				<ul class="project-detail-list project-detail-extra" id="project8-extra">
-					<li data-key="project8-detail3">Model comparison — compared model variants with different mean and variance specifications using AIC/BIC, selecting the best-fitting specification for each asset.</li>
-					<li data-key="project8-detail4">Regime-switching autoregression — extended the model to a Markov-switching AR(1) process on S&amp;P 500 returns, estimating smoothed regime probabilities over time to show how the probability of being in a high-volatility state evolves.</li>
+					<li data-key="project8-detail3">Model comparison; compared model variants with different mean and variance specifications using AIC/BIC, selecting the best-fitting specification for each asset.</li>
+					<li data-key="project8-detail4">Regime-switching autoregression; extended the model to a Markov-switching AR(1) process on S&amp;P 500 returns, estimating smoothed regime probabilities over time to show how the probability of being in a high-volatility state evolves.</li>
 				</ul>
 				<button type="button" class="detail-toggle" aria-expanded="false" aria-controls="project8-extra" data-key="show-details">Show details</button>
 				<a href="/assets/WQU_SM_GWP2_Regime_Switching.ipynb" download="WQU_Regime_Switching_SP500_Bitcoin.ipynb" class="dl-link">
@@ -319,19 +319,19 @@
 
 			<article class="card project-card c-6" data-category="portfolio">
 				<h3 data-key="project9-title">Multi-Armed Bandits for Stock Selection: 2008 vs. 2020</h3>
-				<p class="desc" data-key="project9-desc">Applying reinforcement learning (UCB and Epsilon-Greedy algorithms) to pick stocks during the 2008 financial crisis and the 2020 COVID crash — treating each stock as a bandit arm and letting the algorithm learn where to allocate.</p>
+				<p class="desc" data-key="project9-desc">Applying reinforcement learning (UCB and Epsilon-Greedy algorithms) to pick stocks during the 2008 financial crisis and the 2020 COVID crash; treating each stock as a bandit arm and letting the algorithm learn where to allocate.</p>
 				<div class="tags-row">
 					<span class="tag-chip">Python</span>
 					<span class="tag-chip">Reinforcement Learning</span>
 					<span class="tag-chip">Multi-Armed Bandits</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project9-detail1">Data collection &amp; correlation structure — gathered daily returns for 30 stocks (14 financial, 15 non-financial) during the September-October 2008 crisis, and used hierarchical clustering on the correlation matrix to visualize how stocks grouped together under stress.</li>
-					<li data-key="project9-detail2">UCB (Upper Confidence Bound) algorithm — implemented UCB from scratch to sequentially select stocks, balancing exploitation of historically strong performers against exploration of under-tested ones, using each stock's daily return as its "reward."</li>
+					<li data-key="project9-detail1">Data collection &amp; correlation structure; gathered daily returns for 30 stocks (14 financial, 15 non-financial) during the September-October 2008 crisis, and used hierarchical clustering on the correlation matrix to visualize how stocks grouped together under stress.</li>
+					<li data-key="project9-detail2">UCB (Upper Confidence Bound) algorithm; implemented UCB from scratch to sequentially select stocks, balancing exploitation of historically strong performers against exploration of under-tested ones, using each stock's daily return as its "reward."</li>
 				</ul>
 				<ul class="project-detail-list project-detail-extra" id="project9-extra">
-					<li data-key="project9-detail3">Epsilon-Greedy algorithm — implemented a second bandit strategy for comparison, choosing the best-known stock most of the time while randomly exploring alternatives a fraction of the time.</li>
-					<li data-key="project9-detail4">Out-of-sample stress test — reran both algorithms on the same 30 stocks during the March-April 2020 COVID crash, comparing cumulative returns between UCB and Epsilon-Greedy to see which strategy adapted better to a completely different crisis.</li>
+					<li data-key="project9-detail3">Epsilon-Greedy algorithm; implemented a second bandit strategy for comparison, choosing the best-known stock most of the time while randomly exploring alternatives a fraction of the time.</li>
+					<li data-key="project9-detail4">Out-of-sample stress test; reran both algorithms on the same 30 stocks during the March-April 2020 COVID crash, comparing cumulative returns between UCB and Epsilon-Greedy to see which strategy adapted better to a completely different crisis.</li>
 				</ul>
 				<button type="button" class="detail-toggle" aria-expanded="false" aria-controls="project9-extra" data-key="show-details">Show details</button>
 				<a href="/assets/WQU_SM_GWP3_Multiarmed_Bandits.ipynb" download="WQU_Multiarmed_Bandits_Stock_Selection.ipynb" class="dl-link">
@@ -342,7 +342,7 @@
 
 			<article class="card project-card c-6" data-category="ml">
 				<h3 data-key="project10-title">Machine Learning Foundations for Finance: Clustering, PCA, and Trees</h3>
-				<p class="desc" data-key="project10-desc">Three core ML techniques applied to financial data — clustering assets by behavior, reducing a 20-stock portfolio to its key risk factors, and predicting returns from momentum and volatility with a regression tree.</p>
+				<p class="desc" data-key="project10-desc">Three core ML techniques applied to financial data; clustering assets by behavior, reducing a 20-stock portfolio to its key risk factors, and predicting returns from momentum and volatility with a regression tree.</p>
 				<div class="tags-row">
 					<span class="tag-chip">Python</span>
 					<span class="tag-chip">scikit-learn</span>
@@ -350,11 +350,11 @@
 					<span class="tag-chip">Machine Learning</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project10-detail1">K-means clustering — implemented and visualized K-means step-by-step (centroid initialization, point assignment, centroid updates) on financial-style data with return and volatility features, illustrating how the algorithm groups similar instruments.</li>
-					<li data-key="project10-detail2">Principal Component Analysis (PCA) — applied PCA to daily returns of 20 major stocks (AAPL, MSFT, GOOGL, TSLA, JPM, and others) to reduce the portfolio's dimensionality and identify the principal factors driving joint stock movements.</li>
+					<li data-key="project10-detail1">K-means clustering; implemented and visualized K-means step-by-step (centroid initialization, point assignment, centroid updates) on financial-style data with return and volatility features, illustrating how the algorithm groups similar instruments.</li>
+					<li data-key="project10-detail2">Principal Component Analysis (PCA); applied PCA to daily returns of 20 major stocks (AAPL, MSFT, GOOGL, TSLA, JPM, and others) to reduce the portfolio's dimensionality and identify the principal factors driving joint stock movements.</li>
 				</ul>
 				<ul class="project-detail-list project-detail-extra" id="project10-extra">
-					<li data-key="project10-detail3">Regression trees — trained a decision tree regressor to predict asset returns from momentum, volatility, and value features, using a time-aware train/test split to respect the sequential nature of financial data and evaluating performance with MSE and R-squared.</li>
+					<li data-key="project10-detail3">Regression trees; trained a decision tree regressor to predict asset returns from momentum, volatility, and value features, using a time-aware train/test split to respect the sequential nature of financial data and evaluating performance with MSE and R-squared.</li>
 				</ul>
 				<button type="button" class="detail-toggle" aria-expanded="false" aria-controls="project10-extra" data-key="show-details">Show details</button>
 				<a href="/assets/WQU_ML_GWP1_Clustering_PCA_Trees.ipynb" download="WQU_ML_Clustering_PCA_Trees.ipynb" class="dl-link">
@@ -365,7 +365,7 @@
 
 			<article class="card project-card c-6" data-category="ml">
 				<h3 data-key="project11-title">LDA, Neural Networks &amp; SVMs for Financial Classification</h3>
-				<p class="desc" data-key="project11-desc">Three classification techniques on real and financial data — using Linear Discriminant Analysis for dimensionality reduction, a neural network to predict S&amp;P 500 returns, and SVMs across synthetic financial classification and regression tasks.</p>
+				<p class="desc" data-key="project11-desc">Three classification techniques on real and financial data; using Linear Discriminant Analysis for dimensionality reduction, a neural network to predict S&amp;P 500 returns, and SVMs across synthetic financial classification and regression tasks.</p>
 				<div class="tags-row">
 					<span class="tag-chip">Python</span>
 					<span class="tag-chip">Neural Networks</span>
@@ -373,11 +373,11 @@
 					<span class="tag-chip">scikit-learn</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project11-detail1">Linear Discriminant Analysis (LDA) — applied LDA to the classic Iris dataset for supervised dimensionality reduction, then paired it with a Random Forest classifier to evaluate classification accuracy via a confusion matrix. Extended the technique to a synthetic financial-instrument classification task.</li>
-					<li data-key="project11-detail2">Neural networks — built a feedforward neural network (Keras/TensorFlow, with dropout regularization) to predict next-period S&amp;P 500 returns from engineered features, using a time-respecting train/test split.</li>
+					<li data-key="project11-detail1">Linear Discriminant Analysis (LDA); applied LDA to the classic Iris dataset for supervised dimensionality reduction, then paired it with a Random Forest classifier to evaluate classification accuracy via a confusion matrix. Extended the technique to a synthetic financial-instrument classification task.</li>
+					<li data-key="project11-detail2">Neural networks; built a feedforward neural network (Keras/TensorFlow, with dropout regularization) to predict next-period S&amp;P 500 returns from engineered features, using a time-respecting train/test split.</li>
 				</ul>
 				<ul class="project-detail-list project-detail-extra" id="project11-extra">
-					<li data-key="project11-detail3">Support Vector Machines (SVMs) — implemented both SVC and SVR on synthetic financial data (returns, volatility, volume, momentum) for classification and regression tasks, tuning hyperparameters via grid search and cross-validation.</li>
+					<li data-key="project11-detail3">Support Vector Machines (SVMs); implemented both SVC and SVR on synthetic financial data (returns, volatility, volume, momentum) for classification and regression tasks, tuning hyperparameters via grid search and cross-validation.</li>
 				</ul>
 				<button type="button" class="detail-toggle" aria-expanded="false" aria-controls="project11-extra" data-key="show-details">Show details</button>
 				<a href="/assets/WQU_ML_GWP2_LDA_NN_SVM.ipynb" download="WQU_ML_LDA_NN_SVM.ipynb" class="dl-link">
@@ -388,7 +388,7 @@
 
 			<article class="card project-card c-6" data-category="ml">
 				<h3 data-key="project12-title">Model Tuning: Hyperparameter Optimization, Bias-Variance &amp; Ensembles</h3>
-				<p class="desc" data-key="project12-desc">Practical machine learning engineering for financial models — tuning a Random Forest via randomized search, diagnosing overfitting with learning curves, and comparing bagging, boosting, and stacking ensembles.</p>
+				<p class="desc" data-key="project12-desc">Practical machine learning engineering for financial models; tuning a Random Forest via randomized search, diagnosing overfitting with learning curves, and comparing bagging, boosting, and stacking ensembles.</p>
 				<div class="tags-row">
 					<span class="tag-chip">Python</span>
 					<span class="tag-chip">scikit-learn</span>
@@ -396,11 +396,11 @@
 					<span class="tag-chip">Hyperparameter Tuning</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project12-detail1">Hyperparameter optimization — tuned a Random Forest regressor on synthetic financial-factor data using randomized search with 5-fold cross-validation, comparing the optimized model's test performance against a baseline.</li>
-					<li data-key="project12-detail2">Bias-variance tradeoff — diagnosed underfitting and overfitting across four model types (regularized logistic regression, a deep decision tree, a shallow decision tree, and a Random Forest ensemble) using learning curves, visualizing how each model's training and validation accuracy diverge as more data is added.</li>
+					<li data-key="project12-detail1">Hyperparameter optimization; tuned a Random Forest regressor on synthetic financial-factor data using randomized search with 5-fold cross-validation, comparing the optimized model's test performance against a baseline.</li>
+					<li data-key="project12-detail2">Bias-variance tradeoff; diagnosed underfitting and overfitting across four model types (regularized logistic regression, a deep decision tree, a shallow decision tree, and a Random Forest ensemble) using learning curves, visualizing how each model's training and validation accuracy diverge as more data is added.</li>
 				</ul>
 				<ul class="project-detail-list project-detail-extra" id="project12-extra">
-					<li data-key="project12-detail3">Ensemble learning — implemented and compared three ensemble strategies (bagging, boosting, and stacking) on a classification task, evaluating each with cross-validation to see which combination method generalized best.</li>
+					<li data-key="project12-detail3">Ensemble learning; implemented and compared three ensemble strategies (bagging, boosting, and stacking) on a classification task, evaluating each with cross-validation to see which combination method generalized best.</li>
 				</ul>
 				<button type="button" class="detail-toggle" aria-expanded="false" aria-controls="project12-extra" data-key="show-details">Show details</button>
 				<a href="/assets/WQU_ML_GWP3_Tuning_Ensembles.ipynb" download="WQU_ML_Tuning_Ensembles.ipynb" class="dl-link">
@@ -411,7 +411,7 @@
 
 			<article class="card project-card c-6" data-category="ml">
 				<h3 data-key="project13-title">Deep Learning for Price Prediction: MLPs vs. GAF-CNNs</h3>
-				<p class="desc" data-key="project13-desc">Comparing neural network architectures for S&amp;P 500 prediction across three data representations — testing whether converting price series into images (Gramian Angular Fields) for a CNN beats a standard neural network.</p>
+				<p class="desc" data-key="project13-desc">Comparing neural network architectures for S&amp;P 500 prediction across three data representations; testing whether converting price series into images (Gramian Angular Fields) for a CNN beats a standard neural network.</p>
 				<div class="tags-row">
 					<span class="tag-chip">Python</span>
 					<span class="tag-chip">Deep Learning</span>
@@ -419,12 +419,12 @@
 					<span class="tag-chip">TensorFlow</span>
 				</div>
 				<ul class="project-detail-list">
-					<li data-key="project13-detail1">Stationarity analysis — tested S&amp;P 500 price levels for stationarity via the Augmented Dickey-Fuller test, then applied fractional differencing to find the optimal balance between removing trend and preserving memory in the series (unlike simple log returns, which achieve stationarity but discard more information).</li>
-					<li data-key="project13-detail2">MLP baseline models — trained feedforward neural networks on three representations of the same data — raw price levels, log returns, and fractionally differenced series — using lagged values as features, to test which representation is easiest for a neural network to learn from.</li>
+					<li data-key="project13-detail1">Stationarity analysis; tested S&amp;P 500 price levels for stationarity via the Augmented Dickey-Fuller test, then applied fractional differencing to find the optimal balance between removing trend and preserving memory in the series (unlike simple log returns, which achieve stationarity but discard more information).</li>
+					<li data-key="project13-detail2">MLP baseline models; trained feedforward neural networks on three representations of the same data; raw price levels, log returns, and fractionally differenced series; using lagged values as features, to test which representation is easiest for a neural network to learn from.</li>
 				</ul>
 				<ul class="project-detail-list project-detail-extra" id="project13-extra">
-					<li data-key="project13-detail3">GAF-CNN models — converted each time series into Gramian Angular Field images and trained convolutional neural networks on the resulting "pictures" of price dynamics, an unconventional but increasingly popular technique for financial time series.</li>
-					<li data-key="project13-detail4">Comprehensive model comparison — benchmarked all six model/representation combinations by MSE and MAE, finding that a standard MLP trained on log returns outperformed every CNN variant, including the image-based ones — a useful reminder that architectural sophistication doesn't always beat simpler, well-chosen representations.</li>
+					<li data-key="project13-detail3">GAF-CNN models; converted each time series into Gramian Angular Field images and trained convolutional neural networks on the resulting "pictures" of price dynamics, an unconventional but increasingly popular technique for financial time series.</li>
+					<li data-key="project13-detail4">Comprehensive model comparison; benchmarked all six model/representation combinations by MSE and MAE, finding that a standard MLP trained on log returns outperformed every CNN variant, including the image-based ones; a useful reminder that architectural sophistication doesn't always beat simpler, well-chosen representations.</li>
 				</ul>
 				<button type="button" class="detail-toggle" aria-expanded="false" aria-controls="project13-extra" data-key="show-details">Show details</button>
 				<a href="/assets/WQU_DL_GWP1_MLP_vs_GAFCNN.ipynb" download="WQU_DL_MLP_vs_GAFCNN.ipynb" class="dl-link">
