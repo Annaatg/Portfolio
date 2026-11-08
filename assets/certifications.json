@@ -1,0 +1,56 @@
+[
+	{
+		"title": "WorldQuant University: Financial Engineering certificate",
+		"issuer": "WorldQuant University",
+		"date": "",
+		"category": "quant-finance",
+		"featured": true,
+		"url": "",
+		"todoNote": "TODO (not rendered): confirm the exact certificate title and date with Anne-Marie before publishing."
+	},
+
+	{ "title": "Analysez et modélisez des séries temporelles", "issuer": "OpenClassrooms · Ensae-Ensai", "date": "Aug 2024", "category": "data-science-ml", "featured": true, "url": "" },
+	{ "title": "Utilisez des modèles supervisés non linéaires", "issuer": "OpenClassrooms · CentraleSupélec", "date": "Aug 2024", "category": "data-science-ml", "featured": true, "url": "" },
+	{ "title": "Initiez-vous au Deep Learning", "issuer": "OpenClassrooms · OpenINSA", "date": "Aug 2024", "category": "data-science-ml", "featured": true, "url": "" },
+	{ "title": "Entraînez un modèle prédictif linéaire", "issuer": "OpenClassrooms · CentraleSupélec", "date": "Aug 2024", "category": "data-science-ml", "featured": false, "url": "" },
+	{ "title": "Explorez vos données avec des algorithmes non supervisés", "issuer": "OpenClassrooms · CentraleSupélec", "date": "Aug 2024", "category": "data-science-ml", "featured": false, "url": "" },
+	{ "title": "Évaluez les performances d'un modèle de machine learning", "issuer": "OpenClassrooms · CentraleSupélec", "date": "Aug 2024", "category": "data-science-ml", "featured": false, "url": "" },
+	{ "title": "Analysez vos données textuelles", "issuer": "OpenClassrooms", "date": "Aug 2024", "category": "data-science-ml", "featured": false, "url": "" },
+	{ "title": "Découvrez les librairies Python pour la Data Science", "issuer": "OpenClassrooms", "date": "Aug 2024", "category": "data-science-ml", "featured": false, "url": "" },
+	{ "title": "Nettoyez et analysez votre jeu de données", "issuer": "OpenClassrooms", "date": "Aug 2024", "category": "data-science-ml", "featured": false, "url": "" },
+
+	{ "title": "Introduction to Large Language Models", "issuer": "Google Cloud (Coursera)", "date": "Dec 2024", "category": "ai-data-eng", "featured": true, "url": "" },
+	{ "title": "Introduction to Data Engineering", "issuer": "IBM (Coursera)", "date": "Dec 2024", "category": "ai-data-eng", "featured": true, "url": "" },
+	{ "title": "Introduction to Artificial Intelligence (AI)", "issuer": "IBM (Coursera)", "date": "Dec 2024", "category": "ai-data-eng", "featured": false, "url": "" },
+	{ "title": "Generative AI for Everyone", "issuer": "DeepLearning.AI (Coursera)", "date": "Dec 2024", "category": "ai-data-eng", "featured": false, "url": "" },
+	{ "title": "Prompt Engineering for ChatGPT", "issuer": "Vanderbilt University (Coursera)", "date": "Dec 2024", "category": "ai-data-eng", "featured": false, "url": "" },
+
+	{ "title": "Programming for Everybody (Getting Started with Python)", "issuer": "University of Michigan (Coursera)", "date": "Dec 2024", "category": "programming-software", "featured": false, "url": "" },
+	{ "title": "Apprenez les bases du langage Python", "issuer": "OpenClassrooms", "date": "May 2024", "category": "programming-software", "featured": false, "url": "" },
+	{ "title": "Apprenez la programmation orientée objet avec Python", "issuer": "OpenClassrooms", "date": "May 2024", "category": "programming-software", "featured": false, "url": "" },
+	{ "title": "Écrivez du code Python maintenable", "issuer": "OpenClassrooms", "date": "May 2024", "category": "programming-software", "featured": false, "url": "" },
+	{ "title": "Testez votre projet Python", "issuer": "OpenClassrooms", "date": "May 2024", "category": "programming-software", "featured": false, "url": "" },
+	{ "title": "Découvrez le fonctionnement des algorithmes", "issuer": "OpenClassrooms", "date": "May 2024", "category": "programming-software", "featured": false, "url": "" },
+	{ "title": "Adoptez les API REST pour vos projets web", "issuer": "OpenClassrooms", "date": "May 2024", "category": "programming-software", "featured": false, "url": "" },
+	{ "title": "Gérez du code avec Git et GitHub", "issuer": "OpenClassrooms", "date": "May 2024", "category": "programming-software", "featured": false, "url": "" },
+	{ "title": "Apprenez à utiliser la ligne de commande dans un terminal", "issuer": "OpenClassrooms", "date": "Apr 2024", "category": "programming-software", "featured": false, "url": "" },
+	{ "title": "Introduction to Git and GitHub", "issuer": "Google (Coursera)", "date": "Nov 2024", "category": "programming-software", "featured": false, "url": "" },
+	{ "title": "Introduction to Software, Programming, and Databases", "issuer": "IBM (Coursera)", "date": "Nov 2024", "category": "programming-software", "featured": false, "url": "" },
+	{ "title": "Introduction to Agile Development and Scrum", "issuer": "IBM (Coursera)", "date": "Dec 2024", "category": "programming-software", "featured": false, "url": "" },
+	{ "title": "The Bits and Bytes of Computer Networking", "issuer": "Google (Coursera)", "date": "Nov 2024", "category": "programming-software", "featured": false, "url": "" },
+	{ "title": "Technical Support Fundamentals", "issuer": "Google (Coursera)", "date": "Nov 2024", "category": "programming-software", "featured": false, "url": "" },
+
+	{ "title": "Ethics, Technology and Engineering", "issuer": "Eindhoven University of Technology (Coursera)", "date": "Dec 2024", "category": "professional-skills", "featured": false, "url": "" },
+	{ "title": "Emotional and Social Intelligence", "issuer": "UC Davis (Coursera)", "date": "Dec 2024", "category": "professional-skills", "featured": false, "url": "" },
+	{ "title": "Work Smarter, Not Harder: Time Management for Personal & Professional Productivity", "issuer": "UC Irvine (Coursera)", "date": "Sep 2024", "category": "professional-skills", "featured": false, "url": "" },
+
+	{
+		"title": "Benin Multimodal AI Hackathon (participation certificate)",
+		"issuer": "lablab.ai x New Native",
+		"date": "May 2024",
+		"category": "competitions",
+		"featured": false,
+		"url": "",
+		"todoNote": "TODO (not rendered): Anne-Marie will send the certificate PDF to add here as a downloadable link."
+	}
+]
