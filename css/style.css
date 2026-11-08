@@ -147,7 +147,7 @@ input:focus-visible {
 }
 
 .on-dark :is(.btn, a, button):focus-visible {
-  outline: 2px solid #fff;
+  outline: 2px solid var(--ink);
   outline-offset: 2px;
 }
 
@@ -166,7 +166,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
 h3 { font-size: 1.25rem; }
 h4 { font-size: 1.05rem; }
 
-.on-dark h1, .on-dark h2, .on-dark h3 { color: #fff; }
+.hero h1 { color: var(--ink); }
 
 p {
   max-width: var(--measure);
@@ -268,7 +268,7 @@ p {
 
 .text-link:hover { border-bottom-color: currentColor; }
 
-.on-dark .text-link { color: var(--brass-bright); }
+.on-dark .text-link { color: var(--brass-text); }
 
 .icon-btn {
   display: inline-flex;
@@ -488,8 +488,8 @@ p {
 /* ---------- Hero ---------- */
 
 .hero {
-  background: var(--ink);
-  color: #fff;
+  background: #fff;
+  color: var(--ink);
   position: relative;
   overflow: hidden;
   padding: var(--space-8) 0 var(--space-9);
@@ -520,13 +520,13 @@ p {
 
 .hero-subtitle {
   font-size: 1.2rem;
-  color: var(--on-dark-muted);
+  color: #2F5CAE;
   margin: 0 0 var(--space-4);
   font-weight: 400;
 }
 
 .hero-value-prop {
-  color: var(--on-dark-muted);
+  color: #2F5CAE;
   font-size: 1.02rem;
   max-width: 54ch;
   margin: 0 0 var(--space-6);
@@ -545,7 +545,7 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: var(--space-4) var(--space-6);
   padding-top: var(--space-6);
-  border-top: 1px solid var(--on-dark-border);
+  border-top: 1px solid var(--border);
   max-width: 540px;
 }
 
@@ -554,14 +554,14 @@ p {
   font-size: 0.72rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--brass-bright);
+  color: var(--ink);
   margin-bottom: 4px;
 }
 
 .hero-facts dd {
   margin: 0;
   font-size: 0.92rem;
-  color: #fff;
+  color: var(--ink);
 }
 
 /* Hero right column */
@@ -604,6 +604,7 @@ p {
   position: relative;
   z-index: 1;
   background: var(--panel);
+  border: 1px solid var(--border);
   border-radius: var(--radius-card);
   padding: var(--space-6);
   margin-top: var(--space-7);
@@ -622,6 +623,7 @@ p {
 .capstone-block h3 {
   margin-bottom: var(--space-2);
   font-size: 1.1rem;
+  color: var(--text);
 }
 
 .capstone-block p {
